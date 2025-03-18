@@ -22,23 +22,24 @@
     }
     /* Add your custom styles here */
   </style>
-      <script src="https://cdn.tailwindcss.com"></script>
-
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  
-<div id="root">
-  <header id="header" class="w-full bg-white shadow-md dark:bg-neutral-900">
+  <div id="root">
+  <header id="header" class="w-full bg-neutral-900 shadow-md">
     <nav class="container mx-auto px-4 py-3">
       <div class="flex items-center justify-between">
         <!-- Site Logo/Name -->
-        <a href="/" class="text-xl font-bold text-[#2C3E50] dark:text-white">
-          AthenaPro
+        <a href="/" class="text-xl font-bold text-white">
+          Cléo Benzema
         </a>
         
         <!-- Desktop Navigation -->
         <ul class="hidden md:flex space-x-6">
-
+            <li>
+              <a href="{{this.link}}" class="text-white hover:text-[#3498DB] transition-colors duration-300">
+              </a>
+            </li>
           <li>
             <a href="/contact" class="bg-[#3498DB] text-white px-4 py-2 rounded hover:bg-[#2980b9] transition-colors duration-300">
               Contact
@@ -47,13 +48,7 @@
         </ul>
         
         <!-- Mobile menu button -->
-        <button 
-          type="button" 
-          class="md:hidden text-[#2C3E50] dark:text-white"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-          id="mobile-menu-button"
-        >
+        <button type="button" class="md:hidden text-white" aria-label="Toggle menu" aria-expanded="false" id="mobile-menu-button">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -63,7 +58,10 @@
       <!-- Mobile Navigation -->
       <div class="md:hidden hidden" id="mobile-menu">
         <ul class="pt-4 pb-3 space-y-2">
-
+            <li>
+              <a href="{{this.link}}" class="block py-2 text-white hover:text-[#3498DB] transition-colors duration-300">
+              </a>
+            </li>
           <li>
             <a href="/contact" class="block py-2 text-[#3498DB] font-medium hover:text-[#2980b9] transition-colors duration-300">
               Contact
@@ -74,115 +72,114 @@
     </nav>
   </header>
 </div>
-
-
-<div id="root">
+<div id="root" class="bg-gray-900 min-h-screen">
   <section id="title" class="container mx-auto px-4 py-12 md:py-16">
     <div class="text-center">
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2C3E50] dark:text-white mb-6">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
         Mentions Légales
       </h1>
       <div class="w-20 h-1 bg-[#3498DB] mx-auto mb-10 rounded-full"></div>
-      <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+      <p class="text-gray-300 max-w-2xl mx-auto">
         Informations légales concernant l'exploitation de ce site web conformément à la législation française en vigueur.
       </p>
     </div>
     
     <!-- Navigation rapide -->
-    <div class="mt-12 bg-gray-100 dark:bg-neutral-800 rounded-lg p-4 md:p-6 max-w-3xl mx-auto">
-      <h2 class="text-lg font-semibold mb-4 text-[#2C3E50] dark:text-white">Navigation rapide</h2>
+    <div class="mt-12 bg-gray-800 rounded-lg p-4 md:p-6 max-w-3xl mx-auto">
+      <h2 class="text-lg font-semibold mb-4 text-white">Navigation rapide</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-        <a href="#editeur" class="text-[#3498DB] hover:text-[#2980b9] dark:text-[#3498DB] dark:hover:text-[#5dade2] transition-colors duration-300">
+        <a href="#editeur" class="text-[#3498DB] hover:text-[#5dade2] transition-colors duration-300">
           → Éditeur du site
         </a>
-        <a href="#hebergeur" class="text-[#3498DB] hover:text-[#2980b9] dark:text-[#3498DB] dark:hover:text-[#5dade2] transition-colors duration-300">
+        <a href="#hebergeur" class="text-[#3498DB] hover:text-[#5dade2] transition-colors duration-300">
           → Hébergeur du site
         </a>
-        <a href="#propriete" class="text-[#3498DB] hover:text-[#2980b9] dark:text-[#3498DB] dark:hover:text-[#5dade2] transition-colors duration-300">
+        <a href="#propriete" class="text-[#3498DB] hover:text-[#5dade2] transition-colors duration-300">
           → Propriété intellectuelle
         </a>
-        <a href="#rgpd" class="text-[#3498DB] hover:text-[#2980b9] dark:text-[#3498DB] dark:hover:text-[#5dade2] transition-colors duration-300">
+        <a href="#rgpd" class="text-[#3498DB] hover:text-[#5dade2] transition-colors duration-300">
           → Protection des données
         </a>
-        <a href="#responsabilite" class="text-[#3498DB] hover:text-[#2980b9] dark:text-[#3498DB] dark:hover:text-[#5dade2] transition-colors duration-300">
+        <a href="#cookies" class="text-[#3498DB] hover:text-[#5dade2] transition-colors duration-300">
+          → Cookies
+        </a>
+        <a href="#responsabilite" class="text-[#3498DB] hover:text-[#5dade2] transition-colors duration-300">
           → Limitation de responsabilité
         </a>
-        <a href="#loi" class="text-[#3498DB] hover:text-[#2980b9] dark:text-[#3498DB] dark:hover:text-[#5dade2] transition-colors duration-300">
+        <a href="#loi" class="text-[#3498DB] hover:text-[#5dade2] transition-colors duration-300">
           → Loi applicable
         </a>
       </div>
     </div>
   </section>
 </div>
-
-
-<div id="root">
+<div id="root" class="bg-gray-900">
   <section id="editeur" class="container mx-auto px-4 py-10">
     <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl md:text-3xl font-bold text-[#2C3E50] dark:text-white mb-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">
         Éditeur du site
       </h2>
       
-      <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-6 mb-8">
+      <div class="bg-neutral-800 rounded-lg shadow-md p-6 mb-8">
         <ul class="space-y-4">
           <li class="flex flex-col md:flex-row md:items-start">
-            <span class="font-semibold text-[#2C3E50] dark:text-white w-48 md:w-56 mb-1 md:mb-0">Dénomination / Nom :</span>
-            <span class="text-gray-700 dark:text-gray-300">Cléo Benzema</span>
+            <span class="font-semibold text-white w-48 md:w-56 mb-1 md:mb-0">Dénomination / Nom :</span>
+            <span class="text-gray-300">Cléo Benzema</span>
           </li>
           
           <li class="flex flex-col md:flex-row md:items-start">
-            <span class="font-semibold text-[#2C3E50] dark:text-white w-48 md:w-56 mb-1 md:mb-0">Nom commercial :</span>
-            <span class="text-gray-700 dark:text-gray-300">idk</span>
+            <span class="font-semibold text-white w-48 md:w-56 mb-1 md:mb-0">Nom commercial :</span>
+            <span class="text-gray-300">idk</span>
           </li>
           
           <li class="flex flex-col md:flex-row md:items-start">
-            <span class="font-semibold text-[#2C3E50] dark:text-white w-48 md:w-56 mb-1 md:mb-0">Forme juridique :</span>
-            <span class="text-gray-700 dark:text-gray-300">Entrepreneur individuel</span>
+            <span class="font-semibold text-white w-48 md:w-56 mb-1 md:mb-0">Forme juridique :</span>
+            <span class="text-gray-300">Entrepreneur individuel</span>
           </li>
           
           <li class="flex flex-col md:flex-row md:items-start">
-            <span class="font-semibold text-[#2C3E50] dark:text-white w-48 md:w-56 mb-1 md:mb-0">SIREN :</span>
-            <span class="text-gray-700 dark:text-gray-300">938 061 975</span>
+            <span class="font-semibold text-white w-48 md:w-56 mb-1 md:mb-0">SIREN :</span>
+            <span class="text-gray-300">938 061 975</span>
           </li>
           
           <li class="flex flex-col md:flex-row md:items-start">
-            <span class="font-semibold text-[#2C3E50] dark:text-white w-48 md:w-56 mb-1 md:mb-0">SIRET :</span>
-            <span class="text-gray-700 dark:text-gray-300">938 061 975 00018</span>
+            <span class="font-semibold text-white w-48 md:w-56 mb-1 md:mb-0">SIRET :</span>
+            <span class="text-gray-300">938 061 975 00018</span>
           </li>
           
           <li class="flex flex-col md:flex-row md:items-start">
-            <span class="font-semibold text-[#2C3E50] dark:text-white w-48 md:w-56 mb-1 md:mb-0">Code APE :</span>
-            <span class="text-gray-700 dark:text-gray-300">63.12Z</span>
+            <span class="font-semibold text-white w-48 md:w-56 mb-1 md:mb-0">Code APE :</span>
+            <span class="text-gray-300">63.12Z</span>
           </li>
           
           <li class="flex flex-col md:flex-row md:items-start">
-            <span class="font-semibold text-[#2C3E50] dark:text-white w-48 md:w-56 mb-1 md:mb-0">Date d'immatriculation au RNE :</span>
-            <span class="text-gray-700 dark:text-gray-300">02/12/2024</span>
+            <span class="font-semibold text-white w-48 md:w-56 mb-1 md:mb-0">Date d'immatriculation au RNE :</span>
+            <span class="text-gray-300">02/12/2024</span>
           </li>
           
           <li class="flex flex-col md:flex-row md:items-start">
-            <span class="font-semibold text-[#2C3E50] dark:text-white w-48 md:w-56 mb-1 md:mb-0">Département :</span>
-            <span class="text-gray-700 dark:text-gray-300">69 – Rhône</span>
+            <span class="font-semibold text-white w-48 md:w-56 mb-1 md:mb-0">Département :</span>
+            <span class="text-gray-300">69 – Rhône</span>
           </li>
           
           <li class="flex flex-col md:flex-row md:items-start">
-            <span class="font-semibold text-[#2C3E50] dark:text-white w-48 md:w-56 mb-1 md:mb-0">Adresse :</span>
-            <span class="text-gray-700 dark:text-gray-300">11 RUE Charles Robin, 69100 Villeurbanne, France</span>
+            <span class="font-semibold text-white w-48 md:w-56 mb-1 md:mb-0">Adresse :</span>
+            <span class="text-gray-300">11 RUE Charles Robin, 69100 Villeurbanne, France</span>
           </li>
           
           <li class="flex flex-col md:flex-row md:items-start">
-            <span class="font-semibold text-[#2C3E50] dark:text-white w-48 md:w-56 mb-1 md:mb-0">Directeur de la publication :</span>
-            <span class="text-gray-700 dark:text-gray-300">Cléo Benzema</span>
+            <span class="font-semibold text-white w-48 md:w-56 mb-1 md:mb-0">Directeur de la publication :</span>
+            <span class="text-gray-300">Cléo Benzema</span>
           </li>
           
           <li class="flex flex-col md:flex-row md:items-start">
-            <span class="font-semibold text-[#2C3E50] dark:text-white w-48 md:w-56 mb-1 md:mb-0">Contact :</span>
+            <span class="font-semibold text-white w-48 md:w-56 mb-1 md:mb-0">Contact :</span>
             <div>
-              <p class="text-gray-700 dark:text-gray-300">
+              <p class="text-gray-300">
                 <span class="inline-block mr-2">📧</span>Email : 
-                <a href="mailto:athenapro.b@gmail.com" class="text-[#3498DB] hover:underline">athenapro.b@gmail.com</a>
+                <a href="mailto:athenapro.b@gmail.com" class="text-blue-400 hover:underline">athenapro.b@gmail.com</a>
               </p>
-              <p class="text-gray-700 dark:text-gray-300 mt-1">
+              <p class="text-gray-300 mt-1">
                 <span class="inline-block mr-2">📞</span>Téléphone : 06 04 18 17 84
               </p>
             </div>
@@ -192,29 +189,27 @@
     </div>
   </section>
 </div>
-
-
-<div id="root">
+<div id="root" class="bg-gray-900">
   <section id="hebergeur" class="container mx-auto px-4 py-10">
     <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl md:text-3xl font-bold text-[#2C3E50] dark:text-white mb-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">
         Hébergeur du site
       </h2>
       
-      <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-6">
+      <div class="bg-neutral-800 rounded-lg shadow-md p-6">
         <ul class="space-y-4">
           <li class="flex flex-col md:flex-row md:items-start">
-            <span class="font-semibold text-[#2C3E50] dark:text-white w-48 md:w-56 mb-1 md:mb-0">Nom :</span>
-            <span class="text-gray-700 dark:text-gray-300">GitHub, Inc.</span>
+            <span class="font-semibold text-white w-48 md:w-56 mb-1 md:mb-0">Nom :</span>
+            <span class="text-gray-300">GitHub, Inc.</span>
           </li>
           
           <li class="flex flex-col md:flex-row md:items-start">
-            <span class="font-semibold text-[#2C3E50] dark:text-white w-48 md:w-56 mb-1 md:mb-0">Adresse :</span>
-            <span class="text-gray-700 dark:text-gray-300">88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</span>
+            <span class="font-semibold text-white w-48 md:w-56 mb-1 md:mb-0">Adresse :</span>
+            <span class="text-gray-300">88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</span>
           </li>
           
           <li class="flex flex-col md:flex-row md:items-start">
-            <span class="font-semibold text-[#2C3E50] dark:text-white w-48 md:w-56 mb-1 md:mb-0">Site web :</span>
+            <span class="font-semibold text-white w-48 md:w-56 mb-1 md:mb-0">Site web :</span>
             <a href="https://www.github.com" target="_blank" rel="noopener noreferrer" class="text-[#3498DB] hover:underline">
               www.github.com
             </a>
@@ -224,46 +219,40 @@
     </div>
   </section>
 </div>
-
-
-<div id="root">
-  <section id="propriete-intellectuelle" class="container mx-auto px-4 py-10">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl md:text-3xl font-bold text-[#2C3E50] dark:text-white mb-6">
-        Propriété intellectuelle
-      </h2>
-      
-      <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-6">
-        <div class="prose dark:prose-invert max-w-none">
-          <p class="text-gray-700 dark:text-gray-300 mb-4">
-            Tous les contenus présents sur ce site (textes, images, logos, vidéos, etc.) sont la propriété exclusive de 
-            <span class="font-medium">Cléo Benzema (idk)</span>, sauf mention contraire.
-          </p>
-          
-          <div class="flex items-start mt-6">
-            <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-lg w-full">
-              <p class="text-red-700 dark:text-red-300 font-medium">
-                <span class="inline-block mr-2">⚠️</span>Interdiction :
-              </p>
-              <p class="text-gray-700 dark:text-gray-300 mt-2">
-                Toute reproduction, modification ou diffusion sans autorisation est illégale et peut entraîner des sanctions.
-              </p>
-            </div>
-          </div>
-          
-          <div class="mt-6 p-4 bg-[#ECF0F1] dark:bg-neutral-700 rounded-lg">
-            <p class="text-gray-700 dark:text-gray-300 text-sm italic">
-              Conformément aux dispositions du Code de la Propriété Intellectuelle, toute utilisation non autorisée des éléments protégés par le droit d'auteur constitue une contrefaçon passible de sanctions civiles et pénales.
+<div id="propriete-intellectuelle" class="container mx-auto px-4 py-10 bg-gray-50 dark:bg-neutral-900">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold text-[#2C3E50] dark:text-white mb-6">
+      Propriété intellectuelle
+    </h2>
+    
+    <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-6">
+      <div class="prose dark:prose-invert max-w-none">
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          Tous les contenus présents sur ce site (textes, images, logos, vidéos, etc.) sont la propriété exclusive de 
+          <span class="font-medium">Cléo Benzema (idk)</span>, sauf mention contraire.
+        </p>
+        
+        <div class="flex items-start mt-6">
+          <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-lg w-full">
+            <p class="text-red-700 dark:text-red-300 font-medium">
+              <span class="inline-block mr-2">⚠️</span>Interdiction :
+            </p>
+            <p class="text-gray-700 dark:text-gray-300 mt-2">
+              Toute reproduction, modification ou diffusion sans autorisation est illégale et peut entraîner des sanctions.
             </p>
           </div>
         </div>
+        
+        <div class="mt-6 p-4 bg-[#ECF0F1] dark:bg-neutral-700 rounded-lg">
+          <p class="text-gray-700 dark:text-gray-300 text-sm italic">
+            Conformément aux dispositions du Code de la Propriété Intellectuelle, toute utilisation non autorisée des éléments protégés par le droit d'auteur constitue une contrefaçon passible de sanctions civiles et pénales.
+          </p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
-
-
-<div id="root">
+<div id="root" class="bg-gray-900">
   <section id="rgpd" class="container mx-auto px-4 py-10">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-2xl md:text-3xl font-bold text-[#2C3E50] dark:text-white mb-6">
@@ -340,16 +329,77 @@
     </div>
   </section>
 </div>
-
-
-<div id="root">
+<div id="root" class="bg-gray-900">
+  <section id="cookies" class="container mx-auto px-4 py-10">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">
+        Cookies
+      </h2>
+      
+      <div class="bg-neutral-800 rounded-lg shadow-md p-6">
+        <div class="space-y-6">
+          <p class="text-gray-300">
+            Utilisation des cookies pour améliorer l'expérience utilisateur et analyser l'audience.
+          </p>
+          
+          <div class="bg-yellow-900/20 p-4 rounded-lg">
+            <h3 class="font-semibold text-white mb-2">Option de refus :</h3>
+            <p class="text-gray-300">
+              L'utilisateur peut configurer son navigateur pour refuser ou supprimer les cookies.
+            </p>
+          </div>
+          
+          <div class="mt-4">
+            <h3 class="font-semibold text-white mb-3">Comment gérer les cookies :</h3>
+            <div class="space-y-2 text-gray-300">
+              <p>Vous pouvez gérer les cookies via les paramètres de votre navigateur :</p>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>
+                  <span class="font-medium">Chrome</span> : 
+                  <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" class="text-[#3498DB] hover:underline">
+                    Instructions Google Chrome
+                  </a>
+                </li>
+                <li>
+                  <span class="font-medium">Firefox</span> : 
+                  <a href="https://support.mozilla.org/fr/kb/activer-desactiver-cookies" target="_blank" rel="noopener noreferrer" class="text-[#3498DB] hover:underline">
+                    Instructions Firefox
+                  </a>
+                </li>
+                <li>
+                  <span class="font-medium">Safari</span> : 
+                  <a href="https://support.apple.com/fr-fr/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer" class="text-[#3498DB] hover:underline">
+                    Instructions Safari
+                  </a>
+                </li>
+                <li>
+                  <span class="font-medium">Edge</span> : 
+                  <a href="https://support.microsoft.com/fr-fr/microsoft-edge/supprimer-les-cookies-dans-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer" class="text-[#3498DB] hover:underline">
+                    Instructions Edge
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mt-6 p-4 bg-neutral-700 rounded-lg">
+            <p class="text-gray-300 text-sm">
+              En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies conformément à notre politique de confidentialité. Les cookies nous permettent d'analyser le trafic du site et d'améliorer votre expérience utilisateur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div id="root" class="bg-gray-900">
   <section id="limitation-responsabilite" class="container mx-auto px-4 py-10">
     <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl md:text-3xl font-bold text-[#2C3E50] dark:text-white mb-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">
         Limitation de responsabilité
       </h2>
       
-      <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-6">
+      <div class="bg-neutral-800 rounded-lg shadow-md p-6">
         <div class="space-y-6">
           <div class="flex items-start">
             <div class="flex-shrink-0 mt-1">
@@ -358,7 +408,7 @@
               </svg>
             </div>
             <div class="ml-3">
-              <p class="text-gray-700 dark:text-gray-300">
+              <p class="text-gray-300">
                 Les informations du site sont indicatives et sujettes à modification.
               </p>
             </div>
@@ -371,7 +421,7 @@
               </svg>
             </div>
             <div class="ml-3">
-              <p class="text-gray-700 dark:text-gray-300">
+              <p class="text-gray-300">
                 Aucune responsabilité en cas d'erreur, omission ou dommage lié à l'utilisation des informations.
               </p>
             </div>
@@ -384,26 +434,26 @@
               </svg>
             </div>
             <div class="ml-3">
-              <p class="text-gray-700 dark:text-gray-300">
+              <p class="text-gray-300">
                 Les liens externes ne sont pas sous la responsabilité de Cléo Benzema.
               </p>
             </div>
           </div>
           
-          <div class="bg-gray-50 dark:bg-neutral-700 p-4 rounded-lg mt-6">
-            <p class="text-gray-700 dark:text-gray-300 text-sm">
+          <div class="bg-neutral-700 p-4 rounded-lg mt-6">
+            <p class="text-gray-300 text-sm">
               Malgré les efforts fournis pour assurer l'exactitude des informations présentes sur ce site, des erreurs ou omissions peuvent survenir. L'utilisateur reconnaît utiliser ces informations sous sa responsabilité exclusive. Cléo Benzema se réserve le droit de modifier le contenu de ce site à tout moment, sans préavis.
             </p>
           </div>
           
-          <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg mt-4">
-            <h3 class="font-semibold text-red-700 dark:text-red-300 flex items-center mb-2">
+          <div class="bg-red-900/20 p-4 rounded-lg mt-4">
+            <h3 class="font-semibold text-red-300 flex items-center mb-2">
               <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9z" clip-rule="evenodd"></path>
               </svg>
               Concernant les liens hypertextes
             </h3>
-            <p class="text-gray-700 dark:text-gray-300 text-sm">
+            <p class="text-gray-300 text-sm">
               Ce site peut contenir des liens vers d'autres sites internet ou d'autres ressources disponibles sur Internet. Cléo Benzema ne dispose d'aucun moyen pour contrôler les sites en connexion avec son site internet et ne répond pas de la disponibilité de tels sites et sources externes.
             </p>
           </div>
@@ -412,9 +462,7 @@
     </div>
   </section>
 </div>
-
-
-<div id="root">
+<div id="root" class="bg-gray-900">
   <section id="loi-applicable" class="container mx-auto px-4 py-10">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-2xl md:text-3xl font-bold text-[#2C3E50] dark:text-white mb-6">
@@ -464,17 +512,15 @@
             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
             </svg>
-            <span>Dernière mise à jour : 17/03/2025</span>
+            <span>Dernière mise à jour : 01/03/2024</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 </div>
-
-
 <div id="root">
-  <footer id="footer" class="bg-[#2C3E50] text-white py-8 mt-10">
+  <footer id="footer" class="bg-[#121212] text-white py-8 mt-10">
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap justify-between">
         <!-- Contact Info -->
@@ -559,18 +605,14 @@
         </div>
       </div>
       
-      <hr class="border-gray-600 my-6" />
+      <hr class="border-gray-800 my-6">
       
       <div class="text-center text-sm text-gray-400">
-        <p>© 2025 Cléo Benzema. Tous droits réservés.</p>
+        <p>© 2024 Cléo Benzema. Tous droits réservés.</p>
       </div>
       
       <!-- Back to top button -->
-      <button 
-        id="back-to-top-btn" 
-        class="fixed bottom-6 right-6 bg-[#3498DB] text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-[#2980b9] focus:outline-none focus:ring-2 focus:ring-blue-500"
-        aria-label="Retour en haut de page"
-      >
+      <button id="back-to-top-btn" class="fixed bottom-6 right-6 bg-[#3498DB] text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-[#2980b9] focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Retour en haut de page">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
@@ -600,6 +642,5 @@
     });
   </script>
 </div>
-
 </body>
 </html>
