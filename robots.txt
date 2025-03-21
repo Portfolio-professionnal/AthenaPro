@@ -1,2 +1,2 @@
 <meta name="robots" content="index, follow">
-Sitemap: https://portfolio-professionnal.github.io/AthenaPro/sitemap.xml
+Sitemap: https://athenapro.ovh/sitemap.xml
