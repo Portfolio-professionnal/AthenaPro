@@ -1,39 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <sitemap>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url> 
     <loc>https://athenapro.ovh/index.html</loc>
     <lastmod>2025-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-  </sitemap>
+  </url>
 
-  <sitemap>
+  <url>
     <loc>https://athenapro.ovh/Contact</loc>
     <lastmod>2025-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </sitemap>
+  </url>
 
-  <sitemap>
+  <url>
     <loc>https://athenapro.ovh/Mes_Réalisations.html</loc>
     <lastmod>2025-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </sitemap>
+  </url>
 
-  <sitemap>
+  <url>
     <loc>https://athenapro.ovh/Comparatif.html</loc>
     <lastmod>2025-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </sitemap>
+  </url>
 
-  <sitemap>
+  <url>
     <loc>https://athenapro.ovh/Mentions_Légales.html</loc>
     <lastmod>2025-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </sitemap>
-
-</sitemapindex>
+  </url>
+</urlset>
