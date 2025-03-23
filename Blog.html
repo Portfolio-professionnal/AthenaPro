@@ -118,9 +118,11 @@
     });
   </script>
 <div id="root">
-  <section id="blog-hero" class="pt-24 pb-12 md:py-32 relative overflow-hidden bg-[#0F0F0F]">
-    <!-- Fond animé avec dégradé subtil -->
-    <div class="absolute inset-0 z-0" style="background: linear-gradient(45deg, #4F46E5, #A855F7, #EC4899); opacity: 0.15; animation: gradientShift 15s ease infinite;"></div>
+  <section id="blog-hero" class="pt-24 pb-12 md:py-32 bg-[#0F0F0F] py-16 relative overflow-hidden">
+    <!-- Fond d'origine -->
+    <div class="absolute inset-0 opacity-20 z-0">
+      <div class="h-full w-full bg-[url('https://placehold.co/1920x1080?text=tech%20grid%20pattern')] bg-no-repeat bg-cover bg-center"></div>
+    </div>
     
     <div class="container mx-auto px-4 z-10 relative">
       <div class="text-center max-w-3xl mx-auto">
@@ -149,48 +151,32 @@
       </div>
     </div>
     
-    <!-- Effet typewriter pour rappeler des extraits d'articles -->
-    <div class="absolute bottom-0 left-0 w-full z-10 overflow-hidden">
-      <div class="typewriter">
+    <!-- Dégradé en bas pour améliorer la lisibilité -->
+    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#0F0F0F] to-transparent"></div>
+    
+    <!-- Effet typewriter pour afficher des extraits d'article -->
+    <div class="absolute bottom-0 left-0 w-full z-10 overflow-hidden" style="padding: 10px;">
+      <div class="typewriter" style="font-size: 1rem; color: rgba(255,255,255,0.9); white-space: nowrap; overflow: hidden; border-right: 2px solid rgba(255,255,255,0.75);">
         <span id="typewriter-text"></span>
       </div>
     </div>
-    
-    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#0F0F0F] to-transparent"></div>
   </section>
 </div>
 
 <style>
-/* Animation du dégradé en fond */
-@keyframes gradientShift {
-  0% { filter: hue-rotate(0deg); }
-  50% { filter: hue-rotate(180deg); }
-  100% { filter: hue-rotate(360deg); }
-}
-
-/* Style de l'effet typewriter */
-.typewriter {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid rgba(255,255,255,0.75);
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  /* Animation pour le curseur clignotant */
-  animation: blinkCaret 0.75s step-end infinite;
-}
-
+/* Effet typewriter : le curseur clignote */
 @keyframes blinkCaret {
   50% { border-color: transparent; }
+}
+.typewriter {
+  animation: blinkCaret 0.75s step-end infinite;
 }
 </style>
 
 <script>
 document.addEventListener("DOMContentLoaded", function(){
-  // Texte à afficher avec effet "tape au clavier"
-  var text = "Dernières actus du blog : Design innovant, tendances tech, conseils marketing... • Inspirez-vous des stratégies digitales pour booster votre portfolio... • Découvrez nos articles exclusifs et interviews inspirantes...";
+  // Texte à afficher avec effet typewriter
+  var text = "Dernières actus du blog : conseils, tendances tech, interviews inspirantes... • ";
   var i = 0;
   var speed = 100; // délai en ms entre chaque caractère
   function typeWriter() {
