@@ -6,8 +6,6 @@ category: Freelance
 image: "https://i.postimg.cc/SR5DWXbN/Capture-d-cran-2025-03-23-143234.png"
 ---
 
-# Les stratégies éprouvées pour transformer votre portfolio en véritable outil commercial et décrocher plus de projets en tant que freelance.
-
   <main class="pt-24 pb-16">
     <div class="container mx-auto px-4 max-w-4xl">
       <article class="prose prose-invert">
