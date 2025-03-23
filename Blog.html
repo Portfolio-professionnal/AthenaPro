@@ -37,16 +37,69 @@ title: "Blog AthenaPro"
       </div>
       
       <!-- Search bar -->
-      <div class="max-w-2xl mx-auto mt-12 animate__animated animate__fadeIn animate__delay-3s">
-        <div class="relative">
-          <input type="text" placeholder="Rechercher un article..." class="w-full px-5 py-3 bg-neutral-800 border border-neutral-700 rounded-full focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white transition-all duration-300">
-          <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-cyan-500 to-purple-500 p-2 rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </button>
+      <!-- Search Bar -->
+        <div class="max-w-2xl mx-auto mt-12 animate__animated animate__fadeIn animate__delay-3s">
+          <div class="relative">
+            <input id="search-input" type="text" placeholder="Rechercher un article..." class="w-full px-5 py-3 bg-neutral-800 border border-neutral-700 rounded-full focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white transition-all duration-300">
+            <button id="search-button" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-cyan-500 to-purple-500 p-2 rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
+          </div>
+          <!-- Conteneur pour afficher les résultats de recherche -->
+          <div id="search-results" class="mt-4"></div>
         </div>
-      </div>
+      <script>
+  // Déclarez des variables pour l'index et les données
+  let idx, posts;
+
+  // Charger l'index JSON généré par Jekyll
+  fetch('{{ "/search.json" | relative_url }}')
+    .then(response => response.json())
+    .then(data => {
+      posts = data;
+      idx = lunr(function () {
+        this.ref('url');
+        this.field('title');
+        this.field('content');
+        posts.forEach(function (doc) {
+          this.add(doc);
+        }, this);
+      });
+    })
+    .catch(err => console.error('Erreur lors du chargement de l\'index de recherche:', err));
+
+  // Récupérer l'élément input et le conteneur de résultats
+  const searchInput = document.getElementById('search-input');
+  const resultsDiv = document.getElementById('search-results');
+
+  // Ajouter un écouteur d'événement pour détecter la saisie dans l'input
+  searchInput.addEventListener('input', function () {
+    const query = this.value.trim();
+    if (query.length >= 3 && idx) { // Lancer la recherche si la requête comporte au moins 3 caractères
+      const results = idx.search(query);
+      if (results.length) {
+        resultsDiv.innerHTML = results.map(result => {
+          // Trouver le document correspondant dans les données
+          const post = posts.find(p => p.url === result.ref);
+          return `<div class="p-4 bg-neutral-800 rounded-lg mb-2">
+                    <a href="${post.url}" class="text-lg font-bold text-white hover:underline">
+                      ${post.title}
+                    </a>
+                    <p class="text-sm text-gray-400">${post.content.substring(0, 100)}...</p>
+                  </div>`;
+        }).join('');
+      } else {
+        resultsDiv.innerHTML = `<p class="text-white">Aucun résultat trouvé pour "${query}".</p>`;
+      }
+    } else {
+      resultsDiv.innerHTML = '';
+    }
+  });
+</script>
+
+
     </div>
     
   </section>
