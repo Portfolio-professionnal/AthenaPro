@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Les Tendances Design qui Domineront 2025"
-date: 2025-03-24 10:00:00 +0100
+date: 2025-03-23 10:00:00 +0100
 category: "Tendances"
 excerpt: "Découvrez les principales tendances en design qui façonneront l'esthétique des portfolios en 2025."
 image: "https://i.postimg.cc/150Qr63j/design-web-2025.png"
