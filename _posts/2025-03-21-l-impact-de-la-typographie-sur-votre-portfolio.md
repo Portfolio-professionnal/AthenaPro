@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "L'Impact de la Typographie sur Votre Portfolio"
-date: 2025-03-23 10:00:00 +0100
+date: 2025-03-21 10:00:00 +0100
 category: "Design"
 excerpt: "Comment le choix judicieux des polices peut transformer l'apparence de votre portfolio et renforcer votre identité visuelle."
 image: "https://i.postimg.cc/m2Nf4chM/typewriter-1170657-1280.jpg"  # Remplacez par l'URL de votre image
