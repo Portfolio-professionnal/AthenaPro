@@ -2,7 +2,7 @@
 layout: post
 title: "Comment Attirer des Clients avec Votre Portfolio"
 date: 2025-03-23 10:00:00 +0100
-category: blog
+category: freelance
 image: "https://i.postimg.cc/SR5DWXbN/Capture-d-cran-2025-03-23-143234.png"
 ---
 
