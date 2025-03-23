@@ -118,19 +118,12 @@
     });
   </script>
 <div id="root">
-  <section id="blog-hero" class="pt-24 pb-12 md:py-32 relative overflow-hidden animated-bg">
-    
-    <!-- Particules animées en fond -->
-    <div class="absolute inset-0 z-0">
-      <div class="particle particle-1"></div>
-      <div class="particle particle-2"></div>
-      <div class="particle particle-3"></div>
-    </div>
+  <section id="blog-hero" class="pt-24 pb-12 md:py-32 relative overflow-hidden blog-hero">
     
     <div class="container mx-auto px-4 z-10 relative">
       <div class="text-center max-w-3xl mx-auto">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white font-sans">
-          Notre <span class="bg-gradient-to-r from-[#4F46E5] via-[#A855F7] to-[#EC4899] text-transparent bg-clip-text">Blog</span>
+          Notre <span class="bg-gradient-to-r from-gray-500 via-gray-400 to-gray-500 text-transparent bg-clip-text">Blog</span>
         </h1>
         <p class="text-lg text-gray-300 mb-8 font-sans">
           Découvrez les dernières tendances et conseils pour créer un portfolio qui vous démarque dans votre domaine.
@@ -153,60 +146,48 @@
       </div>
     </div>
     
+    <!-- Un gradient sombre animé en fond -->
+    <div class="absolute inset-0 z-0 bg-dark-gradient"></div>
+    <!-- Animation de vague subtile -->
+    <div class="wave"></div>
+    
     <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#0F0F0F] to-transparent"></div>
   </section>
 </div>
 
 <style>
-/* Fond animé avec dégradé */
-.animated-bg {
-  background: linear-gradient(270deg, #4F46E5, #A855F7, #EC4899);
-  background-size: 600% 600%;
-  animation: gradientAnimation 15s ease infinite;
+/* Fond sombre animé */
+.blog-hero {
+  background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+  background-size: 200% 200%;
+  animation: darkGradient 20s ease infinite;
 }
 
-/* Animation du dégradé */
-@keyframes gradientAnimation {
+@keyframes darkGradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Styles pour les particules animées */
-.particle {
+/* Animation de vague subtile */
+.wave {
   position: absolute;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  animation: float 10s infinite ease-in-out;
-}
-.particle-1 {
-  width: 50px;
-  height: 50px;
-  top: 10%;
-  left: 20%;
-  animation-duration: 12s;
-}
-.particle-2 {
-  width: 80px;
-  height: 80px;
-  top: 50%;
-  left: 70%;
-  animation-duration: 15s;
-}
-.particle-3 {
-  width: 30px;
-  height: 30px;
-  top: 70%;
-  left: 30%;
-  animation-duration: 10s;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 20%;
+  background: url('https://svgshare.com/i/_fA.svg') repeat-x;
+  background-size: cover;
+  opacity: 0.15;
+  animation: waveAnimation 15s linear infinite;
 }
 
-@keyframes float {
-  0% { transform: translateY(0px); opacity: 0.7; }
-  50% { transform: translateY(-20px); opacity: 0.9; }
-  100% { transform: translateY(0px); opacity: 0.7; }
+@keyframes waveAnimation {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 </style>
+
 
 <div id="root">
   <section id="featured-posts" class="bg-[#0A0118] py-16">
