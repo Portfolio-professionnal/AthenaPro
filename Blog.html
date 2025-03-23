@@ -1,69 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AthenaPro Blog</title>
-  <style>
-    /* Reset CSS */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+       AthenaPro | Blog
+    </title>
+    <meta name="msvalidate.01" content="1EF22C01DEC1F8178970D771620C607B" />
+    <meta name="google-site-verification" content="uop0iHMHrwFRql4-mGREo8r95Z5rUHPfGlxlA2s1R9U" />
+    <meta name="description" content="Découvrez le blog d'AthenaPro : inspirations, conseils et actualités pour créer votre portfolio professionnel sur mesure.>
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="création portfolio, portfolio pro, portfolio professionnel, portfolio, CV en ligne, site web pro, création de landing page, landing page">
+    <meta name="author" content="AthenaPro">
+    <link rel="canonical" href="https://athenapro.ovh/index.html">
+    <meta property="og:title" content="AthenaPro | Blog">
+    <meta property="og:description" content="Découvrez le blog d'AthenaPro : inspirations, conseils et actualités pour créer votre portfolio professionnel sur mesure.">
+    <meta property="og:image" content="https://tonpseudo.github.io/tonrepo/images/preview.jpg">
+    <meta property="og:url" content="https://athenapro.ovh/index.html">
+    <link rel="icon" type="image/svg+xml" href="64.svg" />
+
+
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 767px) {
+    .animate__animated {
+        animation: none !important;
+        opacity: 1 !important;
     }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    /* Add your custom styles here */
-  </style>
-  <script src="https://cdn.tailwindcss.com"></script>
+}
+
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <div id="root">
-  <header id="header" class="bg-gradient-to-r from-[#2E0854] via-[#5B0FB2] to-[#8A2BE2]">
-    <nav class="container mx-auto px-4 py-4">
-      <div class="flex justify-between items-center">
-        <!-- Logo -->
-        <div class="flex items-center">
-          <a href="#" class="text-2xl font-bold text-white font-sans">
-            <span class="text-[#FF00FF]">Athena</span>Pro
-          </a>
-        </div>
+ <div id="root">
+    <nav id="header" class="bg-gray-900 shadow-md fixed w-full top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a href="#" class="font-bold text-xl text-indigo-400">AthenaPro</a>
+          </div>
 
-        <!-- Desktop Navigation -->
-        <div class="hidden md:flex space-x-6">
-          {{#each headerNav}}
-            <a href="{{this.link}}" class="text-gray-300 hover:text-[#FF00FF] transition-colors duration-300 font-sans">{{this.label}}</a>
-          {{/each}}
-        </div>
+          <!-- Desktop Navigation -->
+          <div class="hidden md:ml-6 md:flex md:items-center md:space-x-4">
+            <ul class="flex space-x-4">
+              <li><a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition duration-300">Accueil</a></li>
+              <li><a href="Mes_Réalisations.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition duration-300">Mes réalisations</a></li>
+              <li><a href="Comparatif.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition duration-300">Comparateur de prix</a></li>
+              <li><a href="Blog.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition duration-300">Blog</a></li>
+              <li><a href="Contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition duration-300">Contact</a></li>
+            </ul>
+          </div>
 
-        <!-- Mobile Navigation Button -->
-        <div class="md:hidden">
-          <button id="mobile-menu-button" aria-label="Toggle menu" class="text-gray-300 hover:text-[#FF00FF] focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+          <!-- Right Navigation Items -->
+          <div class="hidden md:flex items-center space-x-4">
+            <a href="https://tidycal.com/athenaprob" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-700 hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300">
+              Démarrer un projet
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="flex md:hidden items-center">
+            <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false" aria-controls="mobile-menu" aria-label="Main menu">
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
-      <!-- Mobile Navigation Menu -->
-      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-        <div class="flex flex-col space-y-4">
-          {{#each headerNav}}
-            <a href="{{this.link}}" class="text-gray-300 hover:text-[#FF00FF] transition-colors duration-300 font-sans">{{this.label}}</a>
-          {{/each}}
-        </div>
+      <!-- Mobile menu, show/hide based on menu state -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <li><a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Accueil</a></li>
+          <li><a href="Mes_Réalisations.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Mes Réalisations</a></li>
+          <li><a href="Comparatif.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Comparateur de prix</a></li>
+          <li><a href="Blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Blog</a></li>
+          <li><a href="Contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Contact</a></li>
+          <li><a href="https://tidycal.com/athenaprob" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-400 hover:text-indigo-300">Démarrer un projet</a></li>
+        </ul>
       </div>
     </nav>
-  </header>
-</div>
+  </div>
+
+  <script>
+    // Toggle mobile menu
+    const btn = document.querySelector('.mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+
+      // Toggle icon visibility
+      const icons = btn.querySelectorAll('svg');
+      icons.forEach(icon => icon.classList.toggle('hidden'));
+    });
+  </script>
 <div id="root">
   <section id="blog-hero" class="bg-[#0F0F0F] py-16 relative overflow-hidden">
     <div class="absolute inset-0 opacity-20 z-0">
