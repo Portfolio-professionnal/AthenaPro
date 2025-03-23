@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Comment Attirer des Clients avec Votre Portfolio"
+title: "Comment Attirer des Entrprises avec Votre Portfolio"
 date: 2025-03-23 10:00:00 +0100
 categories: blog
 ---
 
-# Bienvenue sur le blog d’AthenaPro
+# Les stratégies éprouvées pour transformer votre portfolio en véritable outil commercial et décrocher plus de projets en tant que freelance.
 
 Voici mon premier article présentant nos services de création de portfolios professionnels sur mesure.
