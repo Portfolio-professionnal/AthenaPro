@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function(){
             <div class="flex items-center mb-4">
               <span class="text-xs text-gray-400">{{ first_post.date | date: "%d %B %Y" }}</span>
               <span class="mx-2 text-gray-500">•</span>
-              <span class="text-xs text-[#FF61D2]">{{ first_post.category | default: "Design" }}</span>
+              <span class="text-xs text-[#FF61D2]">{{ first_post.category }}</span>
             </div>
             <h3 class="text-xl font-bold mb-3 text-white group-hover:text-[#A367DC] transition-colors duration-300">
               {{ first_post.title }}
