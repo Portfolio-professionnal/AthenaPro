@@ -118,14 +118,11 @@
     });
   </script>
 <div id="root">
-  <section id="blog-hero" class="pt-24 pb-12 md:py-32 relative overflow-hidden" style="background: #0F0F0F;">
-    <!-- Fond animé avec dégradé coloré subtil -->
-    <div class="absolute inset-0 z-0" style="background: linear-gradient(45deg, #4F46E5, #A855F7, #EC4899); opacity: 0.15; animation: gradientShift 15s ease infinite;"></div>
-    
+  <section id="blog-hero" class="pt-24 pb-12 md:py-32 relative overflow-hidden bg-[#0F0F0F]">
     <div class="container mx-auto px-4 z-10 relative">
       <div class="text-center max-w-3xl mx-auto">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white font-sans">
-          Notre <span class="bg-gradient-to-r from-[#4F46E5] via-[#A855F7] to-[#EC4899] text-transparent bg-clip-text">Blog</span>
+          Notre <span class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-transparent bg-clip-text">Blog</span>
         </h1>
         <p class="text-lg text-gray-300 mb-8 font-sans">
           Découvrez les dernières tendances et conseils pour créer un portfolio qui vous démarque dans votre domaine.
@@ -136,11 +133,12 @@
             <input 
               type="text" 
               placeholder="Rechercher un article..." 
-              class="px-6 py-3 pr-12 rounded-full bg-[#1A1A1A] border border-[#2A2A2A] text-white focus:outline-none focus:ring-2 focus:ring-[#A855F7] w-full md:w-96 font-sans"
+              class="px-6 py-3 pr-12 rounded-full bg-[#1A1A1A] border border-[#2A2A2A] text-white focus:outline-none focus:ring-2 focus:ring-purple-600 w-full md:w-96 font-sans"
             >
-            <button class="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#A855F7] hover:text-white transition-colors duration-300">
+            <button class="absolute right-4 top-1/2 transform -translate-y-1/2 text-purple-600 hover:text-white transition-colors duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </button>
           </div>
@@ -148,27 +146,52 @@
       </div>
     </div>
     
-    <!-- Formes animées colorées (subtiles et floues) -->
-    <div class="absolute top-10 left-10 w-32 h-32 rounded-full bg-gradient-to-r from-[#4F46E5] to-[#EC4899] opacity-20 blur-xl animate-float"></div>
-    <div class="absolute bottom-10 right-10 w-24 h-24 rounded-full bg-gradient-to-r from-[#A855F7] to-[#EC4899] opacity-20 blur-xl animate-float" style="animation-delay: 2s;"></div>
+    <!-- Fond animé simulant des lignes de texte -->
+    <div class="absolute inset-0 z-0 bg-lines"></div>
+    
+    <!-- Headline défilante en bas -->
+    <div class="absolute bottom-0 left-0 w-full z-0 overflow-hidden">
+      <div class="scrolling-headlines">
+        <span>Dernières actus du blog : Design innovant, tendances tech, conseils marketing... &nbsp; • &nbsp;</span>
+        <span>Inspirez-vous des nouvelles stratégies digitales pour booster votre portfolio... &nbsp; • &nbsp;</span>
+        <span>Découvrez nos articles exclusifs et interviews inspirantes... &nbsp; • &nbsp;</span>
+      </div>
+    </div>
     
     <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#0F0F0F] to-transparent"></div>
   </section>
 </div>
 
 <style>
-/* Animation du fond en dégradé */
-@keyframes gradientShift {
-  0% { filter: hue-rotate(0deg); }
-  50% { filter: hue-rotate(180deg); }
-  100% { filter: hue-rotate(360deg); }
+/* Fond animé : lignes fines rappelant du texte sur papier */
+.bg-lines {
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 30px
+  );
+  animation: scrollLines 20s linear infinite;
 }
 
-/* Animation flottante pour les formes */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+@keyframes scrollLines {
+  from { background-position: 0 0; }
+  to { background-position: 0 30px; }
+}
+
+/* Animation des headlines défilantes */
+.scrolling-headlines {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  animation: scrollHeadlines 15s linear infinite;
+}
+
+@keyframes scrollHeadlines {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 </style>
 
