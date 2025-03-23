@@ -96,34 +96,35 @@ document.addEventListener("DOMContentLoaded", function(){
       <h2 class="text-3xl md:text-4xl font-bold mb-10 text-white text-center">
         Articles <span class="bg-gradient-to-r from-[#5D3FD3] via-[#A367DC] to-[#FF61D2] text-transparent bg-clip-text">à la Une</span>
       </h2>
+            {% assign first_post = site.posts | sort: "date" | reverse | first %}
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Featured Post 1 -->
+          <!-- Featured Post 1 synchronisé -->
         <article class="group rounded-xl overflow-hidden bg-[#14082A] shadow-lg transform transition-all duration-300 hover:-translate-y-2">
           <div class="relative overflow-hidden">
-            <img
-              src="https://placehold.co/600x400?text=portfolio design techniques"
-              alt="Techniques de design de portfolio modernes"
+            <img 
+              src="{{ first_post.image | default: 'https://placehold.co/600x400?text=portfolio+design+techniques' }}"
+              alt="{{ first_post.title }}"
               class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
               width="600"
               height="400"
-              onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0A0118] to-transparent opacity-60"></div>
             <div class="absolute inset-0 border-2 border-transparent group-hover:border-[#A367DC] rounded-t-xl transition-all duration-300"></div>
           </div>
           <div class="p-6">
             <div class="flex items-center mb-4">
-              <span class="text-xs text-gray-400">12 Mai 2023</span>
+              <span class="text-xs text-gray-400">{{ first_post.date | date: "%d %B %Y" }}</span>
               <span class="mx-2 text-gray-500">•</span>
-              <span class="text-xs text-[#FF61D2]">Design</span>
+              <span class="text-xs text-[#FF61D2]">{{ first_post.category | default: "Design" }}</span>
             </div>
             <h3 class="text-xl font-bold mb-3 text-white group-hover:text-[#A367DC] transition-colors duration-300">
-              10 Techniques Essentielles pour un Portfolio Impressionnant
+              {{ first_post.title }}
             </h3>
             <p class="text-gray-300 mb-5 line-clamp-3">
-              Découvrez les méthodes de design moderne qui feront ressortir votre travail et captiveront vos visiteurs dès la première impression.
+              {{ first_post.excerpt | strip_html | truncate: 150 }}
             </p>
-            <a href="#" class="inline-flex items-center bg-gradient-to-r from-[#5D3FD3] to-[#FF61D2] bg-clip-text text-transparent hover:text-white transition-colors duration-300">
+            <a href="{{ first_post.url | relative_url }}" class="inline-flex items-center bg-gradient-to-r from-[#5D3FD3] to-[#FF69D2] bg-clip-text text-transparent hover:text-white transition-colors duration-300">
               Lire la suite
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
