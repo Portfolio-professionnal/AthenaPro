@@ -218,14 +218,13 @@ document.addEventListener("DOMContentLoaded", function(){
       <h2 class="text-3xl md:text-4xl font-bold mb-10 text-white text-center">
         Articles <span class="bg-gradient-to-r from-[#5D3FD3] via-[#A367DC] to-[#FF61D2] text-transparent bg-clip-text">à la Une</span>
       </h2>
-      
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {% for post in site.posts %}
+        <!-- Featured Post 1 -->
         <article class="group rounded-xl overflow-hidden bg-[#14082A] shadow-lg transform transition-all duration-300 hover:-translate-y-2">
           <div class="relative overflow-hidden">
-            <img 
-              src="{{ post.image | default: 'https://placehold.co/600x400?text=portfolio+design+techniques' }}" 
-              alt="{{ post.title }}" 
+            <img
+              src="https://placehold.co/600x400?text=portfolio design techniques"
+              alt="Techniques de design de portfolio modernes"
               class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
               width="600"
               height="400"
@@ -234,23 +233,19 @@ document.addEventListener("DOMContentLoaded", function(){
             <div class="absolute inset-0 bg-gradient-to-t from-[#0A0118] to-transparent opacity-60"></div>
             <div class="absolute inset-0 border-2 border-transparent group-hover:border-[#A367DC] rounded-t-xl transition-all duration-300"></div>
           </div>
-          
           <div class="p-6">
             <div class="flex items-center mb-4">
-              <span class="text-xs text-gray-400">{{ post.date | date: "%d %B %Y" }}</span>
+              <span class="text-xs text-gray-400">12 Mai 2023</span>
               <span class="mx-2 text-gray-500">•</span>
-              <span class="text-xs text-[#FF61D2]">{{ post.category | default: "Article" }}</span>
+              <span class="text-xs text-[#FF61D2]">Design</span>
             </div>
-            
             <h3 class="text-xl font-bold mb-3 text-white group-hover:text-[#A367DC] transition-colors duration-300">
-              {{ post.title }}
+              10 Techniques Essentielles pour un Portfolio Impressionnant
             </h3>
-            
             <p class="text-gray-300 mb-5 line-clamp-3">
-              {{ post.excerpt | strip_html | truncate: 150 }}
+              Découvrez les méthodes de design moderne qui feront ressortir votre travail et captiveront vos visiteurs dès la première impression.
             </p>
-            
-            <a href="{{ post.url | relative_url }}" class="inline-flex items-center bg-gradient-to-r from-[#5D3FD3] to-[#FF61D2] bg-clip-text text-transparent hover:text-white transition-colors duration-300">
+            <a href="#" class="inline-flex items-center bg-gradient-to-r from-[#5D3FD3] to-[#FF61D2] bg-clip-text text-transparent hover:text-white transition-colors duration-300">
               Lire la suite
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -258,7 +253,74 @@ document.addEventListener("DOMContentLoaded", function(){
             </a>
           </div>
         </article>
-        {% endfor %}
+        <!-- Featured Post 2 -->
+        <article class="group rounded-xl overflow-hidden bg-[#14082A] shadow-lg transform transition-all duration-300 hover:-translate-y-2">
+          <div class="relative overflow-hidden">
+            <img
+              src="https://placehold.co/600x400?text=freelance portfolio showcase"
+              alt="Portfolio freelance professionnel"
+              class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+              width="600"
+              height="400"
+              onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0118] to-transparent opacity-60"></div>
+            <div class="absolute inset-0 border-2 border-transparent group-hover:border-[#A367DC] rounded-t-xl transition-all duration-300"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <span class="text-xs text-gray-400">28 Avril 2023</span>
+              <span class="mx-2 text-gray-500">•</span>
+              <span class="text-xs text-[#FF61D2]">Freelance</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white group-hover:text-[#A367DC] transition-colors duration-300">
+              Comment Attirer des Clients avec Votre Portfolio
+            </h3>
+            <p class="text-gray-300 mb-5 line-clamp-3">
+              Les stratégies éprouvées pour transformer votre portfolio en véritable outil commercial et décrocher plus de projets en tant que freelance.
+            </p>
+            <a href="#" class="inline-flex items-center bg-gradient-to-r from-[#5D3FD3] to-[#FF61D2] bg-clip-text text-transparent hover:text-white transition-colors duration-300">
+              Lire la suite
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </article>
+        <!-- Featured Post 3 -->
+        <article class="group rounded-xl overflow-hidden bg-[#14082A] shadow-lg transform transition-all duration-300 hover:-translate-y-2">
+          <div class="relative overflow-hidden">
+            <img
+              src="https://placehold.co/600x400?text=digital design trends"
+              alt="Tendances design digital 2023"
+              class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+              width="600"
+              height="400"
+              onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0118] to-transparent opacity-60"></div>
+            <div class="absolute inset-0 border-2 border-transparent group-hover:border-[#A367DC] rounded-t-xl transition-all duration-300"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <span class="text-xs text-gray-400">5 Mai 2023</span>
+              <span class="mx-2 text-gray-500">•</span>
+              <span class="text-xs text-[#FF61D2]">Tendances</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white group-hover:text-[#A367DC] transition-colors duration-300">
+              Les Tendances Design qui Domineront 2023
+            </h3>
+            <p class="text-gray-300 mb-5 line-clamp-3">
+              Restez à la pointe avec notre analyse des tendances émergentes en design digital qui façonneront l'esthétique des portfolios cette année.
+            </p>
+            <a href="#" class="inline-flex items-center bg-gradient-to-r from-[#5D3FD3] to-[#FF61D2] bg-clip-text text-transparent hover:text-white transition-colors duration-300">
+              Lire la suite
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
