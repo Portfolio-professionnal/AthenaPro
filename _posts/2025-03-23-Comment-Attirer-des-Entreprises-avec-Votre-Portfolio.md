@@ -6,16 +6,26 @@ category: Freelance
 image: "https://i.postimg.cc/SR5DWXbN/Capture-d-cran-2025-03-23-143234.png"
 ---
 
-  <main class="pt-24 pb-16">
-    <div class="container mx-auto px-4 max-w-4xl">
-      <article class="prose prose-invert">
-        <h1 class="text-4xl font-bold mb-6 neon-text">Comment Attirer des Clients avec Votre Portfolio</h1>
-        <div class="flex items-center mb-6">
-          <span class="text-sm text-gray-400">22 Mars 2025</span>
-          <span class="mx-2 text-gray-500">•</span>
-          <span class="text-sm text-[#FF61D2]">Freelance</span>
-        </div>
+<main class="pt-24 pb-16 bg-[#0A0118] text-white">
+  <div class="container mx-auto px-4 max-w-4xl">
 
+    <!-- Image en haut de l'article -->
+    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+      <img 
+        src="{{ page.image }}" 
+        alt="{{ page.title }}" 
+        class="w-full h-72 object-cover object-center transition-transform duration-500 hover:scale-105"
+      />
+    </div>
+
+    <article class="prose prose-invert max-w-none">
+      <h1 class="text-4xl font-bold mb-6 neon-text">{{ page.title }}</h1>
+      <div class="flex items-center mb-6">
+        <span class="text-sm text-gray-400">{{ page.date | date: "%d %B %Y" }}</span>
+        <span class="mx-2 text-gray-500">•</span>
+        <span class="text-sm text-[#FF61D2]">{{ page.category }}</span>
+      </div>
+      
         <p>
           Avoir un portfolio bien conçu est essentiel pour tout freelance souhaitant attirer de nouveaux clients. Dans cet article, nous explorerons des stratégies éprouvées pour transformer votre portfolio en un véritable outil commercial.
         </p>
