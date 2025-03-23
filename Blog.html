@@ -118,9 +118,13 @@
     });
   </script>
 <div id="root">
-  <section id="blog-hero" class="pt-24 pb-12 md:py-32 bg-[#0F0F0F] py-16 relative overflow-hidden">
-    <div class="absolute inset-0 opacity-20 z-0">
-      <div class="h-full w-full bg-[url('https://placehold.co/1920x1080?text=tech%20grid%20pattern')] bg-no-repeat bg-cover bg-center"></div>
+  <section id="blog-hero" class="pt-24 pb-12 md:py-32 relative overflow-hidden animated-bg">
+    
+    <!-- Particules animées en fond -->
+    <div class="absolute inset-0 z-0">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
     </div>
     
     <div class="container mx-auto px-4 z-10 relative">
@@ -150,12 +154,60 @@
     </div>
     
     <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#0F0F0F] to-transparent"></div>
-    
-    <!-- Animated accents -->
-    <div class="absolute -top-20 -left-20 w-40 h-40 rounded-full bg-gradient-to-r from-[#4F46E5] via-[#A855F7] to-[#EC4899] opacity-20 blur-3xl animate-pulse"></div>
-    <div class="absolute -bottom-20 -right-20 w-40 h-40 rounded-full bg-gradient-to-r from-[#4F46E5] via-[#A855F7] to-[#EC4899] opacity-20 blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
   </section>
 </div>
+
+<style>
+/* Fond animé avec dégradé */
+.animated-bg {
+  background: linear-gradient(270deg, #4F46E5, #A855F7, #EC4899);
+  background-size: 600% 600%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Animation du dégradé */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Styles pour les particules animées */
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: float 10s infinite ease-in-out;
+}
+.particle-1 {
+  width: 50px;
+  height: 50px;
+  top: 10%;
+  left: 20%;
+  animation-duration: 12s;
+}
+.particle-2 {
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 70%;
+  animation-duration: 15s;
+}
+.particle-3 {
+  width: 30px;
+  height: 30px;
+  top: 70%;
+  left: 30%;
+  animation-duration: 10s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); opacity: 0.7; }
+  50% { transform: translateY(-20px); opacity: 0.9; }
+  100% { transform: translateY(0px); opacity: 0.7; }
+}
+</style>
+
 <div id="root">
   <section id="featured-posts" class="bg-[#0A0118] py-16">
     <div class="container mx-auto px-4">
