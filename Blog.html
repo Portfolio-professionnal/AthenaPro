@@ -102,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function(){
           <!-- Featured Post 1 synchronisé -->
         <article class="group rounded-xl overflow-hidden bg-[#14082A] shadow-lg transform transition-all duration-300 hover:-translate-y-2">
           <div class="relative overflow-hidden">
+                <a href="{{ first_post.url | relative_url }}" class="block">
             <img 
               src="{{ first_post.image | default: 'https://placehold.co/600x400?text=portfolio+design+techniques' }}"
               alt="{{ first_post.title }}"
@@ -109,6 +110,8 @@ document.addEventListener("DOMContentLoaded", function(){
               width="600"
               height="400"
             />
+                </a>
+
             <div class="absolute inset-0 bg-gradient-to-t from-[#0A0118] to-transparent opacity-60"></div>
             <div class="absolute inset-0 border-2 border-transparent group-hover:border-[#A367DC] rounded-t-xl transition-all duration-300"></div>
           </div>
