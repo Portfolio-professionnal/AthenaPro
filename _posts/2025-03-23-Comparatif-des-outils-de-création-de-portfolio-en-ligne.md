@@ -25,16 +25,17 @@ image: "https://i.postimg.cc/d117LPMV/wordpress.png"
         {{ page.title }}
       </h1>
 
-      <!-- Métadonnées de l'article -->
-      <div class="flex items-center mb-8">
-        <span class="text-sm text-gray-400">
-          {{ page.date | date: "%d %B %Y" }}
-        </span>
-        <span class="mx-2 text-gray-500">•</span>
-        <span class="text-sm text-[#FF61D2]">
-          {{ page.category }}
-        </span>
-      </div>
+     <!-- Métadonnées de l'article, masquées sur mobile -->
+<div class="hidden md:flex items-center mb-8">
+  <span class="text-sm text-gray-400">
+    {{ page.date | date: "%d %B %Y" }}
+  </span>
+  <span class="mx-2 text-gray-500">•</span>
+  <span class="text-sm text-[#FF61D2]">
+    {{ page.category }}
+  </span>
+</div>
+
 
       <h2 class="text-3xl font-bold mt-8">Introduction</h2>
       <p class="mt-4">
