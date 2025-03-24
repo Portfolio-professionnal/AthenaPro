@@ -4,7 +4,7 @@ title: "Les erreurs à éviter dans un portfolio professionnel"
 date: 2025-03-24 10:00:00 +0100
 category: "Conseils"
 excerpt: "Découvrez les pièges courants à éviter lors de la création de votre portfolio pour maximiser son impact et séduire vos clients."
-image: "https://i.postimg.cc/XYZ/portfolio-erreurs.jpg"
+image: "https://i.postimg.cc/fLfpw3m3/error.png"
 ---
 
 <main class="pt-24 pb-16 bg-[#0A0118] text-white">
