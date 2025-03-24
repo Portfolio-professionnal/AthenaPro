@@ -38,7 +38,7 @@ image: "https://i.postimg.cc/d117LPMV/wordpress.png"
 
       <h2 class="text-3xl font-bold mt-8">Introduction</h2>
       <p class="mt-4">
-        La création d’un <strong>portfolio professionnel</strong> est aujourd’hui facilitée par une multitude d’outils en ligne. Cependant, choisir la solution qui correspond le mieux à vos besoins peut s’avérer complexe. Cet article vous propose un <em>comparatif détaillé</em> des principales plateformes, en vous aidant à peser leurs <mark>avantages</mark> et leurs <mark>inconvénients</mark>.
+        La création d’un <strong>portfolio professionnel</strong> est aujourd’hui facilitée par une multitude d’outils en ligne. Cependant, choisir la solution qui correspond le mieux à vos besoins peut s’avérer complexe. Cet article vous propose un <em>comparatif détaillé</em> des principales plateformes, en vous aidant à peser leurs  avantages  et leurs  inconvénients  .
       </p>
 
       <h2 class="text-3xl font-bold mt-8">Critères de Sélection</h2>
