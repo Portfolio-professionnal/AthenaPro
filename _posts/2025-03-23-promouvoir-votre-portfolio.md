@@ -4,7 +4,7 @@ title: "Promouvoir Votre Portfolio"
 date: 2025-03-23 10:00:00 +0100
 category: "Marketing"
 excerpt: "Stratégies de marketing pour augmenter la visibilité de votre portfolio et attirer l'attention des clients potentiels."
-image: ""
+image: "https://i.postimg.cc/d117LPMV/wordpress.png"
 ---
 <main class="pt-24 pb-16 bg-[#0A0118] text-white">
   <div class="container mx-auto px-4 max-w-4xl">
