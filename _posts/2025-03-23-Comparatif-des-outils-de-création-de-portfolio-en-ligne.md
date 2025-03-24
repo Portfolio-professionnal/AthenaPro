@@ -24,7 +24,8 @@ image: "https://i.postimg.cc/d117LPMV/wordpress.png"
       </h1>
 
      <!-- Métadonnées de l'article, masquées sur mobile -->
-<div class="hidden md:flex items-center mb-8">
+<!-- Métadonnées de l'article, masquées sur mobile -->
+<div class="hidden md:block items-center mb-8">
   <span class="text-sm text-gray-400">
     {{ page.date | date: "%d %B %Y" }}
   </span>
@@ -33,8 +34,6 @@ image: "https://i.postimg.cc/d117LPMV/wordpress.png"
     {{ page.category }}
   </span>
 </div>
-
-
       <h2 class="text-3xl font-bold mt-8">Introduction</h2>
       <p class="mt-4">
         La création d’un <strong>portfolio professionnel</strong> est aujourd’hui facilitée par une multitude d’outils en ligne. Cependant, choisir la solution qui correspond le mieux à vos besoins peut s’avérer complexe. Cet article vous propose un <em>comparatif détaillé</em> des principales plateformes, en vous aidant à peser leurs  avantages  et leurs  inconvénients  .
