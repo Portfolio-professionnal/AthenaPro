@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Les CTA dans les portfolios. Convertir vos visiteurs en clients"
+title: "L'importance des CTA dans les portfolios."
 date: 2025-03-24 10:00:00 +0100
 category: "Conseils"
 excerpt: "Découvrez comment intégrer des CTA efficaces dans votre portfolio pour encourager vos visiteurs à passer à l'action."
