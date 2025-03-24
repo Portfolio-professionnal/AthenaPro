@@ -3,7 +3,7 @@ layout: post
 title: "Comparatif des outils de création de portfolio"
 date: 2025-03-23 10:00:00 +0100
 category: "Comparatif"
-excerpt: "Découvrez notre comparatif des principaux outils de création de portfolio en ligne pour choisir celui qui répond le mieux à vos besoins professionnels."
+excerpt: "Découvrez notre comparatif des principaux outils de création de portfolio en ligne."
 image: "https://i.postimg.cc/d117LPMV/wordpress.png"
 ---
 <main class="pt-24 pb-16 bg-[#0A0118] text-white">
