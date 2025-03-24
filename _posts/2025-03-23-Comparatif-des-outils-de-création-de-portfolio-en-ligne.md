@@ -1,6 +1,6 @@
 ---
 layout: post 
-title: "Comparatif des outils de création de portfolio en ligne"
+title: "Comparatif des outils de création de portfolio."
 date: 2025-03-23 10:00:00 +0100
 category: "Comparatif"
 excerpt: "Découvrez notre comparatif des principaux outils de création de portfolio en ligne pour choisir celui qui répond le mieux à vos besoins professionnels."
@@ -8,7 +8,8 @@ image: "https://i.postimg.cc/d117LPMV/wordpress.png"
 ---
 <main class="pt-24 pb-16 bg-[#0A0118] text-white">
   <div class="container mx-auto px-4 max-w-4xl">
-<!-- Image en haut de l'article -->
+
+    <!-- Image en haut de l'article -->
     <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
       <img 
         src="{{ page.image }}" 
@@ -16,24 +17,16 @@ image: "https://i.postimg.cc/d117LPMV/wordpress.png"
         class="w-full h-72 object-cover object-center transition-transform duration-500 hover:scale-105"
       />
     </div>
-   <article class="max-w-none">
+
+    <article class="max-w-none">
 
       <!-- Titre principal -->
-  <h1 class="text-4xl font-bold mb-6 neon-text">
-        {{ page.title }}
-      </h1>
-
-     <!-- Métadonnées de l'article, masquées sur mobile -->
-<!-- Métadonnées de l'article, masquées sur mobile -->
-<div class="hidden md:block items-center mb-8">
-  <span class="text-sm text-gray-400">
-    {{ page.date | date: "%d %B %Y" }}
-  </span>
-  <span class="mx-2 text-gray-500">•</span>
-  <span class="text-sm text-[#FF61D2]">
-    {{ page.category }}
-  </span>
-</div>
+      <h1 class="text-4xl font-bold mb-6 neon-text">{{ page.title }}</h1>
+      <div class="flex items-center mb-8">
+        <span class="text-sm text-gray-400">{{ page.date | date: "%d %B %Y" }}</span>
+        <span class="mx-2 text-gray-500">•</span>
+        <span class="text-sm text-[#FF61D2]">{{ page.category }}</span>
+      </div>
       <h2 class="text-3xl font-bold mt-8">Introduction</h2>
       <p class="mt-4">
         La création d’un <strong>portfolio professionnel</strong> est aujourd’hui facilitée par une multitude d’outils en ligne. Cependant, choisir la solution qui correspond le mieux à vos besoins peut s’avérer complexe. Cet article vous propose un <em>comparatif détaillé</em> des principales plateformes, en vous aidant à peser leurs  avantages  et leurs  inconvénients  .
