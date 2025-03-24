@@ -8,8 +8,7 @@ image: "https://i.postimg.cc/d117LPMV/wordpress.png"
 ---
 <main class="pt-24 pb-16 bg-[#0A0118] text-white">
   <div class="container mx-auto px-4 max-w-4xl">
-
-    <!-- Image en haut de l'article -->
+<!-- Image en haut de l'article -->
     <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
       <img 
         src="{{ page.image }}" 
@@ -17,11 +16,10 @@ image: "https://i.postimg.cc/d117LPMV/wordpress.png"
         class="w-full h-72 object-cover object-center transition-transform duration-500 hover:scale-105"
       />
     </div>
-
-    <article class="max-w-none">
+   <article class="max-w-none">
 
       <!-- Titre principal -->
-      <h1 class="text-4xl font-bold mb-6 neon-text">
+  <h1 class="text-4xl font-bold mb-6 neon-text">
         {{ page.title }}
       </h1>
 
