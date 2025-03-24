@@ -899,19 +899,48 @@
         </div>
     </htmlCode>
 <!-- Encart CTA : Comparatif des outils de création de portfolio -->
-<div class="max-w-md mx-auto bg-gradient-to-r from-purple-600 to-cyan-500 rounded-2xl shadow-xl p-8 transition transform hover:-translate-y-1 hover:shadow-2xl">
-  <h3 class="text-2xl font-bold text-white text-center mb-4">
-    Comparatif des outils de création de portfolio
-  </h3>
-  <p class="text-white text-center mb-6">
-    Découvrez notre comparatif détaillé pour choisir les meilleurs outils et créer un portfolio unique et professionnel.
-  </p>
-  <div class="flex justify-center">
-    <a href="/comparatif-des-outils-de-creation-de-portfolio" class="px-6 py-3 bg-white text-purple-600 font-semibold rounded-full transition-colors duration-300 hover:bg-gray-100">
-      Lire l'article
-    </a>
-  </div>
+<div id="cta-comparatif">
+  {% assign comparatif_post = site.posts | where:"title", "Comparatif des outils de création de portfolio" | first %}
+  {% if comparatif_post %}
+  <section class="bg-[#0A0118] py-16">
+    <div class="container mx-auto px-4">
+      <article class="group rounded-xl overflow-hidden bg-[#14082A] shadow-lg transform transition-all duration-300 hover:-translate-y-2">
+        <div class="relative overflow-hidden">
+          <a href="{{ comparatif_post.url | relative_url }}" class="block">
+            <img src="{{ comparatif_post.image | default: 'https://placehold.co/600x400?text=portfolio+design+techniques' }}"
+                 alt="{{ comparatif_post.title }}"
+                 class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0118] to-transparent opacity-60 pointer-events-none"></div>
+            <div class="absolute inset-0 border-2 border-transparent group-hover:border-[#A367DC] rounded-t-xl transition-all duration-300 pointer-events-none"></div>
+          </a>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center mb-4">
+            <span class="text-xs text-gray-400">{{ comparatif_post.date | date: "%d %B %Y" }}</span>
+            <span class="mx-2 text-gray-500">•</span>
+            <span class="text-xs text-[#FF61D2]">{{ comparatif_post.category }}</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-white group-hover:text-[#A367DC] transition-colors duration-300">
+            {{ comparatif_post.title }}
+          </h3>
+          <p class="text-gray-300 mb-5 line-clamp-3">
+            {{ comparatif_post.excerpt | strip_html | truncate: 150 }}
+          </p>
+          <a href="{{ comparatif_post.url | relative_url }}" class="inline-flex items-center bg-gradient-to-r from-[#5D3FD3] to-[#FF69B4] bg-clip-text text-transparent hover:text-white transition-colors duration-300">
+            Lire l'article
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+  {% else %}
+    <p>Aucun article de comparatif trouvé.</p>
+  {% endif %}
 </div>
+
 
     <htmlCode>
         <div id="root">
