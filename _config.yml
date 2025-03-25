@@ -1,5 +1,11 @@
-title: AthenaPro Blog
-description: "Blog d'AthenaPro, service de création de portfolios en ligne."
+title: "AthenaPro"
+description: "Site de portfolios professionnels"
 baseurl: ""
 url: "https://athenapro.ovh"
 theme: minima
+
+plugins:
+  - jekyll-multiple-languages-plugin
+
+languages: ["fr", "en"]
+default_lang: "fr"
