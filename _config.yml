@@ -1,5 +1,5 @@
 title: AthenaPro Blog
 description: "Blog d'AthenaPro, service de création de portfolios en ligne."
-baseurl: "" # laisser vide si vous utilisez le domaine racine
+baseurl: "/Accueil.html"
 url: "https://athenapro.ovh"
 theme: minima
