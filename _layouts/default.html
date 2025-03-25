@@ -48,6 +48,12 @@
          #particles-js {
       width: 100vw;
       max-width: 100vw;
+        html {
+  /* Force la barre de scroll verticale dès le départ */
+  overflow-y: scroll; 
+  /* Optionnel (navigateurs récents) : stabilise encore plus l’espace du scrollbar */
+  scrollbar-gutter: stable both-edges; 
+}
 
         img {
             max-width: 100%;
