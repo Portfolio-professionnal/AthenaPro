@@ -2,4 +2,4 @@ title: AthenaPro Blog
 description: "Blog d'AthenaPro, service de création de portfolios en ligne."
 baseurl: ""
 url: "https://athenapro.ovh"
-theme:
+theme: minima
