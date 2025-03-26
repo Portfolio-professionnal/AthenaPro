@@ -129,4 +129,8 @@ image: "https://i.postimg.cc/150Qr63j/design-web-2025.png"
     </article>
   </div>
 </main>
+<!-- Bouton CTA sticky -->
+<a href="https://athenapro.ovh/Contact.html" class="fixed bottom-4 right-4 bg-[#FF61D2] text-white font-bold py-3 px-5 rounded-full shadow-lg transition-all hover:scale-105 hover:shadow-2xl">
+  Contact
+</a>
 
