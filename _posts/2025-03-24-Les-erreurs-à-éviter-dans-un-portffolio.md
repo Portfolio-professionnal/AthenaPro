@@ -82,7 +82,7 @@ image: "https://i.postimg.cc/fLfpw3m3/error.png"
         Votre portfolio doit inciter le visiteur à agir, que ce soit pour vous contacter ou consulter plus en détail vos projets. Pour cela, il est important de :
       </p>
       <ul class="list-disc pl-5 mt-4">
-        <li><strong>Mettre en avant des CTA clairs :</strong> Utilisez des boutons d'appel à l'action visibles et bien positionnés.</li>
+        <li><strong>Mettre en avant des  <a href="https://athenapro.ovh/conseils/2025/03/24/Les-CTA-dans-les-portfolios.html" style="text-decoration: underline;">CTA</a> clairs :</strong> Utilisez des boutons d'appel à l'action visibles et bien positionnés.</li>
         <li><strong>Utiliser un langage engageant :</strong> Encouragez vos visiteurs à en savoir plus ou à prendre contact.</li>
       </ul>
       
