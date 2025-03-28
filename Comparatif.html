@@ -804,6 +804,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </section>
         </div>
+           <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Création de l'observateur
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Ajout des classes d'animation quand l'élément est visible
+              entry.target.classList.add('animate__animated', 'animate__fadeIn');
+              // Si vous souhaitez n'animer qu'une seule fois, décommentez la ligne suivante :
+              // observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.3 // Pour ajuster le moment de déclenchement
+        });
+
+        // Cibler la section à observer
+        const section = document.getElementById('comparaison-agences');
+        if (section) {
+          observer.observe(section);
+        }
+      });
+    </script>
     </htmlCode>
 <!-- Encart CTA : Comparatif des outils de création de portfolio -->
 <div id="cta-comparatif">
