@@ -316,6 +316,49 @@ og_url: "https://athenapro.ovh/Comparatif.html"
       </div>
     </section>
   </div>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Sélectionner tous les éléments dans la section #offre qui ont une classe d'animation
+  const animatables = document.querySelectorAll('#offre .animate__animated');
+  animatables.forEach(element => {
+    // Récupérer les classes d'animation autres que animate__animated
+    const animationClasses = Array.from(element.classList)
+      .filter(cls => cls.startsWith('animate__') && cls !== 'animate__animated')
+      .join(' ');
+    if (animationClasses) {
+      // Stocker les classes dans un attribut data
+      element.dataset.animation = animationClasses;
+      // Retirer ces classes pour empêcher l'animation au chargement
+      element.classList.remove(...animationClasses.split(' '));
+    }
+  });
+
+  // Créer un IntersectionObserver pour surveiller la section #offre
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Pour chaque élément animable dans la section, réappliquer les classes stockées
+        const animElements = entry.target.querySelectorAll('.animate__animated');
+        animElements.forEach(el => {
+          if (el.dataset.animation) {
+            el.classList.add(...el.dataset.animation.split(' '));
+          }
+        });
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2 // déclenche l'animation quand 20% de la section est visible
+  });
+
+  // Observer la section #offre
+  const offreSection = document.getElementById('offre');
+  if (offreSection) {
+    observer.observe(offreSection);
+  }
+});
+</script>
+
 </htmlCode>
 
     <htmlCode>
