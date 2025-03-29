@@ -1724,48 +1724,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
         </div>
     </htmlCode>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const isMobile = window.innerWidth <= 768;
-  const animatables = document.querySelectorAll('.animate__animated');
+            document.addEventListener('DOMContentLoaded', function() {
+  // Créer un IntersectionObserver avec un seuil adapté (20 % par exemple)
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Lorsque l'élément est visible, on règle son opacité à 1
+        entry.target.style.opacity = 1;
+        // Si vous utilisez des classes spécifiques pour l'animation, ajoutez-les ici.
+        // Par exemple, si l'élément doit avoir animate__fadeIn :
+        if(entry.target.dataset.animation) {
+          entry.target.classList.add(...entry.target.dataset.animation.split(' '));
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
   
-  animatables.forEach(element => {
-    const animationClasses = Array.from(element.classList)
+  // Appliquer l'observation à tous les éléments animés
+  document.querySelectorAll('.animate__animated').forEach(el => {
+    // (Optionnel) Stocker les classes d'animation dans un data-attribute
+    const animationClasses = Array.from(el.classList)
       .filter(cls => cls.startsWith('animate__') && cls !== 'animate__animated')
       .join(' ');
-    if (animationClasses) {
-      element.dataset.animation = animationClasses;
-      if (isMobile) {
-        // Sur mobile, appliquer directement les animations
-        element.classList.add(...animationClasses.split(' '));
-      } else {
-        // Sur desktop, retirer pour les appliquer via IntersectionObserver
-        element.classList.remove(...animationClasses.split(' '));
-      }
+    if(animationClasses) {
+      el.dataset.animation = animationClasses;
+      // Retirer les classes d'animation pour qu'elles ne s'appliquent pas immédiatement
+      animationClasses.split(' ').forEach(cls => el.classList.remove(cls));
     }
+    observer.observe(el);
   });
-
-  if (!isMobile) {
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const animElements = entry.target.querySelectorAll('.animate__animated');
-          animElements.forEach(el => {
-            if (el.dataset.animation) {
-              el.classList.add(...el.dataset.animation.split(' '));
-            }
-          });
-          obs.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.2 // Ajustable selon besoin
-    });
-    
-    document.querySelectorAll('section').forEach(section => {
-      observer.observe(section);
-    });
-  }
 });
-</script>
+
