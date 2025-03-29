@@ -1453,3 +1453,26 @@ og_url: "https://athenapro.ovh/Mes_Réalisations.html"
         </div>
     </htmlCode>
       
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Crée l'observateur avec un seuil de 0.3 (30% de visibilité)
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Récupère la classe d'animation spécifiée dans data-animate
+        const animClass = entry.target.getAttribute('data-animate');
+        // Ajoute les classes animate.css pour déclencher l'animation
+        entry.target.classList.add('animate__animated', animClass);
+        // Si vous souhaitez n'animer qu'une seule fois, désactivez l'observateur pour cet élément
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  // Observe tous les éléments qui doivent s'animer au scroll
+  const elements = document.querySelectorAll('.animate-on-scroll');
+  elements.forEach(el => observer.observe(el));
+});
+</script>
