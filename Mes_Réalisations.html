@@ -1452,4 +1452,21 @@ og_url: "https://athenapro.ovh/Mes_Réalisations.html"
             </script>
         </div>
     </htmlCode>
-      
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Ajoute la classe animate__animated et celle spécifiée dans data-animate
+        entry.target.classList.add('animate__animated', entry.target.getAttribute('data-animate'));
+        // On arrête d'observer cet élément après l'animation
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  animateElements.forEach(el => observer.observe(el));
+});
+</script>
