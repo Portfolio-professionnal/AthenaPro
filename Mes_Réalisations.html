@@ -1459,9 +1459,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Ajoute la classe animate__animated et celle spécifiée dans data-animate
-        entry.target.classList.add('animate__animated', entry.target.getAttribute('data-animate'));
-        // On arrête d'observer cet élément après l'animation
+        entry.target.classList.add('animate__animated');
+        const animateClasses = entry.target.getAttribute('data-animate');
+        if (animateClasses) {
+          entry.target.classList.add(...animateClasses.split(' '));
+        }
         observer.unobserve(entry.target);
       }
     });
