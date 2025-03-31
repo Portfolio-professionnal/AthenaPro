@@ -15,6 +15,7 @@ image: "https://i.postimg.cc/JhZKwsH5/Capture-d-cran-2025-03-23-143234.webp"
       <img 
         src="{{ page.image }}" 
         alt="{{ page.title }}" 
+        loading="lazy"
         class="w-full h-72 object-cover object-center transition-transform duration-500 hover:scale-105"
       />
     </div>
