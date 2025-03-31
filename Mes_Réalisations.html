@@ -1468,8 +1468,30 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px" // Lancement 50px avant que l'élément ne soit entièrement visible
+  });
 
   animateElements.forEach(el => observer.observe(el));
 });
+
+/*document.addEventListener('DOMContentLoaded', function() {
+  const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate__animated');
+        const animateClasses = entry.target.getAttribute('data-animate');
+        if (animateClasses) {
+          entry.target.classList.add(...animateClasses.split(' '));
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  animateElements.forEach(el => observer.observe(el));
+}); */
 </script>
