@@ -4,7 +4,7 @@ title: "Comment Attirer des Clients avec Votre Portfolio"
 date: 2025-03-20 10:00:00 +0100
 category: Freelance
 excerpt: "Les stratégies éprouvées pour transformer votre portfolio en véritable outil commercial et décrocher plus de projets en tant que freelance."
-image: "https://i.postimg.cc/SR5DWXbN/Capture-d-cran-2025-03-23-143234.png"
+image: "https://i.postimg.cc/JhZKwsH5/Capture-d-cran-2025-03-23-143234.webp"
 ---
 
 <main class="pt-24 pb-16 bg-[#0A0118] text-white">
