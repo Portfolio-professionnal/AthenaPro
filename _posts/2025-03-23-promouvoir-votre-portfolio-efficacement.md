@@ -14,6 +14,7 @@ image: "https://i.postimg.cc/0Q9F5TS3/reseaublog-1.webp"
       <img 
         src="{{ page.image }}" 
         alt="{{ page.title }}" 
+        loading="lazy"
         class="w-full h-72 object-cover object-center transition-transform duration-500 hover:scale-105"
       />
     </div>
