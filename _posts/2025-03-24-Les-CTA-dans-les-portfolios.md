@@ -15,6 +15,7 @@ image: "https://i.postimg.cc/BQRzPLD2/cta.webp"
       <img 
         src="{{ page.image }}" 
         alt="{{ page.title }}" 
+            loading="lazy"
         class="w-full h-72 object-cover object-center transition-transform duration-500 hover:scale-105"
       />
     </div>
