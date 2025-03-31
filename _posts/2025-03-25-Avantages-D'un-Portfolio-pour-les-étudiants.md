@@ -4,7 +4,7 @@ title: "Avantages d'un Portfolio pour les Étudiants"
 date: 2025-03-25 10:00:00 +0100
 category: Carrière
 excerpt: "Découvrez comment un portfolio bien conçu peut booster votre entrée sur le marché du travail, en mettant en valeur vos compétences et projets."
-image: "https://i.postimg.cc/tRLFwjb9/tudiant.png"
+image: "https://i.postimg.cc/JzwTzwVq/tudiant.webp"
 ---
 
 <main class="pt-24 pb-16 bg-[#0A0118] text-white">
