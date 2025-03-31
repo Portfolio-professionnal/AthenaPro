@@ -1454,71 +1454,29 @@ og_url: "https://athenapro.ovh/Mes_Réalisations.html"
         </div>
     </htmlCode>
 <script>
- // Attendre que tout soit chargé (images, CSS, etc.)
-  window.addEventListener('load', function() {
-    // Sélectionne tous les éléments animables
-    let animateElements = Array.from(document.querySelectorAll('.animate-on-scroll'));
+document.addEventListener('DOMContentLoaded', function() {
+  // Sélectionne tous les éléments animables
+  let animateElements = Array.from(document.querySelectorAll('.animate-on-scroll'));
 
-    // Trie les éléments selon leur position dans le viewport (top, puis left)
-    animateElements.sort((a, b) => {
-      const aRect = a.getBoundingClientRect();
-      const bRect = b.getBoundingClientRect();
-      // Si la différence de "top" est significative, trier par top
-      if (Math.abs(aRect.top - bRect.top) > 10) {
-        return aRect.top - bRect.top;
-      }
-      // Sinon trier par left
-      return aRect.left - bRect.left;
-    });
-
-    // Appliquer un délai séquentiel pour déclencher l'animation
-    animateElements.forEach((el, index) => {
-      setTimeout(() => {
-        el.classList.add('animate__animated');
-        const animateClasses = el.getAttribute('data-animate') || '';
-        if (animateClasses) {
-          el.classList.add(...animateClasses.split(' '));
-        }
-      }, index * 500); // 500ms entre chaque, à ajuster selon votre effet souhaité
-    });
-  });
-/*document.addEventListener('DOMContentLoaded', function() {
-  const animateElements = document.querySelectorAll('.animate-on-scroll');
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate__animated');
-        const animateClasses = entry.target.getAttribute('data-animate');
-        if (animateClasses) {
-          entry.target.classList.add(...animateClasses.split(' '));
-        }
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px" // Lancement 50px avant que l'élément ne soit entièrement visible
+  // Trie les éléments selon leur position dans le viewport (top, puis left)
+  animateElements.sort((a, b) => {
+    const aRect = a.getBoundingClientRect();
+    const bRect = b.getBoundingClientRect();
+    if (Math.abs(aRect.top - bRect.top) > 10) {
+      return aRect.top - bRect.top;
+    }
+    return aRect.left - bRect.left;
   });
 
-  animateElements.forEach(el => observer.observe(el));
-}); */
-/*document.addEventListener('DOMContentLoaded', function() {
-  const animateElements = document.querySelectorAll('.animate-on-scroll');
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate__animated');
-        const animateClasses = entry.target.getAttribute('data-animate');
-        if (animateClasses) {
-          entry.target.classList.add(...animateClasses.split(' '));
-        }
-        observer.unobserve(entry.target);
+  // Applique un délai séquentiel pour déclencher l'animation
+  animateElements.forEach((el, index) => {
+    setTimeout(() => {
+      el.classList.add('animate__animated');
+      const animateClasses = el.getAttribute('data-animate') || '';
+      if (animateClasses) {
+        el.classList.add(...animateClasses.split(' '));
       }
-    });
-  }, { threshold: 0.1 });
-
-  animateElements.forEach(el => observer.observe(el));
-}); */
+    }, index * 250); // 250ms entre chaque élément
+  });
+});
 </script>
