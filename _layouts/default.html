@@ -79,7 +79,7 @@
 
   </style>
     <link rel="stylesheet" href="/css/styles.min.css">
- <script src="https://cdn.tailwindcss.com"></script>
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <script src="https://unpkg.com/lunr/lunr.js" defer></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -142,7 +142,8 @@
     </nav>
   </div>
 
-  <script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
     // Toggle mobile menu
     const btn = document.querySelector('.mobile-menu-button');
     const menu = document.getElementById('mobile-menu');
@@ -154,7 +155,8 @@
       const icons = btn.querySelectorAll('svg');
       icons.forEach(icon => icon.classList.toggle('hidden'));
     });
-  </script>
+  });
+</script>
 
 
   <!-- Contenu spécifique à la page sera inséré ici -->
