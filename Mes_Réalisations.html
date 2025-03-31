@@ -1455,28 +1455,26 @@ og_url: "https://athenapro.ovh/Mes_Réalisations.html"
     </htmlCode>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Sélectionne tous les éléments animables
-  let animateElements = Array.from(document.querySelectorAll('.animate-on-scroll'));
-
-  // Trie les éléments selon leur position dans le viewport (top, puis left)
-  animateElements.sort((a, b) => {
-    const aRect = a.getBoundingClientRect();
-    const bRect = b.getBoundingClientRect();
-    if (Math.abs(aRect.top - bRect.top) > 10) {
-      return aRect.top - bRect.top;
-    }
-    return aRect.left - bRect.left;
-  });
-
-  // Applique un délai séquentiel pour déclencher l'animation
-  animateElements.forEach((el, index) => {
-    setTimeout(() => {
-      el.classList.add('animate__animated');
-      const animateClasses = el.getAttribute('data-animate') || '';
-      if (animateClasses) {
-        el.classList.add(...animateClasses.split(' '));
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      // Déclenche l'animation uniquement quand 50% de l'élément est visible
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate__animated');
+        const animateClasses = entry.target.getAttribute('data-animate') || '';
+        if (animateClasses) {
+          entry.target.classList.add(...animateClasses.split(' '));
+        }
+        // Une fois animé, on ne le surveille plus
+        observer.unobserve(entry.target);
       }
-    }, index * 250); // 250ms entre chaque élément
+    });
+  }, {
+    threshold: 0.5,  // L’élément doit être à 50% visible
+    rootMargin: "0px"  // Pas de décalage supplémentaire
   });
+
+  // Observer chaque élément animé
+  const animateElements = document.querySelectorAll('.animate-on-scroll');
+  animateElements.forEach(el => observer.observe(el));
 });
 </script>
