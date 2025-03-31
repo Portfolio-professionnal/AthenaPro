@@ -1454,33 +1454,34 @@ og_url: "https://athenapro.ovh/Mes_Réalisations.html"
         </div>
     </htmlCode>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Sélectionne tous les éléments animables
-  let animateElements = Array.from(document.querySelectorAll('.animate-on-scroll'));
+ // Attendre que tout soit chargé (images, CSS, etc.)
+  window.addEventListener('load', function() {
+    // Sélectionne tous les éléments animables
+    let animateElements = Array.from(document.querySelectorAll('.animate-on-scroll'));
 
-  // Trie les éléments selon leur position dans le viewport (haut, puis gauche)
-  animateElements.sort((a, b) => {
-    const aRect = a.getBoundingClientRect();
-    const bRect = b.getBoundingClientRect();
-    // Si la différence de "top" est significative, trier par top
-    if (Math.abs(aRect.top - bRect.top) > 10) {
-      return aRect.top - bRect.top;
-    }
-    // Sinon trier par left
-    return aRect.left - bRect.left;
-  });
-
-  // Applique un délai séquentiel pour déclencher l'animation
-  animateElements.forEach((el, index) => {
-    setTimeout(() => {
-      el.classList.add('animate__animated');
-      const animateClasses = el.getAttribute('data-animate') || '';
-      if (animateClasses) {
-        el.classList.add(...animateClasses.split(' '));
+    // Trie les éléments selon leur position dans le viewport (top, puis left)
+    animateElements.sort((a, b) => {
+      const aRect = a.getBoundingClientRect();
+      const bRect = b.getBoundingClientRect();
+      // Si la différence de "top" est significative, trier par top
+      if (Math.abs(aRect.top - bRect.top) > 10) {
+        return aRect.top - bRect.top;
       }
-    }, index * 500); // 500ms entre chaque élément, ajuste ce délai selon tes préférences
+      // Sinon trier par left
+      return aRect.left - bRect.left;
+    });
+
+    // Appliquer un délai séquentiel pour déclencher l'animation
+    animateElements.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add('animate__animated');
+        const animateClasses = el.getAttribute('data-animate') || '';
+        if (animateClasses) {
+          el.classList.add(...animateClasses.split(' '));
+        }
+      }, index * 500); // 500ms entre chaque, à ajuster selon votre effet souhaité
+    });
   });
-});
 /*document.addEventListener('DOMContentLoaded', function() {
   const animateElements = document.querySelectorAll('.animate-on-scroll');
 
