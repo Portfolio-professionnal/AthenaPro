@@ -1454,7 +1454,22 @@ og_url: "https://athenapro.ovh/Mes_Réalisations.html"
         </div>
     </htmlCode>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
+    // Convertir la NodeList en tableau pour garantir l'ordre du DOM
+    const animateElements = Array.from(document.querySelectorAll('.animate-on-scroll'));
+    
+    // Déclencher les animations séquentiellement avec un délai
+    animateElements.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add('animate__animated');
+        const animateClasses = el.getAttribute('data-animate');
+        if (animateClasses) {
+          el.classList.add(...animateClasses.split(' '));
+        }
+      }, index * 500); // Par exemple, 500ms de décalage entre chaque élément
+    });
+  });
+/*document.addEventListener('DOMContentLoaded', function() {
   const animateElements = document.querySelectorAll('.animate-on-scroll');
 
   const observer = new IntersectionObserver((entries, observer) => {
@@ -1474,8 +1489,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   animateElements.forEach(el => observer.observe(el));
-});
-
+}); */
 /*document.addEventListener('DOMContentLoaded', function() {
   const animateElements = document.querySelectorAll('.animate-on-scroll');
 
