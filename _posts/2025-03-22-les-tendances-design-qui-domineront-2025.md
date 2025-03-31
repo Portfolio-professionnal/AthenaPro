@@ -10,13 +10,15 @@ image: "https://i.postimg.cc/BQFjBHrp/design-web-2025.webp"
   <div class="container mx-auto px-4 max-w-4xl">
 
     <!-- Image en haut de l'article -->
-    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
+   <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
       <img 
         src="{{ page.image }}" 
         alt="{{ page.title }}" 
-        class="w-full h-72 object-cover object-center transition-transform duration-500 hover:scale-105"
+        loading="lazy"
+
+  class="w-full h-72 object-cover object-center transition-transform duration-500 hover:scale-105"
       />
-    </div>
+   </div>
 
     <article class="max-w-none">
 
