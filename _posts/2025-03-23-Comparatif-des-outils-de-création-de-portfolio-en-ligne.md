@@ -4,7 +4,7 @@ title: "Comparatif des outils de création de portfolio"
 date: 2025-03-23 10:00:00 +0100
 category: "Comparatif"
 excerpt: "Découvrez notre comparatif des principaux outils de création de portfolio en ligne."
-image: "https://i.postimg.cc/d117LPMV/wordpress.png"
+image: "https://i.postimg.cc/dtDMycfc/wordpress-1.webp"
 ---
 <main class="pt-24 pb-16 bg-[#0A0118] text-white">
   <div class="container mx-auto px-4 max-w-4xl">
