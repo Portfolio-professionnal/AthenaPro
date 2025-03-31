@@ -4,7 +4,7 @@ title: "L'importance des CTA dans les portfolios"
 date: 2025-03-24 11:00:00 +0100
 category: "Conseils"
 excerpt: "Découvrez comment intégrer des CTA efficaces dans votre portfolio pour encourager vos visiteurs à passer à l'action."
-image: "https://i.postimg.cc/y8Vn67kx/cta.png"
+image: "https://i.postimg.cc/BQRzPLD2/cta.webp"
 ---
 
 <main class="pt-24 pb-16 bg-[#0A0118] text-white">
