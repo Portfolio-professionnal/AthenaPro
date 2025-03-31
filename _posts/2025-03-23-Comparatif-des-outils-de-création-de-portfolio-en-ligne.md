@@ -13,7 +13,9 @@ image: "https://i.postimg.cc/dtDMycfc/wordpress-1.webp"
     <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
       <img 
         src="{{ page.image }}" 
-        alt="{{ page.title }}" 
+        alt="{{ page.title }}"
+        loading="lazy"
+
         class="w-full h-72 object-cover object-center transition-transform duration-500 hover:scale-105"
       />
     </div>
