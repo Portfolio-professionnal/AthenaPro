@@ -1455,22 +1455,27 @@ og_url: "https://athenapro.ovh/Mes_Réalisations.html"
     </htmlCode>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const animateElements = document.querySelectorAll('.animate-on-scroll');
+  const animateElements = Array.from(document.querySelectorAll('.animate-on-scroll'));
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate__animated');
-        const animateClasses = entry.target.getAttribute('data-animate');
-        if (animateClasses) {
-          entry.target.classList.add(...animateClasses.split(' '));
-        }
-        observer.unobserve(entry.target);
+        // Trouve l'index de l'élément dans le tableau
+        const index = animateElements.indexOf(entry.target);
+        // Appliquer un délai séquentiel (ici 500ms entre chaque)
+        setTimeout(() => {
+          entry.target.classList.add('animate__animated');
+          const animateClasses = entry.target.getAttribute('data-animate');
+          if (animateClasses) {
+            entry.target.classList.add(...animateClasses.split(' '));
+          }
+          observer.unobserve(entry.target);
+        }, index * 500); // 500ms de délai par index (ajuste selon ton besoin)
       }
     });
   }, {
     threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px" // Lancement 50px avant que l'élément ne soit entièrement visible
+    rootMargin: "0px 0px -20px 0px" // Déclenche légèrement plus tôt si besoin
   });
 
   animateElements.forEach(el => observer.observe(el));
