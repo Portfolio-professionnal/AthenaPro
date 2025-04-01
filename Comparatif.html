@@ -1720,29 +1720,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
         </div>
     </htmlCode>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Sélectionnez tous les éléments à animer
-  const animateElements = document.querySelectorAll('.animate-on-scroll');
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Retirez la classe qui masque l'élément
-        entry.target.classList.remove('opacity-0');
-        // Récupérez les classes d'animation stockées et ajoutez-les
-        const animationClasses = entry.target.dataset.animation;
-        if (animationClasses) {
-          entry.target.classList.add(...animationClasses.split(' '));
-        }
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.2,
-    rootMargin: "0px 0px -200px 0px"
-  });
-
-  animateElements.forEach(el => observer.observe(el));
-});
-</script>
