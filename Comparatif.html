@@ -1669,3 +1669,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
         </div>
     </htmlCode>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate__animated');
+        const animateClasses = entry.target.getAttribute('data-animate') || '';
+        if (animateClasses) {
+          entry.target.classList.add(...animateClasses.split(' '));
+        }
+        // Retirer la classe qui masque l'élément
+        entry.target.classList.remove('opacity-0');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -200px 0px"
+  });
+
+  const animateElements = document.querySelectorAll('.animate-on-scroll');
+  animateElements.forEach(el => observer.observe(el));
+});
+
+</script>
