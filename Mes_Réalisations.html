@@ -1457,24 +1457,24 @@ og_url: "https://athenapro.ovh/Mes_Réalisations.html"
 document.addEventListener('DOMContentLoaded', function() {
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      // Déclenche l'animation uniquement quand 50% de l'élément est visible
       if (entry.isIntersecting) {
         entry.target.classList.add('animate__animated');
         const animateClasses = entry.target.getAttribute('data-animate') || '';
         if (animateClasses) {
           entry.target.classList.add(...animateClasses.split(' '));
         }
-        // Une fois animé, on ne le surveille plus
+        // Retirer la classe qui masque l'élément
+        entry.target.classList.remove('opacity-0');
         observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.1,  // L’élément doit être à 50% visible
-    rootMargin: "0px 0px -200px 0px"  // Pas de décalage supplémentaire
+    threshold: 0.1,
+    rootMargin: "0px 0px -200px 0px"
   });
 
-  // Observer chaque élément animé
   const animateElements = document.querySelectorAll('.animate-on-scroll');
   animateElements.forEach(el => observer.observe(el));
 });
+
 </script>
