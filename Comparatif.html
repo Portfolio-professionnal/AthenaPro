@@ -313,7 +313,46 @@ og_url: "https://athenapro.ovh/Comparatif.html"
         </div>
       </div>
     </section>
+ <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Sélectionner tous les éléments avec la classe animate-on-scroll dans la section #offre
+        const animatables = document.querySelectorAll('#offre .animate-on-scroll');
+        animatables.forEach(element => {
+          // Récupérer les classes d'animation stockées dans data-animation
+          const animationClasses = element.dataset.animation;
+          // Les retirer au chargement (déjà cachés grâce à l'opacité via CSS)
+          if (animationClasses) {
+            element.classList.remove(...animationClasses.split(' '));
+          }
+        });
 
+        // Créer un IntersectionObserver pour surveiller la section #offre
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Pour chaque élément animé dans la section, ajouter les classes stockées
+              const animElements = entry.target.querySelectorAll('.animate-on-scroll');
+              animElements.forEach(el => {
+                if (el.dataset.animation) {
+                  el.classList.add(...el.dataset.animation.split(' '));
+                }
+                // Optionnel : retirer la classe d'opacité pour révéler l'élément
+                el.classList.remove('opacity-0');
+              });
+              obs.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.2 // Déclenche l'animation quand 20% de la section est visible
+        });
+
+        // Observer la section #offre
+        const offreSection = document.getElementById('offre');
+        if (offreSection) {
+          observer.observe(offreSection);
+        }
+      });
+    </script>
   </div>
 </htmlCode>
 
