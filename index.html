@@ -1418,41 +1418,37 @@ google_site_verification: "uop0iHMHrwFRql4-mGREo8r95Z5rUHPfGlxlA2s1R9U"
         <!-- Bottom border with gradient -->
         </section>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // FAQ Accordion
-                const faqToggles = document.querySelectorAll('.faq-toggle');
+          <script>
+                (function () {
+                    try {
+                        const faqToggles = document.querySelectorAll('.faq-toggle');
+                        faqToggles.forEach(toggle => {
+                            toggle.addEventListener('click', function (e) {
+                                // Empêche tout comportement par défaut
+                                e.preventDefault();
+                                const content = this.nextElementSibling;
+                                const icon = this.querySelector('.faq-icon');
 
-                faqToggles.forEach(toggle => {
-                    toggle.addEventListener('click', function () {
-                        const targetId = this.getAttribute('data-target');
-                        const targetContent = document.getElementById(targetId);
-                        const arrow = this.querySelector('.faq-arrow');
+                                // Basculer l'affichage du contenu
+                                content.classList.toggle('hidden');
+                                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
 
-                        // Toggle current FAQ
-                        targetContent.classList.toggle('hidden');
-                        arrow.classList.toggle('rotate-180');
-
-                        // Optional: Close others when opening one
-                        // Uncomment the following code if you want to close other FAQs when opening one
-                        /*
-                        document.querySelectorAll('.faq-content').forEach(content => {
-                          if (content.id !== targetId) {
-                            content.classList.add('hidden');
-
-                            // Reset other arrows
-                            const otherToggle = document.querySelector(`[data-target="${content.id}"]`);
-                            if (otherToggle) {
-                              const otherArrow = otherToggle.querySelector('.faq-arrow');
-                              otherArrow.classList.remove('rotate-180');
-                            }
-                          }
+                                // Fermer les autres FAQ
+                                faqToggles.forEach(otherToggle => {
+                                    if (otherToggle !== this) {
+                                        const otherContent = otherToggle.nextElementSibling;
+                                        const otherIcon = otherToggle.querySelector('.faq-icon');
+                                        otherContent.classList.add('hidden');
+                                        otherIcon.style.transform = 'rotate(0deg)';
+                                    }
+                                });
+                            });
                         });
-                        */
-                    });
-                });
-            });
-        </script>
+                    } catch (error) {
+                        console.error("Erreur dans le script FAQ : ", error);
+                    }
+                })();
+            </script>
         </div>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
