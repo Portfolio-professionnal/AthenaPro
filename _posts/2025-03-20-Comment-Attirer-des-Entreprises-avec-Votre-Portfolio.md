@@ -6,7 +6,7 @@ category: Freelance
 excerpt: "Les stratégies éprouvées pour transformer votre portfolio en véritable outil commercial et décrocher plus de projets en tant que freelance."
 image: "https://i.postimg.cc/JhZKwsH5/Capture-d-cran-2025-03-23-143234.webp"
 ---
-<main class="pt-24 pb-16 bg-[#0A0118] text-white font-sans">
+<main class="pt-24 pb-16 bg-[#0A0118] text-white font-serif">
   <div class="container mx-auto px-4 max-w-4xl">
     <!-- Image en haut de l'article -->
     <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
@@ -87,7 +87,7 @@ image: "https://i.postimg.cc/JhZKwsH5/Capture-d-cran-2025-03-23-143234.webp"
       </ul>
       
       <!-- Section 3 -->
-      <h2 class="text-2xl font-bold mb-4 neon-text">3. Définissez votre proposition de valeur unique</h2>
+      <h2 class="text-2xl font-bold neon-text mb-4">3. Définissez votre proposition de valeur unique</h2>
       <p class="mb-6 text-gray-300">
         Dans un marché saturé, pourquoi les clients devraient-ils vous choisir vous plutôt qu'un autre freelance ?
       </p>
