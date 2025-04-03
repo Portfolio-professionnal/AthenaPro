@@ -1459,7 +1459,8 @@ document.addEventListener('DOMContentLoaded', function() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('animate__animated');
-        const animateClasses = entry.target.getAttribute('data-animate') || '';
+        // Vérifier d'abord data-animate, sinon data-animation
+        const animateClasses = entry.target.getAttribute('data-animate') || entry.target.getAttribute('data-animation') || '';
         if (animateClasses) {
           entry.target.classList.add(...animateClasses.split(' '));
         }
@@ -1468,7 +1469,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 }); // Notez que le rootMargin négatif a été retiré
+  }, { threshold: 0.1, rootMargin: "0px 0px -200px 0px" });
 
   const animateElements = document.querySelectorAll('.animate-on-scroll');
   animateElements.forEach(el => observer.observe(el));
