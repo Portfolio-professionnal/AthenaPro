@@ -1463,17 +1463,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (animateClasses) {
           entry.target.classList.add(...animateClasses.split(' '));
         }
-        // Rendre l'élément visible
         entry.target.classList.remove('opacity-0');
-        // Forcer l'animation à conserver son état final
         entry.target.style.animationFillMode = 'both';
         observer.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.1,
-    rootMargin: "0px 0px -200px 0px"
-  });
+  }, { threshold: 0.1 }); // Notez que le rootMargin négatif a été retiré
 
   const animateElements = document.querySelectorAll('.animate-on-scroll');
   animateElements.forEach(el => observer.observe(el));
