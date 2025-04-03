@@ -1462,8 +1462,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Récupérer les classes d'animation depuis data-animation
-                const animationClasses = entry.target.dataset.animation;
+                // Récupérer les classes d'animation depuis data-animate (au lieu de data-animation)
+                const animationClasses = entry.target.dataset.animate;
                 if (animationClasses) {
                     entry.target.classList.add(...animationClasses.split(' '));
                 }
@@ -1478,5 +1478,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Observer chaque élément
     animatables.forEach(el => observer.observe(el));
 });
+
 </script>
 
