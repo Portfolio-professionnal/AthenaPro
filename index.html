@@ -1454,29 +1454,29 @@ google_site_verification: "uop0iHMHrwFRql4-mGREo8r95Z5rUHPfGlxlA2s1R9U"
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     </htmlCode>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    // Sélectionner tous les éléments à animer
-    const animatables = document.querySelectorAll('.animate-on-scroll');
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate__animated');
+        const animateClasses = entry.target.getAttribute('data-animate') || '';
+        if (animateClasses) {
+          entry.target.classList.add(...animateClasses.split(' '));
+        }
+        // Rendre l'élément visible
+        entry.target.classList.remove('opacity-0');
+        // Forcer l'animation à conserver son état final
+        entry.target.style.animationFillMode = 'both';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -200px 0px"
+  });
 
-    // Créer un IntersectionObserver
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Récupérer les classes d'animation depuis data-animate (au lieu de data-animation)
-                const animationClasses = entry.target.dataset.animate;
-                if (animationClasses) {
-                    entry.target.classList.add(...animationClasses.split(' '));
-                }
-                // Rendre l'élément visible
-                entry.target.classList.remove('opacity-0');
-                // Arrêter l'observation de cet élément
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 }); // L'animation se déclenche quand 20% de l'élément est visible
-
-    // Observer chaque élément
-    animatables.forEach(el => observer.observe(el));
+  const animateElements = document.querySelectorAll('.animate-on-scroll');
+  animateElements.forEach(el => observer.observe(el));
 });
 
 </script>
