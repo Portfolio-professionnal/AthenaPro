@@ -81,10 +81,11 @@ image: "https://i.postimg.cc/JhZKwsH5/Capture-d-cran-2025-03-23-143234.webp"
         <li>
           <strong>Métriques d'impact :</strong> Quantifiez vos succès avec des données concrètes — par exemple, "Le redesign a augmenté les conversions de 47%".
         </li>
-        <li>
-          <em>Exemple concret :</em> Marie, designer UX freelance, a vu ses demandes de collaboration augmenter de 215% après avoir restructuré son portfolio pour inclure des études de cas détaillées.
-        </li>
       </ul>
+     
+      <p class="mb-6 text-gray-300">
+          <em>Exemple concret :</em> Marie, designer UX freelance, a vu ses demandes de collaboration augmenter de 215% après avoir restructuré son portfolio pour inclure des études de cas détaillées.
+      </p>
       
       <!-- Section 3 -->
       <h2 class="text-2xl font-bold neon-text mb-4">3. Définissez votre proposition de valeur unique</h2>
