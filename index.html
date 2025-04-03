@@ -1457,34 +1457,30 @@ google_site_verification: "uop0iHMHrwFRql4-mGREo8r95Z5rUHPfGlxlA2s1R9U"
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     </htmlCode>
-        <script>
-                (function () {
-                    try {
-                        const faqToggles = document.querySelectorAll('.faq-toggle');
-                        faqToggles.forEach(toggle => {
-                            toggle.addEventListener('click', function (e) {
-                                // Empêche tout comportement par défaut
-                                e.preventDefault();
-                                const content = this.nextElementSibling;
-                                const icon = this.querySelector('.faq-icon');
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Sélectionner tous les éléments à animer
+    const animatables = document.querySelectorAll('.animate-on-scroll');
 
-                                // Basculer l'affichage du contenu
-                                content.classList.toggle('hidden');
-                                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+    // Créer un IntersectionObserver
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Récupérer les classes d'animation depuis data-animation
+                const animationClasses = entry.target.dataset.animation;
+                if (animationClasses) {
+                    entry.target.classList.add(...animationClasses.split(' '));
+                }
+                // Rendre l'élément visible
+                entry.target.classList.remove('opacity-0');
+                // Arrêter l'observation de cet élément
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 }); // L'animation se déclenche quand 20% de l'élément est visible
 
-                                // Fermer les autres FAQ
-                                faqToggles.forEach(otherToggle => {
-                                    if (otherToggle !== this) {
-                                        const otherContent = otherToggle.nextElementSibling;
-                                        const otherIcon = otherToggle.querySelector('.faq-icon');
-                                        otherContent.classList.add('hidden');
-                                        otherIcon.style.transform = 'rotate(0deg)';
-                                    }
-                                });
-                            });
-                        });
-                    } catch (error) {
-                        console.error("Erreur dans le script FAQ : ", error);
-                    }
-                })();
-            </script>
+    // Observer chaque élément
+    animatables.forEach(el => observer.observe(el));
+});
+</script>
+
