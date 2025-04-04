@@ -10,8 +10,7 @@ image: "https://i.postimg.cc/BQRzPLD2/cta.webp"
 
 <main class="pt-24 pb-16 bg-[#0A0118] text-white font-serif">
   <div class="container mx-auto px-4 max-w-4xl">
-
-    <!-- Image en haut de l'article -->
+ <!-- Image en haut de l'article -->
     <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
       <img 
         src="{{ page.image }}" 
@@ -20,6 +19,24 @@ image: "https://i.postimg.cc/BQRzPLD2/cta.webp"
         class="w-full h-72 object-cover object-center transition-transform duration-500 hover:scale-105"
       />
     </div>
+
+    <article class="max-w-none">
+
+      <!-- Titre principal -->
+      <h1 class="text-4xl font-bold mb-6 neon-text">
+        {{ page.title }}
+      </h1>
+
+      <!-- Métadonnées de l'article -->
+      <div class="flex items-center mb-8">
+        <span class="text-sm text-gray-400">
+          {{ page.date | date: "%d %B %Y" }}
+        </span>
+        <span class="mx-2 text-gray-500">•</span>
+        <span class="text-sm text-[#FF61D2]">
+          {{ page.category }}
+        </span>
+      </div>
 
     <article class="max-w-none">
       <!-- Sommaire -->
