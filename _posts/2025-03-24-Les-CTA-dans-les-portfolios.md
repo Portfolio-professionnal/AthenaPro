@@ -134,7 +134,7 @@ image: "https://i.postimg.cc/BQRzPLD2/cta.webp"
         <li class="mb-2"><strong>Juste avant le footer :</strong> La dernière chance de convertir.</li>
       </ul>
       <div class="mt-6">
-        <img src="https://via.placeholder.com/600x400" alt="Positionnement stratégique des CTA" class="w-full h-auto rounded">
+        <img src="https://i.postimg.cc/XqZsjwnV/Chat-GPT-Image-4-avr-2025-16-07-57.png" alt="Positionnement stratégique des CTA" class="w-full h-auto rounded">
       </div>
 
       <!-- Stratégie #3 -->
