@@ -170,7 +170,7 @@ image: "https://i.postimg.cc/Y9XnrhMG/error-1.webp"
         <li class="mb-2"><strong>Placez-les stratégiquement :</strong> Près de vos appels à l'action.</li>
       </ul>
       <!-- Instruction d'image (si nécessaire) -->
-      <!-- <img src="URL_placeholder" alt="Exemple de témoignages clients" class="mt-4 rounded"> -->
+      <img src="https://i.postimg.cc/50HnSwTZ/Chat-GPT-Image-4-avr-2025-15-22-49.png" alt="Exemple de témoignages clients" class="mt-4 rounded">
 
       <!-- Erreur n°8 -->
       <h2 id="erreur8" class="text-3xl font-bold mt-8 neon-text">Erreur n°8 : Temps de chargement trop long</h2>
