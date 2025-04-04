@@ -220,7 +220,7 @@ image: "https://i.postimg.cc/Y9XnrhMG/error-1.webp"
         <li class="mb-2"><strong>Définissez clairement votre client idéal :</strong> Pour attirer les projets qui vous correspondent vraiment.</li>
       </ul>
       <!-- Instruction d'image (si nécessaire) -->
-      <!-- <img src="URL_placeholder" alt="Exemple de mise en avant de valeur ajoutée" class="mt-4 rounded"> -->
+      <img src="https://i.postimg.cc/dQjTS7FX/Chat-GPT-Image-4-avr-2025-15-26-26.png" alt="Exemple de mise en avant de valeur ajoutée" class="mt-4 rounded">
 
       <!-- FAQ -->
       <h2 id="faq" class="text-3xl font-bold mt-8 neon-text">FAQ : Vos questions sur la création de portfolio</h2>
