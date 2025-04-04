@@ -255,10 +255,11 @@ image: "https://i.postimg.cc/BQFjBHrp/design-web-2025.webp"
       <!-- Appel à l'action -->
       <h3 class="text-xl font-semibold mb-3 text-white">Prêt à transformer votre présence digitale ?</h3>
       <p class="leading-relaxed text-gray-300">
-        Notre équipe d'experts en design web moderne peut vous accompagner dans cette transition vers une interface sombre performante et distinctive. <strong>Bénéficiez d'un audit gratuit</strong> de votre site actuel et découvrez comment nous pouvons métamorphoser votre présence en ligne.
+En tant que freelance spécialisée en design web moderne, je vous accompagne dans la création d'une interface sombre, performante et distinctive. <strong>Obtenez un devis gratuit</strong> pour la réalisation de votre site professionnel et découvrez comment je peux transformer votre présence en ligne.
+
       </p>
       <p class="leading-relaxed text-gray-300 mt-4">
-        <a href="https://votre-domaine.com/contact" class="text-[#FF61D2] underline font-bold">Demander mon audit gratuit →</a>
+        <a href="https://athenapro.ovh/Contact.html" class="text-[#FF61D2] underline font-bold">Demander mon audit gratuit →</a>
       </p>
       <p class="leading-relaxed text-gray-300 mt-4 italic">
         *Nos services incluent la création de sites professionnels, portfolios créatifs et landing pages hautement convertissantes, tous optimisés selon les dernières tendances 2025.*
