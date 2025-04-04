@@ -269,8 +269,7 @@ image: "https://i.postimg.cc/BQRzPLD2/cta.webp"
         <strong>Votre portfolio mérite d'être plus qu'une simple vitrine en ligne.</strong> Optimisez vos CTA pour générer activement des opportunités professionnelles.
       </p>
       <p class="mt-4 leading-relaxed text-gray-300">
-        [<strong>Besoin d'un portfolio qui convertit vos visiteurs en clients ?</strong>](#) | [<strong>Réserver un audit gratuit de vos CTA actuels</strong>](#)
-      </p>
+        <a href="https://athenapro.ovh/index.html" class="underline text-[#FF61D2] font-bold">Découvrir mes services de création de portfolio</a> | <a href="https://athenapro.ovh/Contact.html" class="underline text-[#FF61D2] font-bold">Prendre rendez-vous pour un appel découverte</a>      </p>
 
       <!-- Footer note -->
       <p class="mt-8 leading-relaxed text-gray-300 italic">
