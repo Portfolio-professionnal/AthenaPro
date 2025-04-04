@@ -90,7 +90,7 @@ image: "https://i.postimg.cc/BQRzPLD2/cta.webp"
         💡 Astuce pro : Un portfolio sans CTA clair est comme un magasin sans caisse — vos visiteurs peuvent admirer vos produits mais n'ont aucun moyen de concrétiser leur intérêt.
       </blockquote>
       <div class="mt-6">
-        <img src="https://via.placeholder.com/600x300" alt="Exemple de CTA efficace" class="w-full h-auto rounded">
+        <img src="https://i.postimg.cc/3NSQ6jnY/Chat-GPT-Image-4-avr-2025-16-03-45.png" alt="Exemple de CTA efficace" class="w-full h-auto rounded">
       </div>
 
       <!-- Stratégie #1 -->
