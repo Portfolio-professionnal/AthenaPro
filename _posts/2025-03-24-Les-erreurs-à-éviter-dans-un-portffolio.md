@@ -255,7 +255,7 @@ image: "https://i.postimg.cc/Y9XnrhMG/error-1.webp"
         Vous souhaitez un portfolio professionnel qui convertit vos visiteurs en clients ? Je crée des portfolios et landing pages sur mesure, parfaitement adaptés à votre image de marque et optimisés pour générer des opportunités commerciales.
       </p>
       <p class="mt-4 leading-relaxed text-gray-300">
-        Découvrir mes services de création de portfolio | Prendre rendez-vous pour un appel découverte
+        <a href="https://athenapro.ovh/index.html" class="underline text-[#FF61D2] font-bold">Découvrir mes services de création de portfolio</a> | <a href="https://athenapro.ovh/Contact.html" class="underline text-[#FF61D2] font-bold">Prendre rendez-vous pour un appel découverte</a>
       </p>
 
     </article>
