@@ -120,7 +120,7 @@ image: "https://i.postimg.cc/Y9XnrhMG/error-1.webp"
         <li class="mb-2"><strong>Ajoutez un sentiment d'urgence :</strong> Par exemple, "Places limitées pour mai 2025".</li>
       </ul>
       <!-- Instruction d'image (si nécessaire) -->
-      <!-- <img src="URL_placeholder" alt="Exemple de CTA" class="mt-4 rounded"> -->
+      <img src="https://i.postimg.cc/MKnrY82n/Chat-GPT-Image-4-avr-2025-15-18-08.png" alt="Exemple de CTA" class="mt-4 rounded">
 
       <!-- Erreur n°5 -->
       <h2 id="erreur5" class="text-3xl font-bold mt-8 neon-text">Erreur n°5 : Présenter des projets obsolètes</h2>
