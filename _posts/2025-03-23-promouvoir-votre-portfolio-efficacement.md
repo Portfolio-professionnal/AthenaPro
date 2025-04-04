@@ -321,7 +321,7 @@ image: "https://i.postimg.cc/0Q9F5TS3/reseaublog-1.webp"
         Vous êtes un freelance ou entrepreneur qui souhaite se démarquer en ligne ? Réservez une consultation gratuite de 30 minutes et découvrons ensemble comment votre présence web peut devenir votre meilleur commercial.
       </p>
       <p class="mb-6 leading-relaxed text-gray-300">
-        <a href="#" class="underline text-[#FF61D2] font-bold">Réserver ma consultation gratuite →</a><br>
+        <a href="https://athenapro.ovh/Contact.html" class="underline text-[#FF61D2] font-bold">Réserver ma consultation gratuite →</a><br>
         <em>Disponibilité limitée à 5 consultations par semaine – Premier arrivé, premier servi.</em>
       </p>
 
