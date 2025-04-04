@@ -340,7 +340,7 @@ image: "https://i.postimg.cc/dtDMycfc/wordpress-1.webp"
         <strong>Vous cherchez un portfolio qui se démarque vraiment ?</strong> Discutons de votre projet lors d'une consultation découverte gratuite de 30 minutes.
       </p>
       <p class="mb-6 leading-relaxed text-gray-300">
-        <a href="https://votre-domaine.com/contact" class="underline text-[#FF61D2] font-bold">Réserver ma consultation portfolio →</a>
+        <a href="https://athenapro.ovh/Contact.html" class="underline text-[#FF61D2] font-bold">Réserver ma consultation portfolio →</a>
       </p>
       <p class="leading-relaxed text-gray-300 italic">
         *Découvrez comment un portfolio sur mesure peut transformer votre présence professionnelle en ligne.*
