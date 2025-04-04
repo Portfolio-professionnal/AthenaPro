@@ -6,7 +6,7 @@ category: "Tendances"
 excerpt: "Découvrez les principales tendances en design qui façonneront l'esthétique des portfolios en 2025."
 image: "https://i.postimg.cc/BQFjBHrp/design-web-2025.webp"
 ---
-<main class="pt-24 pb-16 bg-[#0A0118] text-white">
+<main class="pt-24 pb-16 bg-[#0A0118] text-white font-serif">
   <div class="container mx-auto px-4 max-w-4xl">
 
     <!-- Image en haut de l'article -->
