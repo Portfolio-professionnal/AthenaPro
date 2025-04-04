@@ -85,7 +85,7 @@ image: "https://i.postimg.cc/Y9XnrhMG/error-1.webp"
         <li class="mb-2"><strong>Créez des templates visuels :</strong> Utilisez les mêmes cadres, espacements et compositions pour unifier votre présentation.</li>
       </ul>
       <!-- Instruction d'image (si nécessaire) -->
-      <!-- <img src="URL_placeholder" alt="Exemple de cohérence visuelle" class="mt-4 rounded"> -->
+      <img src="https://i.postimg.cc/SR3rx2Ph/Chat-GPT-Image-4-avr-2025-15-05-59.png" alt="Exemple de cohérence visuelle" class="mt-4 rounded">
 
       <!-- Erreur n°3 -->
       <h2 id="erreur3" class="text-3xl font-bold mt-8 neon-text">Erreur n°3 : Ignorer l'optimisation mobile</h2>
