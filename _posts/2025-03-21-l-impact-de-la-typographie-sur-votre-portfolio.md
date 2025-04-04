@@ -66,7 +66,7 @@ image: "https://i.postimg.cc/gkLZtfZv/typewriter-1170657-1280.webp"  # Remplacez
         </li>
         <li class="mb-2">
           <a href="#étude-de-cas--la-refonte-typographique-d-airbnb" class="text-[#FF61D2] underline">
-            Étude de cas : La transformation typographique qui a multiplié les conversions
+            Étude de cas : La refonte typographique d'Airbnb
           </a>
         </li>
       </ul>
