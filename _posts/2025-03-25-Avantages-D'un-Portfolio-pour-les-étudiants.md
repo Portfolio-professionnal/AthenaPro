@@ -34,44 +34,44 @@ image: "https://i.postimg.cc/JzwTzwVq/tudiant.webp"
       <h2 class="text-3xl font-bold mt-8 neon-text">Sommaire</h2>
       <ul class="list-disc pl-5 mt-4 text-gray-300 leading-relaxed">
         <li>
-          <a href="#introduction--pourquoi-un-portfolio-est-essentiel" class="underline text-[#FF61D2]">
+          <a href="#section-introduction--pourquoi-un-portfolio-est-essentiel" class="underline text-[#FF61D2]">
             Introduction : Pourquoi un portfolio est essentiel
           </a>
         </li>
         <li>
-          <a href="#1-lart-de-la-présentation-visuelle" class="underline text-[#FF61D2]">
+          <a href="#section-1-lart-de-la-présentation-visuelle" class="underline text-[#FF61D2]">
             1. L'art de la présentation visuelle
           </a>
         </li>
         <li>
-          <a href="#2-valorisation-stratégique-de-vos-projets" class="underline text-[#FF61D2]">
+          <a href="#section-2-valorisation-stratégique-de-vos-projets" class="underline text-[#FF61D2]">
             2. Valorisation stratégique de vos projets
           </a>
         </li>
         <li>
-          <a href="#3-personnalisation-selon-vos-objectifs-de-carrière" class="underline text-[#FF61D2]">
+          <a href="#section-3-personnalisation-selon-vos-objectifs-de-carrière" class="underline text-[#FF61D2]">
             3. Personnalisation selon vos objectifs de carrière
           </a>
         </li>
         <li>
-          <a href="#4-maximiser-votre-visibilité-digitale" class="underline text-[#FF61D2]">
+          <a href="#section-4-maximiser-votre-visibilité-digitale" class="underline text-[#FF61D2]">
             4. Maximiser votre visibilité digitale
           </a>
         </li>
         <li>
-          <a href="#5-stratégies-de-réseautage-efficaces" class="underline text-[#FF61D2]">
+          <a href="#section-5-stratégies-de-réseautage-efficaces" class="underline text-[#FF61D2]">
             5. Stratégies de réseautage efficaces
           </a>
         </li>
         <li>
-          <a href="#conclusion--transformer-votre-portfolio-en-opportunités" class="underline text-[#FF61D2]">
+          <a href="#section-conclusion--transformer-votre-portfolio-en-opportunités" class="underline text-[#FF61D2]">
             Conclusion : Transformer votre portfolio en opportunités
           </a>
         </li>
       </ul>
 
       <!-- Introduction -->
-      <h2 id="introduction--pourquoi-un-portfolio-est-essentiel" class="text-3xl font-bold mt-8 neon-text">
+      <h2 id="section-introduction--pourquoi-un-portfolio-est-essentiel" class="text-3xl font-bold mt-8 neon-text">
         Introduction : Pourquoi un portfolio est essentiel
       </h2>
       <p class="mt-4 leading-relaxed text-gray-300">
@@ -82,7 +82,7 @@ image: "https://i.postimg.cc/JzwTzwVq/tudiant.webp"
       </p>
 
       <!-- Section 1 -->
-      <h2 id="1-lart-de-la-présentation-visuelle" class="text-3xl font-bold mt-8 neon-text">
+      <h2 id="section-1-lart-de-la-présentation-visuelle" class="text-3xl font-bold mt-8 neon-text">
         1. L'art de la présentation visuelle
       </h2>
       <p class="mt-4 leading-relaxed text-gray-300">
@@ -104,7 +104,7 @@ image: "https://i.postimg.cc/JzwTzwVq/tudiant.webp"
       </ul>
 
       <!-- Section 2 -->
-      <h2 id="2-valorisation-stratégique-de-vos-projets" class="text-3xl font-bold mt-8 neon-text">
+      <h2 id="section-2-valorisation-stratégique-de-vos-projets" class="text-3xl font-bold mt-8 neon-text">
         2. Valorisation stratégique de vos projets
       </h2>
       <p class="mt-4 leading-relaxed text-gray-300">
@@ -126,7 +126,7 @@ image: "https://i.postimg.cc/JzwTzwVq/tudiant.webp"
       </ul>
 
       <!-- Section 3 -->
-      <h2 id="3-personnalisation-selon-vos-objectifs-de-carrière" class="text-3xl font-bold mt-8 neon-text">
+      <h2 id="section-3-personnalisation-selon-vos-objectifs-de-carrière" class="text-3xl font-bold mt-8 neon-text">
         3. Personnalisation selon vos objectifs de carrière
       </h2>
       <p class="mt-4 leading-relaxed text-gray-300">
@@ -148,7 +148,7 @@ image: "https://i.postimg.cc/JzwTzwVq/tudiant.webp"
       </ul>
 
       <!-- Section 4 -->
-      <h2 id="4-maximiser-votre-visibilité-digitale" class="text-3xl font-bold mt-8 neon-text">
+      <h2 id="section-4-maximiser-votre-visibilité-digitale" class="text-3xl font-bold mt-8 neon-text">
         4. Maximiser votre visibilité digitale
       </h2>
       <p class="mt-4 leading-relaxed text-gray-300">
@@ -170,7 +170,7 @@ image: "https://i.postimg.cc/JzwTzwVq/tudiant.webp"
       </ul>
 
       <!-- Section 5 -->
-      <h2 id="5-stratégies-de-réseautage-efficaces" class="text-3xl font-bold mt-8 neon-text">
+      <h2 id="section-5-stratégies-de-réseautage-efficaces" class="text-3xl font-bold mt-8 neon-text">
         5. Stratégies de réseautage efficaces
       </h2>
       <p class="mt-4 leading-relaxed text-gray-300">
@@ -192,7 +192,7 @@ image: "https://i.postimg.cc/JzwTzwVq/tudiant.webp"
       </ul>
 
       <!-- Conclusion -->
-      <h2 id="conclusion--transformer-votre-portfolio-en-opportunités" class="text-3xl font-bold mt-8 neon-text">
+      <h2 id="section-conclusion--transformer-votre-portfolio-en-opportunités" class="text-3xl font-bold mt-8 neon-text">
         Conclusion : Transformer votre portfolio en opportunités
       </h2>
       <p class="mt-4 leading-relaxed text-gray-300">
