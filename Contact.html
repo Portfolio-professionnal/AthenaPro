@@ -310,35 +310,6 @@ og_url: "https://athenapro.ovh/Contact.html"
         </div>
       </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Sélectionner individuellement tous les éléments à animer sur la page
-  const animatables = document.querySelectorAll('.animate-on-scroll');
-  
-  // Créer un IntersectionObserver qui observe chaque élément individuellement
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const animationClasses = entry.target.dataset.animation;
-        if (animationClasses) {
-          entry.target.classList.add(...animationClasses.split(' '));
-        }
-        entry.target.classList.remove('opacity-0');
-        // Désinscrire cet élément après son animation
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.2 // L'animation se déclenche quand 20% de l'élément est visible
-  });
-  
-  // Observer chaque élément animé individuellement
-  animatables.forEach(el => {
-    observer.observe(el);
-  });
-});
-</script>
-
     </div>
 </htmlCode>
 
