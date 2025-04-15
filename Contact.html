@@ -11,169 +11,304 @@ og_description: "Contactez AthenaPro pour obtenir un devis personnalisé et lanc
 og_image: "https://tonpseudo.github.io/tonrepo/images/preview.jpg"
 og_url: "https://athenapro.ovh/Contact.html"
 ---
-    <htmlCode>
-        <div id="root" class="bg-neutral-900 text-white">
-            <!-- Contact Section -->
-            <section id="contact" class="pt-24 pb-12 md:py-32 min-h-screen flex items-center bg-neutral-900 relative overflow-hidden">
-                <div class="absolute inset-0 opacity-10">
-                    <div class="neon-grid"></div>
-                </div>
-
-                <div class="container mx-auto px-4 relative z-10">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-12 text-center animate__animated animate__fadeInDown">
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">Contactez-nous</span>
-                    </h1>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                        <!-- Contact Form -->
-                        <div class="bg-neutral-800 p-8 rounded-lg shadow-lg border border-purple-500/30 animate__animated animate__fadeInLeft">
-                            <h3 class="text-2xl font-semibold mb-6 text-purple-400">Formulaire de contact</h3>
-
-                            <form id="quoteForm" class="space-y-6" action="https://formspree.io/f/xldjjlor" method="POST">
-                                <div class="space-y-2">
-                                    <label for="name" class="block text-sm font-medium text-gray-300">Nom complet</label>
-                                    <input type="text"
-                                           id="name"
-                                           name="name"
-                                           class="w-full px-4 py-3 rounded-md bg-neutral-700 border border-neutral-600 focus:border-purple-500 focus:ring-purple-500 transition duration-300"
-                                           required
-                                           aria-required="true">
-                                </div>
-
-                                <div class="space-y-2">
-                                    <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
-                                    <input type="email"
-                                           id="email"
-                                           name="email"
-                                           class="w-full px-4 py-3 rounded-md bg-neutral-700 border border-neutral-600 focus:border-purple-500 focus:ring-purple-500 transition duration-300"
-                                           required
-                                           aria-required="true">
-                                </div>
-
-                                <div class="space-y-2">
-                                    <label for="service" class="block text-sm font-medium text-gray-300">Service intéressé</label>
-                                    <select id="service"
-                                            name="service"
-                                            class="w-full px-4 py-3 rounded-md bg-neutral-700 border border-neutral-600 focus:border-purple-500 focus:ring-purple-500 transition duration-300"
-                                            required
-                                            aria-required="true">
-                                        <option value="">Sélectionner une option</option>
-                                        <option value="portfolio-github">Portfolio avec hébergement GitHub (250€)</option>
-                                        <option value="portfolio-custom">Portfolio avec domaine personnalisé (250€ + 3€/mois)</option>
-                                        <option value="portfolio-github">Landing Page avec hébergement GitHub (250€)</option>
-                                        <option value="portfolio-custom">Landing Page avec domaine personnalisé (250€ + 3€/mois)</option>
-                                        <option value="other">Autre demande</option>
-                                    </select>
-                                </div>
-
-                                <div class="space-y-2">
-                                    <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
-                                    <textarea id="message"
-                                              name="message"
-                                              rows="5"
-                                              class="w-full px-4 py-3 rounded-md bg-neutral-700 border border-neutral-600 focus:border-purple-500 focus:ring-purple-500 transition duration-300"
-                                              required
-                                              aria-required="true"></textarea>
-                                </div>
-
-                                <div class="space-y-2">
-                                    <label class="inline-flex items-center">
-                                        <input type="checkbox" name="consent" class="form-checkbox h-5 w-5 text-purple-500" required aria-required="true">
-                                        <span class="ml-2 text-sm text-gray-300">Je consens au traitement de mes données personnelles</span>
-                                    </label>
-                                </div>
-
-                                <div id="formStatus" class="hidden py-3 px-4 rounded-md mt-2"></div>
-
-                                <button type="submit"
-                                        id="submit-devis"
-                                        class="w-full py-3 px-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-md transition duration-300 shadow-lg shadow-purple-500/20 relative overflow-hidden hover:shadow-purple-500/40 group"
-                                        aria-label="Envoyer le message">
-                                    <span class="relative z-10">Envoyer</span>
-                                    <span class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
-                                </button>
-                            </form>
+  <htmlCode>
+            <div>
+                <section id="rdv" class="py-16 bg-neutral-900 overflow-x-hidden">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-lw8h0w6p">
+                        <div class="text-center mb-16" id="el-nbnp6pdo">
+                            <h2 class="text-3xl font-extrabold text-cyan-400 sm:text-4xl" id="el-zokc1d4c">
+                                <span class="block" id="el-9zx4qaj8">Demande de Devis</span>
+                            </h2>
+                        
+                                       <section id="process" class="mt-4 max-w-2xl mx-auto text-xl text-gray-400">
+  <h2 style="text-align:center;">🧠 Comment ça marche – Zéro appel, 100% asynchrone</h2>
+  <ol style="max-width: 700px; margin: auto; padding: 20px; font-size: 1.1em;">
+    <li><strong>1. Remplissez le formulaire de demande</strong> avec vos besoins.</li>
+    <li><strong>2. Recevez un devis personnalisé</strong> par e-mail sous 24h.</li>
+    <li><strong>3. Payez en toute sécurité</strong> via virement ou PayPal (facture envoyée).</li>
+    <li><strong>4. Recevez votre site livré par mail</strong> selon le délai choisi.</li>
+    <li><strong>5. Possibilité de 1 à 2 ajustements par mail</strong> inclus dans le prix.</li>
+  </ol>
+</section>
+                           
                         </div>
+                        
 
-                        <!-- Contact Info -->
-                        <div class="animate__animated animate__fadeInRight">
-                            <div class="bg-neutral-800 p-8 rounded-lg shadow-lg border border-blue-500/30 mb-8">
-                                <h3 class="text-2xl font-semibold mb-6 text-blue-400">Nos services</h3>
-                                <div class="space-y-6">
-                                    <div class="flex items-start">
-                                        <div class="bg-purple-600/20 p-3 rounded-lg mr-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7m-7-7v14" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <h4 class="text-lg font-medium text-white">Portfolio/Landing Page avec GitHub</h4>
-                                            <p class="text-gray-300 mt-1">Portfolio professionnel hébergé sur GitHub Pages pour 250€.</p>
-                                        </div>
-                                    </div>
+                        <div class="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
+                            <!-- Form Section -->
+                            <div class="lg:w-2/3 md:animate__animated md:animate__fadeInLeft md:animate__delay-1s">
 
-                                    <div class="flex items-start">
-                                        <div class="bg-blue-600/20 p-3 rounded-lg mr-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                                            </svg>
-                                        </div>
+                                <div class="bg-neutral-50 dark:bg-neutral-800 rounded-xl shadow-lg p-8">
+                                    <form id="quoteForm" class="space-y-6" action="https://formspree.io/f/xldjjlor" method="POST">
+
+                                        <!-- Personal Information -->
                                         <div>
-                                            <h4 class="text-lg font-medium text-white">Portfolio/Landing Page avec domaine personnalisé</h4>
-                                            <p class="text-gray-300 mt-1">Portfolio professionnel avec domaine personnalisé pour 250€ + 3€/mois.</p>
+                                            <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-4">Vos Coordonnées</h3>
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                <div>
+                                                    <label for="firstName" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Prénom *</label>
+                                                    <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-neutral-700 dark:text-white">
+                                                </div>
+                                                <div>
+                                                    <label for="lastName" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Nom *</label>
+                                                    <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-neutral-700 dark:text-white">
+                                                </div>
+                                                <div>
+                                                    <label for="email" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Email *</label>
+                                                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-neutral-700 dark:text-white">
+                                                </div>
+                                                <div>
+                                                    <label for="phone" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Téléphone</label>
+                                                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-neutral-700 dark:text-white">
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
+
+                                        <!-- Project Information -->
+                                        <div class="border-t border-neutral-200 dark:border-neutral-700 pt-6">
+                                            <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-4">Votre Projet</h3>
+                                            <div class="space-y-6">
+                                                <div>
+                                                    <label class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">Type de site souhaité *</label>
+                                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                                        <div class="relative">
+                                                            <input type="radio" id="typePortfolio" name="siteType" value="portfolio" class="peer hidden" required>
+                                                            <label for="typePortfolio" class="block p-4 text-center border border-neutral-300 dark:border-neutral-600 rounded-lg cursor-pointer hover:border-purple-500 dark:hover:border-purple-500 peer-checked:border-purple-500 peer-checked:bg-purple-50 dark:peer-checked:bg-purple-900/30 transition-colors">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-2 text-neutral-700 dark:text-neutral-300 peer-checked:text-purple-600 dark:peer-checked:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                                                </svg>
+                                                                <span class="block text-neutral-900 dark:text-white font-medium">Portfolio</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <input type="radio" id="typeShowcase" name="siteType" value="showcase" class="peer hidden">
+                                                            <label for="typeShowcase" class="block p-4 text-center border border-neutral-300 dark:border-neutral-600 rounded-lg cursor-pointer hover:border-purple-500 dark:hover:border-purple-500 peer-checked:border-purple-500 peer-checked:bg-purple-50 dark:peer-checked:bg-purple-900/30 transition-colors">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-2 text-neutral-700 dark:text-neutral-300 peer-checked:text-purple-600 dark:peer-checked:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                                                </svg>
+                                                                <span class="block text-neutral-900 dark:text-white font-medium">Site Vitrine</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <input type="radio" id="typeEcommerce" name="siteType" value="ecommerce" class="peer hidden">
+                                                            <label for="typeEcommerce" class="block p-4 text-center border border-neutral-300 dark:border-neutral-600 rounded-lg cursor-pointer hover:border-purple-500 dark:hover:border-purple-500 peer-checked:border-purple-500 peer-checked:bg-purple-50 dark:peer-checked:bg-purple-900/30 transition-colors">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-2 text-neutral-700 dark:text-neutral-300 peer-checked:text-purple-600 dark:peer-checked:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                                                </svg>
+                                                                <span class="block text-neutral-900 dark:text-white font-medium">Landing Page</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <label class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">Option d'hébergement préférée</label>
+                                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                                        <div class="relative">
+                                                            <input type="radio" id="hostingGithub" name="hosting" value="github" class="peer hidden" checked>
+                                                            <label for="hostingGithub" class="block p-4 text-center border border-neutral-300 dark:border-neutral-600 rounded-lg cursor-pointer hover:border-purple-500 dark:hover:border-purple-500 peer-checked:border-purple-500 peer-checked:bg-purple-50 dark:peer-checked:bg-purple-900/30 transition-colors">
+                                                                <span class="flex items-center justify-center">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-neutral-700 dark:text-neutral-300 peer-checked:text-purple-600 dark:peer-checked:text-purple-400" viewBox="0 0 24 24" fill="currentColor">
+                                                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                                                    </svg>
+                                                                    <span class="block text-neutral-900 dark:text-white font-medium">GitHub Pages (Gratuit)</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <input type="radio" id="hostingCustom" name="hosting" value="custom" class="peer hidden">
+                                                            <label for="hostingCustom" class="block p-4 text-center border border-neutral-300 dark:border-neutral-600 rounded-lg cursor-pointer hover:border-purple-500 dark:hover:border-purple-500 peer-checked:border-purple-500 peer-checked:bg-purple-50 dark:peer-checked:bg-purple-900/30 transition-colors">
+                                                                <span class="flex items-center justify-center">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-neutral-700 dark:text-neutral-300 peer-checked:text-purple-600 dark:peer-checked:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                                                    </svg>
+                                                                    <span class="block text-neutral-900 dark:text-white font-medium">Domaine personnalisé (3€/mois)</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <label for="budget" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Budget approximatif (€)</label>
+                                                    <select id="budget" name="budget" class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-neutral-700 dark:text-white">
+                                                        <option value="">Sélectionnez votre budget</option>
+                                                        <option value="less-than-250">Moins de 250€</option>
+                                                        <option value="250-300">250€ - 300€</option>
+                                                        <option value="more-than-300">Plus de 300€</option>
+                                                    </select>
+                                                </div>
+
+                                                <div>
+                                                    <label class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">Fonctionnalités souhaitées</label>
+                                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                                        <div class="flex items-start">
+                                                            <input type="checkbox" id="featureContact" name="features" value="contact" class="mt-1 h-4 w-4 text-purple-600 border-neutral-300 rounded focus:ring-purple-500 dark:bg-neutral-700 dark:border-neutral-600">
+                                                            <label for="featureContact" class="ml-2 text-sm text-neutral-700 dark:text-neutral-300">Formulaire de contact</label>
+                                                        </div>
+                                                        <div class="flex items-start">
+                                                            <input type="checkbox" id="featureSeo" name="features" value="seo" class="mt-1 h-4 w-4 text-purple-600 border-neutral-300 rounded focus:ring-purple-500 dark:bg-neutral-700 dark:border-neutral-600">
+                                                            <label for="featureSeo" class="ml-2 text-sm text-neutral-700 dark:text-neutral-300">Optimisation SEO avancée</label>
+                                                        </div>
+                                                        <div class="flex items-start">
+                                                            <input type="checkbox" id="featureResponsive" name="features" value="responsive" class="mt-1 h-4 w-4 text-purple-600 border-neutral-300 rounded focus:ring-purple-500 dark:bg-neutral-700 dark:border-neutral-600" checked>
+                                                            <label for="featureResponsive" class="ml-2 text-sm text-neutral-700 dark:text-neutral-300">Design responsive</label>
+                                                        </div>
+                                                        <div class="flex items-start">
+                                                            <input type="checkbox" id="featureMultilingual" name="features" value="multilingual" class="mt-1 h-4 w-4 text-purple-600 border-neutral-300 rounded focus:ring-purple-500 dark:bg-neutral-700 dark:border-neutral-600">
+                                                            <label for="featureMultilingual" class="ml-2 text-sm text-neutral-700 dark:text-neutral-300">Site multilingue</label>
+                                                        </div>
+                                                        <div class="flex items-start">
+                                                            <input type="checkbox" id="featureGallery" name="features" value="gallery" class="mt-1 h-4 w-4 text-purple-600 border-neutral-300 rounded focus:ring-purple-500 dark:bg-neutral-700 dark:border-neutral-600">
+                                                            <label for="featureGallery" class="ml-2 text-sm text-neutral-700 dark:text-neutral-300">Galerie de projets/produits</label>
+                                                        </div>
+                                                        <div class="flex items-start">
+                                                            <input type="checkbox" id="featureAdmin" name="features" value="admin" class="mt-1 h-4 w-4 text-purple-600 border-neutral-300 rounded focus:ring-purple-500 dark:bg-neutral-700 dark:border-neutral-600">
+                                                            <label for="featureAdmin" class="ml-2 text-sm text-neutral-700 dark:text-neutral-300">Interface d'administration</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <label for="projectDescription" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Description du projet *</label>
+                                                    <textarea id="projectDescription" name="projectDescription" rows="5" required class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-neutral-700 dark:text-white" placeholder="Décrivez votre projet, vos objectifs et toute information que vous jugez pertinente..."></textarea>
+                                                </div>
+
+                                                <div>
+                                                    <label for="timeline" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Délai souhaité</label>
+                                                    <select id="timeline" name="timeline" class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-neutral-700 dark:text-white">
+                                                        <option value="">Sélectionnez un délai</option>
+                                                        <option value="urgent">Urgent (moins de 5 jours)</option>
+                                                        <option value="normal">Normal (environ 7 jours)</option>
+                                                        <option value="flexible">Flexible (plus d'une semaine)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Submit -->
+                                        <div class="pt-4">
+                                            <div class="flex items-start mb-4">
+                                                <input type="checkbox" id="privacy" name="privacy" required class="mt-1 h-4 w-4 text-purple-600 border-neutral-300 rounded focus:ring-purple-500 dark:bg-neutral-700 dark:border-neutral-600">
+                                                <label for="privacy" class="ml-2 text-sm text-neutral-600 dark:text-neutral-400">
+                                                    J'accepte que mes données soient traitées pour traiter ma demande. *
+                                                </label>
+                                            </div>
+                                            <button type="submit" id="submit-devis" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md">
+                                                Envoyer ma demande de devis
+                                            </button>
+                                            <p class="text-xs text-neutral-500 dark:text-neutral-400 mt-3 text-center">Les champs marqués d'un * sont obligatoires</p>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
 
-                            <div class="bg-neutral-800 p-8 rounded-lg shadow-lg border border-purple-500/30">
-                                <h3 class="text-2xl font-semibold mb-6 text-purple-400">Nos coordonnées</h3>
-                                <div class="space-y-6">
-                                    <div class="flex items-start">
-                                        <div class="bg-purple-600/20 p-3 rounded-lg mr-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <h4 class="text-lg font-medium text-white">Email</h4>
-                                            <a href="mailto:contact@athenapro.ovh" class="text-blue-400 hover:text-blue-300 transition duration-300 mt-1 block">contact@athenapro.ovh</a>
-                                        </div>
+                            <!-- Info Section -->
+                            <div class="lg:w-1/3 md:animate__animated md:animate__fadeInRight md:animate__delay-1s">
+                                <div class="sticky top-24">
+                                    <div class="bg-gradient-to-br from-purple-600 to-indigo-600 rounded-xl shadow-lg p-8 text-white mb-8">
+                                        <h3 class="text-xl font-bold mb-4">Pourquoi nous choisir ?</h3>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start">
+                                                <svg class="w-5 h-5 text-purple-200 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Sites web modernes et optimisés</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="w-5 h-5 text-purple-200 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Tarifs transparents sans frais cachés</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="w-5 h-5 text-purple-200 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Accompagnement personnalisé</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="w-5 h-5 text-purple-200 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Support technique inclus</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="w-5 h-5 text-purple-200 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Garantie satisfaction à 100%</span>
+                                            </li>
+                                        </ul>
                                     </div>
+                                    <div class="bg-neutral-50 dark:bg-neutral-800 rounded-xl shadow-lg p-8">
+                                        <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-4">Nous contacter directement</h3>
+                                        <div class="space-y-4">
+                                            <div class="flex items-start">
+                                                <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center mr-3 shrink-0">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-sm font-semibold text-neutral-900 dark:text-white">Email</h4>
+                                                    <a href="mailto:contact@athenapro.ovh" class="text-purple-600 dark:text-purple-400 hover:underline">contact@athenapro.ovh</a>
+                                                </div>
+                                            </div>
 
-                                    <div class="flex items-start">
-                                        <div class="bg-blue-600/20 p-3 rounded-lg mr-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <h4 class="text-lg font-medium text-white">Heures d'ouverture</h4>
-                                            <p class="text-gray-300 mt-1">Lundi - Vendredi: 9h00 - 18h00</p>
-                                        </div>
-                                    </div>
+                                            <div class="flex items-start">
+                                                <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center mr-3 shrink-0">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-sm font-semibold text-neutral-900 dark:text-white">Téléphone</h4>
+                                                    <a href="tel:+33604181784" class="text-purple-600 dark:text-purple-400 hover:underline">+33 6 04 18 17 84</a>
+                                                </div>
+                                            </div>
 
-                                    <div class="flex justify-center space-x-4 mt-8">
-                                        <a href="https://www.linkedin.com/company/athenapro/" class="text-gray-300 hover:text-purple-400 transition-colors duration-300" aria-label="LinkedIn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                            </svg>
-                                        </a>
-                                        <a href="https://www.instagram.com/athenapro.ovh/?utm_source=ig_web_button_share_sheet" class="text-gray-300 hover:text-purple-400 transition-colors duration-300" aria-label="Instagram">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                                            </svg>
-                                        </a>
+                                            <div class="flex items-start">
+                                                <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center mr-3 shrink-0">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-sm font-semibold text-neutral-900 dark:text-white">Horaires</h4>
+                                                    <p class="text-neutral-600 dark:text-neutral-400">Lun - Ven: 9h00 - 18h00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-6 pt-6 border-t border-neutral-200 dark:border-neutral-700">
+                                            <h4 class="text-sm font-semibold text-neutral-900 dark:text-white mb-3">Suivez-nous</h4>
+                                            <div class="flex space-x-4">
+                                                <a href="https://www.instagram.com/athenapro.ovh/?utm_source=ig_web_button_share_sheet" class="w-10 h-10 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:bg-purple-100 hover:text-purple-600 dark:hover:bg-purple-900/40 dark:hover:text-purple-400 transition-colors">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                                    </svg>
+                                                </a>
+                                                <a href="https://www.linkedin.com/company/athenapro/" class="w-10 h-10 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:bg-purple-100 hover:text-purple-600 dark:hover:bg-purple-900/40 dark:hover:text-purple-400 transition-colors">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                                    </svg>
+                                                </a>
+                                                <a href="#" class="w-10 h-10 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:bg-purple-100 hover:text-purple-600 dark:hover:bg-purple-900/40 dark:hover:text-purple-400 transition-colors">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                                        </div> <!-- Fin du container -->
-                </section> <!-- Fin de la section contact -->
-            </div> <!-- Fin du div#root -->
-
-    </htmlCode>
+                </section>
+            </div>
+        </htmlCode>               
 
 
     <htmlCode>
