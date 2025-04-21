@@ -4,7 +4,7 @@ title: "5 techniques avancées de SEO pour freelances créatifs en 2025"
 date: 2025-04-21 10:00:00 +0100
 category: "Référencement"
 excerpt: "Découvrez comment propulser votre site de freelance dans les premiers résultats de recherche grâce à ces techniques SEO spécifiquement adaptées aux professionnels créatifs."
-image: "seo-header-illustration.svg"
+image: "https://i.postimg.cc/W3THdGdS/PORTFOLIO.webp"
 ---
 
 <main class="pt-24 pb-16 bg-[#0A0118] text-white font-serif">
