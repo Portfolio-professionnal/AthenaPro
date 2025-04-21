@@ -135,7 +135,7 @@ image: "https://i.postimg.cc/t4NtvLSR/UX.webp"
         <li class="mb-2"><strong>Créez des états visuels distincts :</strong> Normal, hover, actif et visité pour tous les éléments cliquables.</li>
         <li class="mb-2"><strong>Utilisez des indicateurs directionnels :</strong> Flèches, icônes et autres éléments visuels qui suggèrent la direction du flux d'information ou de navigation.</li>
       </ul>
-      <img src="https://i.postimg.cc/TYSzd8g8/affordance-example.webp" alt="Exemple d'affordance visuelle" class="mt-4 rounded">
+      <img src="https://i.postimg.cc/Gtzd53yJ/affordance.webp" alt="Exemple d'affordance visuelle" class="mt-4 rounded">
 
       <!-- Principe n°5 -->
       <h2 id="principe5" class="text-3xl font-bold mt-8 neon-text">Principe n°5 : La personnalisation subtile du parcours utilisateur</h2>
