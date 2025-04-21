@@ -136,205 +136,6 @@ image: "https://i.postimg.cc/t4NtvLSR/UX.webp"
         <li class="mb-2"><strong>Utilisez des indicateurs directionnels :</strong> Flèches, icônes et autres éléments visuels qui suggèrent la direction du flux d'information ou de navigation.</li>
       </ul>
       <img src="https://i.postimg.cc/Gtzd53yJ/affordance.webp" alt="Exemple d'affordance visuelle" class="mt-4 rounded">
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <!-- Fond sombre -->
-  <rect width="800" height="500" fill="#0A0118"/>
-  
-  <!-- Grille et éléments de fond -->
-  <g opacity="0.05">
-    <path d="M0 50 H800" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M0 100 H800" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M0 150 H800" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M0 200 H800" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M0 250 H800" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M0 300 H800" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M0 350 H800" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M0 400 H800" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M0 450 H800" stroke="#FF61D2" stroke-width="1"/>
-    
-    <path d="M50 0 V500" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M100 0 V500" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M150 0 V500" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M200 0 V500" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M250 0 V500" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M300 0 V500" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M350 0 V500" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M400 0 V500" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M450 0 V500" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M500 0 V500" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M550 0 V500" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M600 0 V500" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M650 0 V500" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M700 0 V500" stroke="#FF61D2" stroke-width="1"/>
-    <path d="M750 0 V500" stroke="#FF61D2" stroke-width="1"/>
-  </g>
-
-  <!-- Titre principal -->
-  <text x="400" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Principe n°7 : La cohérence émotionnelle</text>
-  <text x="400" y="75" font-family="Arial, sans-serif" font-size="18" fill="#FF61D2" text-anchor="middle">de votre marque</text>
-  
-  <!-- Ligne de séparation décorative -->
-  <line x1="200" y1="90" x2="600" y2="90" stroke="#FF61D2" stroke-width="3" stroke-linecap="round"/>
-  
-  <!-- Cœur central représentant l'émotion -->
-  <path d="M400,140 C430,110 480,110 480,150 C480,190 400,200 400,200 C400,200 320,190 320,150 C320,110 370,110 400,140 Z" fill="none" stroke="#FF61D2" stroke-width="3"/>
-  
-  <!-- Section 1: Palette émotionnelle -->
-  <g id="emotional-palette">
-    <text x="170" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">1. Palette émotionnelle</text>
-    
-    <!-- Cercles d'émotions pour différentes étapes du parcours -->
-    <g transform="translate(90, 160)">
-      <circle cx="0" cy="0" r="30" fill="#0A0118" stroke="#FF61D2" stroke-width="2"/>
-      <text x="0" y="5" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">CURIOSITÉ</text>
-      <text x="0" y="35" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Découverte</text>
-    </g>
-    
-    <g transform="translate(170, 160)">
-      <circle cx="0" cy="0" r="30" fill="#0A0118" stroke="#9B59B6" stroke-width="2"/>
-      <text x="0" y="5" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">CONFIANCE</text>
-      <text x="0" y="35" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Considération</text>
-    </g>
-    
-    <g transform="translate(90, 230)">
-      <circle cx="0" cy="0" r="30" fill="#0A0118" stroke="#3498DB" stroke-width="2"/>
-      <text x="0" y="5" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">SATISFACTION</text>
-      <text x="0" y="35" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Achat</text>
-    </g>
-    
-    <g transform="translate(170, 230)">
-      <circle cx="0" cy="0" r="30" fill="#0A0118" stroke="#2ECC71" stroke-width="2"/>
-      <text x="0" y="5" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">JOIE</text>
-      <text x="0" y="35" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Fidélisation</text>
-    </g>
-    
-    <!-- Lignes de connexion entre les émotions -->
-    <path d="M120 160 L140 160" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1"/>
-    <path d="M90 190 L90 210" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1"/>
-    <path d="M120 230 L140 230" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1"/>
-    <path d="M170 190 L170 210" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1"/>
-  </g>
-  
-  <!-- Section 2: Système de design émotionnel -->
-  <g id="emotional-design-system">
-    <text x="170" y="290" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">2. Système de design émotionnel</text>
-    
-    <rect x="50" y="310" width="160" height="130" rx="8" fill="#1A1128" stroke="#333333" stroke-width="1"/>
-    
-    <!-- Typographie -->
-    <text x="60" y="330" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF">Typographie:</text>
-    <text x="80" y="350" font-family="Arial, sans-serif" font-size="12" fill="#FF61D2">TITRE DYNAMIQUE</text>
-    <text x="80" y="370" font-family="Times, serif" font-size="12" fill="#CCCCCC">Texte élégant et raffiné</text>
-    
-    <!-- Animation -->
-    <text x="60" y="390" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF">Animation:</text>
-    <!-- Petite animation représentée par 3 points à différents états -->
-    <circle cx="85" cy="410" r="5" fill="#FF61D2">
-      <animate attributeName="cy" values="410;405;410" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="100" cy="410" r="5" fill="#FF61D2">
-      <animate attributeName="cy" values="410;405;410" dur="2s" begin="0.3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="115" cy="410" r="5" fill="#FF61D2">
-      <animate attributeName="cy" values="410;405;410" dur="2s" begin="0.6s" repeatCount="indefinite"/>
-    </circle>
-    
-    <!-- Micro-interactions -->
-    <text x="60" y="430" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF">Micro-interactions:</text>
-    <rect x="140" y="418" width="50" height="20" rx="10" fill="#444444"/>
-    <circle cx="150" cy="428" r="8" fill="#666666">
-      <animate attributeName="cx" values="150;180;150" dur="3s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-  
-  <!-- Section 3: Humanisation du ton -->
-  <g id="humanize-tone">
-    <text x="410" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">3. Humanisez votre ton</text>
-    
-    <!-- Messages standard vs humanisés -->
-    <rect x="280" y="150" width="180" height="60" rx="8" fill="#1A1128" stroke="#333333" stroke-width="1"/>
-    <text x="290" y="170" font-family="Arial, sans-serif" font-size="12" fill="#999999">Standard:</text>
-    <text x="290" y="190" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">"Votre formulaire a été soumis."</text>
-    
-    <rect x="280" y="220" width="180" height="60" rx="8" fill="#1A1128" stroke="#FF61D2" stroke-width="1"/>
-    <text x="290" y="240" font-family="Arial, sans-serif" font-size="12" fill="#999999">Humanisé:</text>
-    <text x="290" y="260" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">"Super ! Nous avons bien reçu</text>
-    <text x="290" y="275" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">votre message et revenons</text>
-    <text x="290" y="290" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">vers vous très vite ! 😊"</text>
-  </g>
-  
-  <!-- Section 4: Moments de vérité -->
-  <g id="moments-of-truth">
-    <text x="617" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">4. Moments de vérité</text>
-    
-    <!-- Interface de confirmation de commande -->
-    <rect x="520" y="150" width="230" height="130" rx="8" fill="#1A1128" stroke="#FF61D2" stroke-width="2"/>
-    <text x="635" y="175" font-family="Arial, sans-serif" font-size="16" fill="#FF61D2" text-anchor="middle">Commande confirmée !</text>
-    
-    <!-- Petite animation de célébration -->
-    <g transform="translate(635, 210)">
-      <circle cx="-40" cy="0" r="5" fill="#FF61D2">
-        <animate attributeName="cy" values="0;-20;0" dur="1s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="-20" cy="0" r="5" fill="#9B59B6">
-        <animate attributeName="cy" values="0;-15;0" dur="1.2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="0" cy="0" r="5" fill="#3498DB">
-        <animate attributeName="cy" values="0;-25;0" dur="0.8s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="20" cy="0" r="5" fill="#2ECC71">
-        <animate attributeName="cy" values="0;-15;0" dur="1.5s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="40" cy="0" r="5" fill="#F1C40F">
-        <animate attributeName="cy" values="0;-20;0" dur="1.3s" repeatCount="indefinite"/>
-      </circle>
-    </g>
-    
-    <text x="635" y="240" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Merci pour votre confiance !</text>
-    <text x="635" y="260" font-family="Arial, sans-serif" font-size="12" fill="#CCCCCC" text-anchor="middle">Vous recevrez bientôt votre colis</text>
-    
-    <!-- Message d'erreur humanisé -->
-    <rect x="520" y="290" width="230" height="90" rx="8" fill="#1A1128" stroke="#333333" stroke-width="1"/>
-    <text x="635" y="315" font-family="Arial, sans-serif" font-size="14" fill="#FF6B6B" text-anchor="middle">Oups, une petite erreur...</text>
-    <text x="635" y="340" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Pas de panique, nous sommes là</text>
-    <text x="635" y="360" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">pour vous aider à résoudre ce problème.</text>
-  </g>
-  
-  <!-- Chemin du parcours client au centre (liant tous les éléments) -->
-  <g id="customer-journey">
-    <path d="M170 195 Q 285 235, 400 195 Q 515 155, 630 195" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="4" stroke-opacity="0.6"/>
-    
-    <!-- Points de contact -->
-    <circle cx="170" cy="195" r="5" fill="#FF61D2"/>
-    <circle cx="400" cy="195" r="5" fill="#FF61D2"/>
-    <circle cx="630" cy="195" r="5" fill="#FF61D2"/>
-    
-    <!-- Labels des étapes -->
-    <text x="170" cy="320" font-family="Arial, sans-serif" font-size="12" fill="#CCCCCC" text-anchor="middle" transform="translate(0, 350)">DÉCOUVERTE</text>
-    <text x="400" cy="320" font-family="Arial, sans-serif" font-size="12" fill="#CCCCCC" text-anchor="middle" transform="translate(0, 350)">ENGAGEMENT</text>
-    <text x="630" cy="320" font-family="Arial, sans-serif" font-size="12" fill="#CCCCCC" text-anchor="middle" transform="translate(0, 350)">FIDÉLISATION</text>
-  </g>
-  
-  <!-- Ligne d'union entre les sections -->
-  <path d="M400 300 L400 400" stroke="#333333" stroke-width="1" stroke-dasharray="4"/>
-  
-  <!-- Effet de lueur néon -->
-  <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
-    <feGaussianBlur stdDeviation="5" result="blur"/>
-    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-  </filter>
-  
-  <g filter="url(#neon-glow)">
-    <path d="M50 485 C 250 460, 550 460, 750 485" stroke="#FF61D2" stroke-width="1" fill="none"/>
-  </g>
-  
-  <!-- Citation explicative -->
-  <rect x="150" y="490" width="500" height="1" fill="#333333"/>
-  <text x="400" y="480" font-family="Arial, sans-serif" font-size="14" fill="#CCCCCC" text-anchor="middle" font-style="italic">"L'émotion est le chemin le plus court vers la fidélité client"</text>
-  
-  <!-- Copyright -->
-  <text x="780" y="490" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="end">athenapro.ovh</text>
-</svg>
 
       <!-- Principe n°5 -->
       <h2 id="principe5" class="text-3xl font-bold mt-8 neon-text">Principe n°5 : La personnalisation subtile du parcours utilisateur</h2>
@@ -386,7 +187,202 @@ image: "https://i.postimg.cc/t4NtvLSR/UX.webp"
         <li class="mb-2"><strong>Humanisez votre ton :</strong> Adaptez votre langage visuel et textuel pour créer une connexion authentique, même dans les messages système.</li>
         <li class="mb-2"><strong>Concevez pour les moments de vérité :</strong> Identifiez les points de contact critiques où l'aspect émotionnel doit être particulièrement soigné (confirmation de commande, messages d'erreur, etc.).</li>
       </ul>
-      <img src="https://i.postimg.cc/MGXcrd7L/emotional-consistency.webp" alt="Exemple de cohérence émotionnelle" class="mt-4 rounded">
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond sombre -->
+  <rect width="800" height="500" fill="#0A0118"/>
+  
+  <!-- Grille et éléments de fond -->
+  <g opacity="0.05">
+    <path d="M0 50 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 100 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 150 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 200 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 250 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 300 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 350 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 400 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 450 H800" stroke="#FF61D2" stroke-width="1"/>
+    
+    <path d="M50 0 V500" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M100 0 V500" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M150 0 V500" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M200 0 V500" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M250 0 V500" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M300 0 V500" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M350 0 V500" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M400 0 V500" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M450 0 V500" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M500 0 V500" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M550 0 V500" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M600 0 V500" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M650 0 V500" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M700 0 V500" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M750 0 V500" stroke="#FF61D2" stroke-width="1"/>
+  </g>
+
+  <!-- Titre principal -->
+  <text x="400" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Principe n°7 : La cohérence émotionnelle</text>
+  <text x="400" y="75" font-family="Arial, sans-serif" font-size="18" fill="#FF61D2" text-anchor="middle">de votre marque</text>
+  
+  <!-- Ligne de séparation décorative -->
+  <line x1="200" y1="90" x2="600" y2="90" stroke="#FF61D2" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Cœur central représentant l'émotion -->
+  <path d="M400,140 C430,110 480,110 480,150 C480,190 400,200 400,200 C400,200 320,190 320,150 C320,110 370,110 400,140 Z" fill="none" stroke="#FF61D2" stroke-width="3"/>
+  
+  <!-- Section 1: Palette émotionnelle -->
+  <g id="emotional-palette">
+    <text x="130" y="140" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">1. Palette émotionnelle</text>
+    
+    <!-- Cercles d'émotions pour différentes étapes du parcours -->
+    <g transform="translate(70, 180)">
+      <circle cx="0" cy="0" r="30" fill="#0A0118" stroke="#FF61D2" stroke-width="2"/>
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">CURIOSITÉ</text>
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Découverte</text>
+    </g>
+    
+    <g transform="translate(150, 180)">
+      <circle cx="0" cy="0" r="30" fill="#0A0118" stroke="#9B59B6" stroke-width="2"/>
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">CONFIANCE</text>
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Considération</text>
+    </g>
+    
+    <g transform="translate(70, 250)">
+      <circle cx="0" cy="0" r="30" fill="#0A0118" stroke="#3498DB" stroke-width="2"/>
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">SATISFACTION</text>
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Achat</text>
+    </g>
+    
+    <g transform="translate(150, 250)">
+      <circle cx="0" cy="0" r="30" fill="#0A0118" stroke="#2ECC71" stroke-width="2"/>
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">JOIE</text>
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Fidélisation</text>
+    </g>
+    
+    <!-- Lignes de connexion entre les émotions -->
+    <path d="M100 180 L120 180" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1"/>
+    <path d="M70 210 L70 220" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1"/>
+    <path d="M100 250 L120 250" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1"/>
+    <path d="M150 210 L150 220" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1"/>
+  </g>
+  
+  <!-- Section 2: Système de design émotionnel -->
+  <g id="emotional-design-system">
+    <text x="130" y="310" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">2. Système de design émotionnel</text>
+    
+    <rect x="50" y="320" width="160" height="140" rx="8" fill="#1A1128" stroke="#333333" stroke-width="1"/>
+    
+    <!-- Typographie -->
+    <text x="60" y="340" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF">Typographie:</text>
+    <text x="80" y="360" font-family="Arial, sans-serif" font-size="12" fill="#FF61D2">TITRE DYNAMIQUE</text>
+    <text x="80" y="380" font-family="Times, serif" font-size="12" fill="#CCCCCC">Texte élégant et raffiné</text>
+    
+    <!-- Animation -->
+    <text x="60" y="400" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF">Animation:</text>
+    <!-- Petite animation représentée par 3 points à différents états -->
+    <circle cx="85" cy="420" r="5" fill="#FF61D2">
+      <animate attributeName="cy" values="420;415;420" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="420" r="5" fill="#FF61D2">
+      <animate attributeName="cy" values="420;415;420" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="115" cy="420" r="5" fill="#FF61D2">
+      <animate attributeName="cy" values="420;415;420" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Micro-interactions -->
+    <text x="60" y="440" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF">Micro-interactions:</text>
+    <rect x="140" y="428" width="50" height="20" rx="10" fill="#444444"/>
+    <circle cx="150" cy="438" r="8" fill="#666666">
+      <animate attributeName="cx" values="150;180;150" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Section 3: Humanisation du ton -->
+  <g id="humanize-tone">
+    <text x="370" y="140" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">3. Humanisez votre ton</text>
+    
+    <!-- Messages standard vs humanisés -->
+    <rect x="280" y="160" width="180" height="60" rx="8" fill="#1A1128" stroke="#333333" stroke-width="1"/>
+    <text x="290" y="180" font-family="Arial, sans-serif" font-size="12" fill="#999999">Standard:</text>
+    <text x="290" y="200" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">"Votre formulaire a été soumis."</text>
+    
+    <rect x="280" y="230" width="180" height="70" rx="8" fill="#1A1128" stroke="#FF61D2" stroke-width="1"/>
+    <text x="290" y="250" font-family="Arial, sans-serif" font-size="12" fill="#999999">Humanisé:</text>
+    <text x="290" y="270" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">"Super ! Nous avons bien reçu</text>
+    <text x="290" y="285" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">votre message et revenons</text>
+    <text x="290" y="300" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">vers vous très vite ! 😊"</text>
+  </g>
+  
+  <!-- Section 4: Moments de vérité -->
+  <g id="moments-of-truth">
+    <text x="617" y="140" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">4. Moments de vérité</text>
+    
+    <!-- Interface de confirmation de commande -->
+    <rect x="520" y="160" width="230" height="110" rx="8" fill="#1A1128" stroke="#FF61D2" stroke-width="2"/>
+    <text x="635" y="185" font-family="Arial, sans-serif" font-size="16" fill="#FF61D2" text-anchor="middle">Commande confirmée !</text>
+    
+    <!-- Animation de célébration -->
+    <g transform="translate(635, 210)">
+      <circle cx="-40" cy="0" r="5" fill="#FF61D2">
+        <animate attributeName="cy" values="0;-15;0" dur="1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-20" cy="0" r="5" fill="#9B59B6">
+        <animate attributeName="cy" values="0;-10;0" dur="1.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="5" fill="#3498DB">
+        <animate attributeName="cy" values="0;-15;0" dur="0.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="20" cy="0" r="5" fill="#2ECC71">
+        <animate attributeName="cy" values="0;-10;0" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="40" cy="0" r="5" fill="#F1C40F">
+        <animate attributeName="cy" values="0;-15;0" dur="1.3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <text x="635" y="235" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Merci pour votre confiance !</text>
+    <text x="635" y="255" font-family="Arial, sans-serif" font-size="12" fill="#CCCCCC" text-anchor="middle">Vous recevrez bientôt votre colis</text>
+    
+    <!-- Message d'erreur humanisé -->
+    <rect x="520" y="280" width="230" height="100" rx="8" fill="#1A1128" stroke="#333333" stroke-width="1"/>
+    <text x="635" y="310" font-family="Arial, sans-serif" font-size="14" fill="#FF6B6B" text-anchor="middle">Oups, une petite erreur...</text>
+    <text x="635" y="335" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Pas de panique, nous sommes là</text>
+    <text x="635" y="355" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">pour vous aider à résoudre ce problème.</text>
+  </g>
+  
+  <!-- Chemin du parcours client au centre (liant tous les éléments) -->
+  <g id="customer-journey">
+    <path d="M110 215 Q 285 265, 400 215 Q 515 165, 635 215" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="4" stroke-opacity="0.6"/>
+    
+    <!-- Points de contact -->
+    <circle cx="110" cy="215" r="5" fill="#FF61D2"/>
+    <circle cx="400" cy="215" r="5" fill="#FF61D2"/>
+    <circle cx="635" cy="215" r="5" fill="#FF61D2"/>
+    
+    <!-- Labels des étapes (positionnés pour éviter les chevauchements) -->
+    <text x="110" y="420" font-family="Arial, sans-serif" font-size="12" fill="#CCCCCC" text-anchor="middle">DÉCOUVERTE</text>
+    <text x="400" y="420" font-family="Arial, sans-serif" font-size="12" fill="#CCCCCC" text-anchor="middle">ENGAGEMENT</text>
+    <text x="635" y="420" font-family="Arial, sans-serif" font-size="12" fill="#CCCCCC" text-anchor="middle">FIDÉLISATION</text>
+  </g>
+  
+  <!-- Effet de lueur néon -->
+  <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="5" result="blur"/>
+    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+  </filter>
+  
+  <g filter="url(#neon-glow)">
+    <path d="M50 485 C 250 460, 550 460, 750 485" stroke="#FF61D2" stroke-width="1" fill="none"/>
+  </g>
+  
+  <!-- Citation explicative -->
+  <rect x="150" y="490" width="500" height="1" fill="#333333"/>
+  <text x="400" y="470" font-family="Arial, sans-serif" font-size="14" fill="#CCCCCC" text-anchor="middle" font-style="italic">"L'émotion est le chemin le plus court vers la fidélité client"</text>
+  
+  <!-- Copyright -->
+  <text x="780" y="490" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="end">athenapro.ovh</text>
+</svg>
 
       <!-- Comment implémenter -->
       <h2 id="implementation" class="text-3xl font-bold mt-8 neon-text">Comment implémenter ces principes sur votre site actuel</h2>
