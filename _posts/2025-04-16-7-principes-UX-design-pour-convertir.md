@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "7 principes d'UX design pour convertir vos visiteurs en clients fidèles"
-date: 2025-04-22 10:00:00 +0100
+date: 2025-04-21 10:00:00 +0100
 category: "Design UX"
 excerpt: "Découvrez comment transformer l'expérience utilisateur de votre site en véritable machine à conversion et fidéliser vos clients grâce à ces 7 principes d'UX design essentiels."
-image: "https://i.postimg.cc/9FXkQbGC/ux-design-header.webp"
+image: "https://i.postimg.cc/CKbJ0Rx0/UX.png"
 ---
 
 <main class="pt-24 pb-16 bg-[#0A0118] text-white font-serif">
