@@ -4,7 +4,7 @@ title: "7 principes d'UX design pour convertir vos visiteurs en clients"
 date: 2025-04-21 10:00:00 +0100
 category: "Design UX"
 excerpt: "Découvrez comment transformer l'expérience utilisateur de votre site en véritable machine à conversion et fidéliser vos clients grâce à ces 7 principes d'UX design essentiels."
-image: "https://i.postimg.cc/CKbJ0Rx0/UX.png"
+image: "https://i.postimg.cc/t4NtvLSR/UX.webp"
 ---
 
 <main class="pt-24 pb-16 bg-[#0A0118] text-white font-serif">
