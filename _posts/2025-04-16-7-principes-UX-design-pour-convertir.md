@@ -101,8 +101,264 @@ image: "https://i.postimg.cc/t4NtvLSR/UX.webp"
         <li class="mb-2"><strong>Proposez un parcours principal évident :</strong> Mettez en avant une action prioritaire par page, et reléguez les alternatives au second plan.</li>
         <li class="mb-2"><strong>Segmentez les processus complexes :</strong> Divisez les tâches en étapes digestibles avec des indicateurs de progression clairs.</li>
       </ul>
-      <img src="https://i.postimg.cc/BvqKXWQm/hick-law-example.webp" alt="Exemple de simplification des choix" class="mt-4 rounded">
+<svg viewBox="0 0 800 550" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond sombre -->
+  <rect width="800" height="550" fill="#0A0118"/>
+  
+  <!-- Grille et éléments de fond -->
+  <g opacity="0.05">
+    <path d="M0 50 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 100 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 150 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 200 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 250 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 300 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 350 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 400 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 450 H800" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M0 500 H800" stroke="#FF61D2" stroke-width="1"/>
+    
+    <path d="M50 0 V550" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M100 0 V550" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M150 0 V550" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M200 0 V550" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M250 0 V550" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M300 0 V550" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M350 0 V550" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M400 0 V550" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M450 0 V550" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M500 0 V550" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M550 0 V550" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M600 0 V550" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M650 0 V550" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M700 0 V550" stroke="#FF61D2" stroke-width="1"/>
+    <path d="M750 0 V550" stroke="#FF61D2" stroke-width="1"/>
+  </g>
 
+  <!-- Titre principal -->
+  <text x="400" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Principe n°2 : La loi de Hick</text>
+  <text x="400" y="75" font-family="Arial, sans-serif" font-size="18" fill="#FF61D2" text-anchor="middle">Simplifier les choix pour accélérer la décision</text>
+  
+  <!-- Ligne de séparation décorative -->
+  <line x1="200" y1="90" x2="600" y2="90" stroke="#FF61D2" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Visualisation de la loi de Hick: courbe logarithmique -->
+  <g id="hick-law-graph">
+    <!-- Axes du graphique -->
+    <line x1="100" y1="140" x2="100" y2="240" stroke="#FFFFFF" stroke-width="2"/>
+    <line x1="100" y1="240" x2="340" y2="240" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- Labels des axes -->
+    <text x="220" y="260" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Nombre d'options</text>
+    <text x="80" y="190" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" transform="rotate(-90, 80, 190)">Temps de décision</text>
+    
+    <!-- Courbe logarithmique -->
+    <path d="M120 220 Q 160 175, 200 160 Q 240 145, 280 140 Q 300 137, 320 135" stroke="#FF61D2" stroke-width="3" fill="none"/>
+    
+    <!-- Points sur la courbe avec annotations -->
+    <circle cx="120" cy="220" r="5" fill="#FFFFFF"/>
+    <text x="120" y="205" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">2-3</text>
+    
+    <circle cx="200" cy="160" r="5" fill="#FFFFFF"/>
+    <text x="200" y="145" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">7-8</text>
+    
+    <circle cx="280" cy="140" r="5" fill="#FFFFFF"/>
+    <text x="280" y="125" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">12+</text>
+    
+    <!-- Texte explicatif -->
+    <text x="220" y="280" font-family="Arial, sans-serif" font-size="11" fill="#CCCCCC" text-anchor="middle">Plus d'options = Plus de temps pour décider</text>
+  </g>
+  
+  <!-- Cerveau simplifié (visualisation de la charge cognitive) -->
+  <g id="brain">
+    <path d="M400 150 C 420 130, 440 130, 460 150 C 480 170, 480 200, 460 220 C 440 240, 400 240, 380 220 C 360 200, 360 170, 380 150 C 390 140, 400 150, 400 150 Z" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.7"/>
+    
+    <!-- Surcharge cognitive (trop d'options) -->
+    <g transform="translate(380, 160)">
+      <circle cx="0" cy="0" r="8" fill="#FF6B6B">
+        <animate attributeName="r" values="8;10;8" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="20" cy="0" r="8" fill="#FF6B6B">
+        <animate attributeName="r" values="8;10;8" dur="2.7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="40" cy="0" r="8" fill="#FF6B6B">
+        <animate attributeName="r" values="8;10;8" dur="3.3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="60" cy="0" r="8" fill="#FF6B6B">
+        <animate attributeName="r" values="8;10;8" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      
+      <circle cx="10" cy="20" r="8" fill="#FF6B6B">
+        <animate attributeName="r" values="8;10;8" dur="2.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="30" cy="20" r="8" fill="#FF6B6B">
+        <animate attributeName="r" values="8;10;8" dur="3.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="50" cy="20" r="8" fill="#FF6B6B">
+        <animate attributeName="r" values="8;10;8" dur="2.9s" repeatCount="indefinite"/>
+      </circle>
+      
+      <circle cx="20" cy="40" r="8" fill="#FF6B6B">
+        <animate attributeName="r" values="8;10;8" dur="3.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="40" cy="40" r="8" fill="#FF6B6B">
+        <animate attributeName="r" values="8;10;8" dur="2.6s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Label pour la charge cognitive -->
+    <text x="420" y="250" font-family="Arial, sans-serif" font-size="14" fill="#FF6B6B" text-anchor="middle">Surcharge cognitive</text>
+    <text x="420" y="270" font-family="Arial, sans-serif" font-size="12" fill="#CCCCCC" text-anchor="middle">Trop d'options paralysent le visiteur</text>
+  </g>
+  
+  <!-- Section 1: Options de navigation limitées -->
+  <g id="navigation-options">
+    <text x="130" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">1. Limitez les options de navigation</text>
+    
+    <!-- Exemple de bon menu (minimaliste) -->
+    <rect x="50" y="335" width="160" height="40" rx="4" fill="#1A1128" stroke="#FF61D2" stroke-width="2"/>
+    
+    <rect x="60" y="345" width="20" height="20" rx="2" fill="#FF61D2" opacity="0.8"/>
+    <text x="100" y="360" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">Accueil</text>
+    
+    <rect x="130" y="345" width="20" height="20" rx="2" fill="#FF61D2" opacity="0.8"/>
+    <text x="170" y="360" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">Services</text>
+    
+    <rect x="50" y="385" width="160" height="40" rx="4" fill="#1A1128" stroke="#FF61D2" stroke-width="2"/>
+    
+    <rect x="60" y="395" width="20" height="20" rx="2" fill="#FF61D2" opacity="0.8"/>
+    <text x="100" y="410" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">Portfolio</text>
+    
+    <rect x="130" y="395" width="20" height="20" rx="2" fill="#FF61D2" opacity="0.8"/>
+    <text x="170" y="410" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">Contact</text>
+    
+    <!-- Indicateur de simplicité -->
+    <text x="130" y="445" font-family="Arial, sans-serif" font-size="14" fill="#2ECC71" text-anchor="middle">✓ 4-7 options maximum</text>
+  </g>
+  
+  <!-- Section 2: Formulaires simplifiés -->
+  <g id="simple-forms">
+    <text x="400" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">2. Simplifiez vos formulaires</text>
+    
+    <!-- Exemple de formulaire "Avant/Après" -->
+    <g transform="translate(320, 340)">
+      <!-- Formulaire complexe (à éviter) -->
+      <rect x="0" y="0" width="80" height="120" rx="4" fill="#1A1128" stroke="#FF6B6B" stroke-width="2"/>
+      
+      <rect x="10" y="10" width="60" height="12" rx="2" fill="#333333"/>
+      <rect x="10" y="27" width="60" height="12" rx="2" fill="#333333"/>
+      <rect x="10" y="44" width="60" height="12" rx="2" fill="#333333"/>
+      <rect x="10" y="61" width="60" height="12" rx="2" fill="#333333"/>
+      <rect x="10" y="78" width="60" height="12" rx="2" fill="#333333"/>
+      <rect x="10" y="95" width="60" height="12" rx="2" fill="#333333"/>
+      
+      <text x="40" y="140" font-family="Arial, sans-serif" font-size="12" fill="#FF6B6B" text-anchor="middle">Trop de champs</text>
+      
+      <!-- Flèche -->
+      <path d="M90 60 L110 60" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="4"/>
+      <polygon points="110,60 105,55 105,65" fill="#FFFFFF"/>
+      
+      <!-- Formulaire simplifié (recommandé) -->
+      <rect x="120" y="0" width="80" height="120" rx="4" fill="#1A1128" stroke="#2ECC71" stroke-width="2"/>
+      
+      <rect x="130" y="20" width="60" height="15" rx="2" fill="#333333"/>
+      <rect x="130" y="50" width="60" height="15" rx="2" fill="#333333"/>
+      <rect x="130" y="80" width="60" height="15" rx="2" fill="#FF61D2"/>
+      
+      <text x="160" y="140" font-family="Arial, sans-serif" font-size="12" fill="#2ECC71" text-anchor="middle">Uniquement l'essentiel</text>
+    </g>
+  </g>
+  
+  <!-- Section 3: Parcours principal évident -->
+  <g id="primary-path">
+    <text x="600" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">3. Parcours principal évident</text>
+    
+    <!-- Exemple de page avec CTA principal vs secondaires -->
+    <rect x="550" y="340" width="150" height="120" rx="8" fill="#1A1128" stroke="#333333" stroke-width="1"/>
+    
+    <!-- Header -->
+    <rect x="550" y="340" width="150" height="20" rx="8 8 0 0" fill="#222222"/>
+    
+    <!-- Contenu -->
+    <rect x="560" y="370" width="130" height="8" rx="2" fill="#444444"/>
+    <rect x="560" y="385" width="130" height="8" rx="2" fill="#444444"/>
+    <rect x="560" y="400" width="80" height="8" rx="2" fill="#444444"/>
+    
+    <!-- CTA principal -->
+    <rect x="575" y="420" width="100" height="30" rx="15" fill="#FF61D2"/>
+    <text x="625" y="440" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">DÉMARRER</text>
+    
+    <!-- CTA secondaires -->
+    <rect x="555" y="425" width="15" height="15" rx="4" fill="#333333"/>
+    <text x="563" y="435" font-family="Arial, sans-serif" font-size="10" fill="#AAAAAA" text-anchor="middle">?</text>
+    
+    <rect x="680" y="425" width="15" height="15" rx="4" fill="#333333"/>
+    <text x="688" y="435" font-family="Arial, sans-serif" font-size="10" fill="#AAAAAA" text-anchor="middle">+</text>
+    
+    <!-- Annotations -->
+    <text x="625" y="470" font-family="Arial, sans-serif" font-size="12" fill="#FF61D2" text-anchor="middle">Action principale mise en avant</text>
+    <text x="625" y="490" font-family="Arial, sans-serif" font-size="12" fill="#AAAAAA" text-anchor="middle">Actions secondaires discrètes</text>
+  </g>
+  
+  <!-- Section 4: Segmentation des processus -->
+  <g id="process-segmentation">
+    <text x="600" y="140" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">4. Segmentez les processus complexes</text>
+    
+    <!-- Étapes progressives -->
+    <rect x="550" y="160" width="150" height="140" rx="8" fill="#1A1128" stroke="#333333" stroke-width="1"/>
+    
+    <!-- Indicateur de progression -->
+    <rect x="570" y="180" width="110" height="8" rx="4" fill="#222222"/>
+    
+    <!-- Étapes complétées -->
+    <rect x="570" y="180" width="44" height="8" rx="4" fill="#FF61D2"/>
+    
+    <!-- Numéros d'étape -->
+    <circle cx="570" cy="184" r="8" fill="#FF61D2"/>
+    <text x="570" y="187" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">1</text>
+    
+    <circle cx="600" cy="184" r="8" fill="#FF61D2"/>
+    <text x="600" y="187" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">2</text>
+    
+    <circle cx="630" cy="184" r="8" fill="#333333"/>
+    <text x="630" y="187" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">3</text>
+    
+    <circle cx="660" cy="184" r="8" fill="#333333"/>
+    <text x="660" y="187" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">4</text>
+    
+    <circle cx="690" cy="184" r="8" fill="#333333"/>
+    <text x="690" y="187" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">5</text>
+    
+    <!-- Étape actuelle -->
+    <text x="625" y="210" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Étape 2 sur 5</text>
+    <text x="625" y="230" font-family="Arial, sans-serif" font-size="12" fill="#AAAAAA" text-anchor="middle">Une seule décision</text>
+    <text x="625" y="245" font-family="Arial, sans-serif" font-size="12" fill="#AAAAAA" text-anchor="middle">à prendre à la fois</text>
+    
+    <!-- Navigation d'étapes -->
+    <rect x="580" y="265" width="40" height="25" rx="4" fill="#333333"/>
+    <text x="600" y="280" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Retour</text>
+    
+    <rect x="630" y="265" width="40" height="25" rx="4" fill="#FF61D2"/>
+    <text x="650" y="280" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Suite</text>
+  </g>
+  
+  <!-- Effet de lueur néon -->
+  <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="5" result="blur"/>
+    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+  </filter>
+  
+  <g filter="url(#neon-glow)">
+    <path d="M50 535 C 250 510, 550 510, 750 535" stroke="#FF61D2" stroke-width="1" fill="none"/>
+  </g>
+  
+  <!-- Citation explicative -->
+  <rect x="150" y="540" width="500" height="1" fill="#333333"/>
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="14" fill="#CCCCCC" text-anchor="middle" font-style="italic">"Moins de choix = Décisions plus rapides = Meilleure conversion"</text>
+  
+  <!-- Copyright -->
+  <text x="780" y="540" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="end">athenapro.ovh</text>
+</svg>
       <!-- Principe n°3 -->
       <h2 id="principe3" class="text-3xl font-bold mt-8 neon-text">Principe n°3 : Le storytelling visuel qui engage</h2>
       <p class="mt-4 leading-relaxed text-gray-300">
