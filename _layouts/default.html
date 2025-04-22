@@ -7,7 +7,8 @@
   <link rel="preconnect" href="https://polyfill.io">
   <link rel="preconnect" href="https://unpkg.com">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <!-- Google tag (gtag.js) -->
+  
+  <!-- Google Analytics et Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WKP97YJR7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,142 +16,135 @@
     gtag('js', new Date());
     gtag('config', 'G-0WKP97YJR7');
   </script>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NQ4BKQR2');</script>
-<!-- End Google Tag Manager -->
-
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NQ4BKQR2');</script>
 
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>{{ page.title }}</title>
-  <meta name="msvalidate.01" content="{{ page.msvalidate }}" />
-  <meta name="google-site-verification" content="{{ page.google_site_verification }}" />
-  <meta name="description" content="{{ page.description }}">
-  <meta name="robots" content="{{ page.robots }}">
-  <meta name="keywords" content="{{ page.keywords }}">
-  <meta name="author" content="{{ page.author }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Meta Tags améliorés -->
+  <title>{{ page.title }} | AthenaPro - Création de Portfolios et Landing Pages</title>
+  <meta name="description" content="{{ page.description | default: 'AthenaPro: Expert en création de portfolios professionnels et landing pages sur mesure. Portfolio à partir de 250€, livraison en 7 jours. Design responsive, SEO optimisé.' }}">
+  <meta name="keywords" content="{{ page.keywords | default: 'création portfolio, portfolio professionnel, landing page, site web pro, portfolio à 250€, CV en ligne, site vitrine, freelance portfolio, portfolio design' }}">
+  <meta name="author" content="{{ page.author | default: 'AthenaPro' }}">
+  <meta name="robots" content="{{ page.robots | default: 'index, follow' }}">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AthenaPro">
+  <meta property="og:title" content="{{ page.og_title | default: page.title }}">
+  <meta property="og:description" content="{{ page.og_description | default: page.description }}">
+  <meta property="og:image" content="{{ page.og_image | default: '/images/og-default.jpg' }}">
+  <meta property="og:url" content="{{ page.og_url | default: page.canonical }}">
+  <meta property="og:locale" content="fr_FR">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.og_title | default: page.title }}">
+  <meta name="twitter:description" content="{{ page.og_description | default: page.description }}">
+  <meta name="twitter:image" content="{{ page.og_image | default: '/images/og-default.jpg' }}">
+  
+  <!-- Canonical URL -->
   <link rel="canonical" href="{{ page.canonical }}">
   
-  <!-- Open Graph -->
-  <meta property="og:title" content="{{ page.og_title }}">
-  <meta property="og:description" content="{{ page.og_description }}">
-  <meta property="og:image" content="{{ page.og_image }}">
-  <meta property="og:url" content="{{ page.og_url }}">
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0A0118">
   
-  <link rel="icon" type="image/svg+xml" href="64 (2).svg" />
-  
+  <!-- CSS optimisé -->
   <style>
-    /* Reset CSS */
+    /* CSS critique pour éviter le FOUC */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.6;
       color: #333;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden; /* Empêche tout scroll horizontal */
-    }
-    #particles-js {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      background-color: #0A0118;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     html {
-      overflow-y: scroll; /* La scrollbar est toujours présente */
       scrollbar-gutter: stable;
+      scroll-behavior: smooth;
     }
     img {
       max-width: 100%;
       height: auto;
+      display: block;
     }
-   /* @media (max-width: 767px) {
-      .animate__animated {
-        animation: none !important;
-        opacity: 1 !important;
-      }
-    }*/
-  .animate-on-scroll {
-  opacity: 0;
-}
-
-
-    .animate__animated {
-  animation-fill-mode: both;
-}
-
-   /*   .animate__animated {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}*/
-    .animate__fadeInUp {
-  animation-duration: 2s !important;
-}
-.animate__fadeIn {
-  animation-duration: 2s !important;
-}
-
-
-
-
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
-    <link rel="stylesheet" href="/css/styles.min.css">
-<script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- CSS et JS externes -->
+  <link rel="stylesheet" href="/css/styles.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lunr/lunr.js" defer></script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
 </head>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ4BKQR2"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  
-  <div id="root">
-    <nav id="header" class="bg-gray-900 shadow-md fixed w-full top-0 z-50">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ4BKQR2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <header>
+    <nav id="header" class="bg-neutral-900 shadow-lg fixed w-full top-0 z-50 transition-all duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
-          <!-- Logo -->
+          <!-- Logo amélioré -->
           <div class="flex-shrink-0 flex items-center">
-            <a href="/index.html" class="text-xl font-bold text-white">Athena<span class="text-purple-400">Pro</span></a>
+            <a href="/index.html" class="text-2xl font-bold text-white hover:opacity-90 transition-opacity">
+              Athena<span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Pro</span>
+            </a>
           </div>
 
-          <!-- Desktop Navigation -->
-          <div class="hidden md:ml-6 md:flex md:items-center md:space-x-4">
-            <ul class="flex space-x-4">
-              <li><a href="/index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition duration-300">Accueil</a></li>
-              <li><a href="/Mes_Réalisations.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition duration-300">Mes réalisations</a></li>
-              <li><a href="/Comparatif.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition duration-300">Comparateur de prix</a></li>
-              <li><a href="/Blog.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition duration-300">Blog</a></li>
-              <li><a href="/Contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition duration-300">Contact</a></li>
-            </ul>
+          <!-- Navigation Desktop -->
+          <div class="hidden md:flex md:items-center md:space-x-6">
+            <a href="/index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-300">Accueil</a>
+            <a href="/Mes_Réalisations.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-300">Réalisations</a>
+            <a href="/Comparatif.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-300">Tarifs</a>
+            <a href="/Blog.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-300">Blog</a>
+            <a href="/Contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-300">Contact</a>
           </div>
 
-          <!-- Right Navigation Items -->
-          <div class="hidden md:flex items-center space-x-4">
-            <a href="/index.html#rdv" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-700 hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300">
-              Démarrer un projet
+          <!-- CTA Button -->
+          <div class="hidden md:flex items-center">
+            <a href="/index.html#rdv" class="inline-flex items-center px-6 py-2.5 text-sm font-medium rounded-full text-white bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-purple-700 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 transform hover:-translate-y-0.5">
+              <span>Démarrer un projet</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
             </a>
           </div>
 
           <!-- Mobile menu button -->
           <div class="flex md:hidden items-center">
-            <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false" aria-controls="mobile-menu" aria-label="Main menu">
-              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500" aria-expanded="false" aria-controls="mobile-menu" aria-label="Main menu">
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
-              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
               </svg>
             </button>
@@ -158,36 +152,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <!-- Mobile menu, show/hide based on menu state -->
+      <!-- Mobile menu amélioré -->
       <div class="md:hidden hidden" id="mobile-menu">
-        <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <li><a href="/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Accueil</a></li>
-          <li><a href="/Mes_Réalisations.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Mes Réalisations</a></li>
-          <li><a href="/Comparatif.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Comparateur de prix</a></li>
-          <li><a href="/Blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Blog</a></li>
-          <li><a href="/Contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Contact</a></li>
-          <li><a href="/index.html#rdv" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-400 hover:text-indigo-300">Démarrer un projet</a></li>
-        </ul>
+        <div class="px-2 pt-2 pb-3 space-y-1 bg-neutral-900 border-t border-gray-800">
+          <a href="/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-300">Accueil</a>
+          <a href="/Mes_Réalisations.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-300">Réalisations</a>
+          <a href="/Comparatif.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-300">Tarifs</a>
+          <a href="/Blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-300">Blog</a>
+          <a href="/Contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-300">Contact</a>
+          <a href="/index.html#rdv" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gradient-to-r from-purple-600 to-cyan-500 mt-4">Démarrer un projet</a>
+        </div>
       </div>
     </nav>
-  </div>
+  </header>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Toggle mobile menu
-    const btn = document.querySelector('.mobile-menu-button');
-    const menu = document.getElementById('mobile-menu');
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Toggle mobile menu
+      const btn = document.querySelector('.mobile-menu-button');
+      const menu = document.getElementById('mobile-menu');
 
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        const icons = btn.querySelectorAll('svg');
+        icons.forEach(icon => icon.classList.toggle('hidden'));
+      });
 
-      // Toggle icon visibility
-      const icons = btn.querySelectorAll('svg');
-      icons.forEach(icon => icon.classList.toggle('hidden'));
+      // Header scroll effect
+      const header = document.getElementById('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.add('bg-neutral-900/95', 'backdrop-blur-sm');
+        } else {
+          header.classList.remove('bg-neutral-900/95', 'backdrop-blur-sm');
+        }
+      });
     });
-  });
-</script>
-
+  </script>
 
   <!-- Contenu spécifique à la page sera inséré ici -->
   {{ content }}
