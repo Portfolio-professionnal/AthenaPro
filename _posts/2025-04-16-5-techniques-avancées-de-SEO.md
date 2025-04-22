@@ -136,7 +136,6 @@ image: "https://i.postimg.cc/W3THdGdS/PORTFOLIO.webp"
         <li><a href="#technique4" class="underline text-[#FF61D2]">Technique n°4 : Le netlinking qualitatif dans votre niche</a></li>
         <li><a href="#technique5" class="underline text-[#FF61D2]">Technique n°5 : L'optimisation UX comme facteur de référencement</a></li>
         <li><a href="#outils" class="underline text-[#FF61D2]">Les outils SEO indispensables pour freelances (budget limité)</a></li>
-        <li><a href="#etude-cas" class="underline text-[#FF61D2]">Étude de cas : Comment un photographe freelance a triplé son trafic en 6 mois</a></li>
         <li><a href="#faq" class="underline text-[#FF61D2]">FAQ : Vos questions sur le SEO pour portfolios créatifs</a></li>
         <li><a href="#conclusion" class="underline text-[#FF61D2]">Conclusion : Votre plan d'action SEO pour les 3 prochains mois</a></li>
       </ul>
@@ -575,112 +574,6 @@ image: "https://i.postimg.cc/W3THdGdS/PORTFOLIO.webp"
         <text x="300" y="30" font-family="Arial, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Outils SEO essentiels pour freelances</text>
       </svg>
 
-      <!-- Étude de cas -->
-      <h2 id="etude-cas" class="text-3xl font-bold mt-8 neon-text">Étude de cas : Comment un photographe freelance a triplé son trafic en 6 mois</h2>
-      <p class="mt-4 leading-relaxed text-gray-300">
-        Voici un exemple concret d'un cas réel documenté par Search Engine Journal en 2024 : Thomas Dubois, un photographe spécialisé en architecture basé à Bordeaux, a vu le trafic de son site passer de 1 200 à 3 800 visites mensuelles en seulement 6 mois, grâce à une stratégie SEO ciblée.
-      </p>
-      <p class="mt-4 leading-relaxed text-gray-300 font-semibold">
-        Sa situation initiale :
-      </p>
-      <ul class="list-disc pl-5 mt-4 text-gray-300 leading-relaxed">
-        <li class="mb-2">Un site portfolio WordPress avec une belle galerie mais peu de contenu textuel</li>
-        <li class="mb-2">Un positionnement générique sur "photographe Bordeaux" (très compétitif)</li>
-        <li class="mb-2">Une absence totale de présence dans les résultats de recherche locaux</li>
-        <li class="mb-2">Un temps de chargement médiocre dû à des images non optimisées</li>
-      </ul>
-      <p class="mt-4 leading-relaxed text-gray-300 font-semibold">
-        Les actions mises en place :
-      </p>
-      <ul class="list-disc pl-5 mt-4 text-gray-300 leading-relaxed">
-        <li class="mb-2"><strong>1. Ciblage d'une niche précise :</strong> Repositionnement sur "photographe d'architecture et d'intérieur Bordeaux" pour réduire la concurrence</li>
-        <li class="mb-2"><strong>2. Création de contenus spécialisés :</strong> Rédaction d'articles sur la photographie architecturale, renforçant son expertise</li>
-        <li class="mb-2"><strong>3. Optimisation technique :</strong> Compression de toutes les images et mise en place d'un système de chargement progressif</li>
-        <li class="mb-2"><strong>4. Implémentation du schema markup :</strong> Utilisation de données structurées pour ses projets et services</li>
-        <li class="mb-2"><strong>5. Stratégie locale :</strong> Création d'une fiche Google Business optimisée et collecte active d'avis clients</li>
-      </ul>
-      <p class="mt-4 leading-relaxed text-gray-300 font-semibold">
-        Les résultats après 6 mois :
-      </p>
-      <ul class="list-disc pl-5 mt-4 text-gray-300 leading-relaxed">
-        <li class="mb-2">Augmentation du trafic organique de 216%</li>
-        <li class="mb-2">Positionnement en première page pour 18 mots-clés à forte intention commerciale</li>
-        <li class="mb-2">Temps de chargement réduit de 5.8s à 2.1s</li>
-        <li class="mb-2">Augmentation de 47% du temps moyen passé sur le site</li>
-        <li class="mb-2">Hausse de 28% du nombre de demandes de devis via le site</li>
-      </ul>
-      <p class="mt-4 leading-relaxed text-gray-300">
-        Cette étude de cas démontre comment l'application méthodique des principes SEO modernes peut transformer la visibilité en ligne d'un freelance créatif, même sur un marché concurrentiel.
-      </p>
-      
-      <!-- Illustration SVG pour l'étude de cas -->
-      <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" class="mt-4 rounded">
-        <!-- Fond -->
-        <rect width="600" height="280" fill="#1A1128"/>
-        
-        <!-- Graphique de croissance -->
-        <rect x="80" y="60" width="440" height="160" rx="5" fill="#0A0118" stroke="#333333" stroke-width="1"/>
-        
-        <!-- Axe horizontal -->
-        <line x1="80" y1="220" x2="520" y2="220" stroke="#FFFFFF" stroke-width="2"/>
-        <text x="90" y="240" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">Janvier</text>
-        <text x="180" y="240" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">Février</text>
-        <text x="270" y="240" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">Mars</text>
-        <text x="360" y="240" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">Avril</text>
-        <text x="450" y="240" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">Mai</text>
-        
-        <!-- Axe vertical -->
-        <line x1="80" y1="60" x2="80" y1="220" stroke="#FFFFFF" stroke-width="2"/>
-        <text x="70" y="210" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="end">1000</text>
-        <text x="70" y="170" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="end">2000</text>
-        <text x="70" y="130" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="end">3000</text>
-        <text x="70" y="90" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="end">4000</text>
-        
-        <!-- Courbe de croissance -->
-        <path d="M90 190 L180 180 L270 160 L360 120 L450 80" stroke="#FF61D2" stroke-width="3" fill="none"/>
-        
-        <!-- Points de données -->
-        <circle cx="90" cy="190" r="5" fill="#FF61D2"/>
-        <circle cx="180" cy="180" r="5" fill="#FF61D2"/>
-        <circle cx="270" cy="160" r="5" fill="#FF61D2"/>
-        <circle cx="360" cy="120" r="5" fill="#FF61D2"/>
-        <circle cx="450" cy="80" r="5" fill="#FF61D2"/>
-        
-        <!-- Actions réalisées -->
-        <g transform="translate(90, 190)">
-          <line x1="0" y1="0" x2="0" y2="-20" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="2,2"/>
-          <circle cx="0" cy="-20" r="10" fill="#0A0118" stroke="#3498DB" stroke-width="1"/>
-          <text x="0" y="-17" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">1</text>
-        </g>
-        
-        <g transform="translate(180, 180)">
-          <line x1="0" y1="0" x2="0" y2="-20" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="2,2"/>
-          <circle cx="0" cy="-20" r="10" fill="#0A0118" stroke="#9B59B6" stroke-width="1"/>
-          <text x="0" y="-17" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">2</text>
-        </g>
-        
-        <g transform="translate(270, 160)">
-          <line x1="0" y1="0" x2="0" y2="-20" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="2,2"/>
-          <circle cx="0" cy="-20" r="10" fill="#0A0118" stroke="#2ECC71" stroke-width="1"/>
-          <text x="0" y="-17" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">3</text>
-        </g>
-        
-        <g transform="translate(360, 120)">
-          <line x1="0" y1="0" x2="0" y2="-20" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="2,2"/>
-          <circle cx="0" cy="-20" r="10" fill="#0A0118" stroke="#F1C40F" stroke-width="1"/>
-          <text x="0" y="-17" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">4</text>
-        </g>
-        
-        <g transform="translate(450, 80)">
-          <line x1="0" y1="0" x2="0" y2="-20" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="2,2"/>
-          <circle cx="0" cy="-20" r="10" fill="#0A0118" stroke="#E74C3C" stroke-width="1"/>
-          <text x="0" y="-17" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">5</text>
-        </g>
-        
-        <!-- Titre -->
-        <text x="300" y="30" font-family="Arial, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Évolution du trafic sur 6 mois</text>
-        <text x="300" y="265" font-family="Arial, sans-serif" font-size="14" fill="#FF61D2" text-anchor="middle">+216% de trafic</text>
-      </svg>
 
       <!-- FAQ -->
       <h2 id="faq" class="text-3xl font-bold mt-8 neon-text">FAQ : Vos questions sur le SEO pour portfolios créatifs</h2>
