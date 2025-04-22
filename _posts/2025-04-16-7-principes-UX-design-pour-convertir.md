@@ -52,7 +52,6 @@ image: "https://i.postimg.cc/t4NtvLSR/UX.webp"
         <li><a href="#principe6" class="underline text-[#FF61D2]">Principe n°6 : L'accessibilité inclusive comme standard</a></li>
         <li><a href="#principe7" class="underline text-[#FF61D2]">Principe n°7 : La cohérence émotionnelle de votre marque</a></li>
         <li><a href="#implementation" class="underline text-[#FF61D2]">Comment implémenter ces principes sur votre site actuel</a></li>
-        <li><a href="#etude-cas" class="underline text-[#FF61D2]">Étude de cas : Comment j'ai augmenté les conversions de 68% pour un portfolio freelance</a></li>
         <li><a href="#faq" class="underline text-[#FF61D2]">FAQ : Vos questions sur l'UX design orienté conversion</a></li>
         <li><a href="#conclusion" class="underline text-[#FF61D2]">Conclusion : Transformez votre site en machine à fidéliser</a></li>
       </ul>
@@ -656,40 +655,7 @@ image: "https://i.postimg.cc/t4NtvLSR/UX.webp"
         💡 Astuce pro : Privilégiez l'approche "Mobile First" pour vos améliorations UX. Plus de la moitié des conversions se font désormais sur mobile, et ce chiffre continue d'augmenter.
       </blockquote>
 
-      <!-- Étude de cas -->
-      <h2 id="etude-cas" class="text-3xl font-bold mt-8 neon-text">Étude de cas : Comment j'ai augmenté les conversions de 68% pour un portfolio freelance</h2>
-      <p class="mt-4 leading-relaxed text-gray-300">
-        Un photographe freelance m'a contactée pour résoudre un problème critique : son portfolio était visuellement impressionnant mais ne générait pratiquement aucune demande de devis.
-      </p>
-      <p class="mt-4 leading-relaxed text-gray-300">
-        <strong>Le diagnostic :</strong> Une analyse approfondie a révélé plusieurs problèmes UX majeurs :
-      </p>
-      <ul class="list-disc pl-5 mt-4 text-gray-300 leading-relaxed">
-        <li class="mb-2">Navigation confuse avec trop d'options de filtrage</li>
-        <li class="mb-2">Formulaire de contact trop complexe (12 champs obligatoires)</li>
-        <li class="mb-2">Aucune hiérarchie claire entre les projets (tous présentés avec la même importance)</li>
-        <li class="mb-2">Temps de chargement excessif dû à des images non optimisées</li>
-      </ul>
-      <p class="mt-4 leading-relaxed text-gray-300">
-        <strong>La solution :</strong> En appliquant les principes d'UX mentionnés dans cet article :
-      </p>
-      <ul class="list-disc pl-5 mt-4 text-gray-300 leading-relaxed">
-        <li class="mb-2">Simplification de la navigation (réduite à 5 catégories principales)</li>
-        <li class="mb-2">Refonte du formulaire de contact (réduit à 3 champs essentiels)</li>
-        <li class="mb-2">Création d'une hiérarchie visuelle mettant en avant les projets les plus pertinents</li>
-        <li class="mb-2">Optimisation des images et implémentation du chargement progressif</li>
-        <li class="mb-2">Ajout de témoignages clients stratégiquement placés près des appels à l'action</li>
-      </ul>
-      <p class="mt-4 leading-relaxed text-gray-300">
-        <strong>Les résultats :</strong> Un mois après le lancement :
-      </p>
-      <ul class="list-disc pl-5 mt-4 text-gray-300 leading-relaxed">
-        <li class="mb-2">Augmentation de 68% des demandes de devis</li>
-        <li class="mb-2">Réduction de 42% du taux de rebond</li>
-        <li class="mb-2">Augmentation de 3,5 minutes du temps moyen passé sur le site</li>
-        <li class="mb-2">Amélioration de 58% du taux de conversion des visiteurs mobiles</li>
-      </ul>
-
+     
       <!-- FAQ -->
       <h2 id="faq" class="text-3xl font-bold mt-8 neon-text">FAQ : Vos questions sur l'UX design orienté conversion</h2>
       <ul class="list-disc pl-5 mt-4 text-gray-300 leading-relaxed">
