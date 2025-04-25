@@ -105,12 +105,46 @@
   <script src="https://unpkg.com/lunr/lunr.js" defer></script>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="822639e2-db48-4f9a-adb0-2ff10f379cb4"></script>
 
-<!--           ConveyThis Script Start         -->
-<script src="//cdn.conveythis.com/javascript/conveythis.js?api_key=pub_1d96e7c7f0b09ab8d5607302b216bf7b"></script>
-<!--           ConveyThis Script End         -->
 
+<!-- Bouton custom -->
+<div id="language-selector" style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
+  <button 
+    onclick="changeLanguage('en')" 
+    style="background-color: #FF61D2; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 20px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    🇬🇧
+  </button>
+</div>
 
+<!-- Google Translate (invisible) -->
+<div id="google_translate_element" style="display: none;"></div>
 
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'fr',
+      includedLanguages: 'en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+
+  function changeLanguage(lang) {
+    var select = document.querySelector("select.goog-te-combo");
+    if (select) {
+      select.value = lang;
+      select.dispatchEvent(new Event('change'));
+    }
+  }
+</script>
+
+<!-- Script Google Translate -->
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Optionnel : Masquer la barre Google (CSS hack) -->
+<style>
+  .goog-te-banner-frame.skiptranslate { display: none !important; } 
+  body { top: 0px !important; }
+  .goog-te-gadget { font-size: 0; } /* Cache le menu Google */
+</style>
 
 
 </head>
