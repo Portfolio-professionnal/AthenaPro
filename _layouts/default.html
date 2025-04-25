@@ -105,7 +105,6 @@
   <script src="https://unpkg.com/lunr/lunr.js" defer></script>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="822639e2-db48-4f9a-adb0-2ff10f379cb4"></script>
 
-
 <!-- Bouton custom -->
 <div id="language-selector" style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
   <button 
@@ -128,18 +127,22 @@
   }
 
   function changeLanguage(lang) {
-    var select = document.querySelector("select.goog-te-combo");
-    if (select) {
-      select.value = lang;
-      select.dispatchEvent(new Event('change'));
-    }
+    // ATTEND que le select soit chargé (polling)
+    const interval = setInterval(() => {
+      const select = document.querySelector("select.goog-te-combo");
+      if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event('change'));
+        clearInterval(interval); // Stop le polling une fois trouvé
+      }
+    }, 100); // Check toutes les 100ms
   }
 </script>
 
 <!-- Script Google Translate -->
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<!-- Optionnel : Masquer la barre Google (CSS hack) -->
+<!-- Masquer la barre Google Translate -->
 <style>
   .goog-te-banner-frame.skiptranslate { display: none !important; } 
   body { top: 0px !important; }
