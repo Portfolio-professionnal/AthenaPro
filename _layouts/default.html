@@ -106,6 +106,7 @@
 <script defer src="https://cloud.umami.is/script.js" data-website-id="822639e2-db48-4f9a-adb0-2ff10f379cb4"></script>
 
 <!-- Google Translate Bubble Code - À placer avant la balise </head> -->
+<!-- Google Translate Bubble Code - À placer avant la balise </head> -->
 <style>
   /* Style pour la bulle de traduction */
   .translate-bubble {
@@ -192,10 +193,46 @@
     font-size: 10px;
     font-weight: bold;
   }
+  
+  /* Style pour le widget Google Translate */
+  .skiptranslate {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+  }
+  
+  body {
+    top: 0 !important;
+  }
+  
+  #google_translate_element {
+    display: none;
+  }
 </style>
 
-<script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'fr',
+      autoDisplay: false,
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+  
   document.addEventListener('DOMContentLoaded', function() {
+    // Ajouter le div pour Google Translate
+    const translateElement = document.createElement('div');
+    translateElement.id = 'google_translate_element';
+    document.body.appendChild(translateElement);
+    
+    // Charger le script Google Translate
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.head.appendChild(script);
+    
     // Créer la bulle de traduction
     const translateBubble = document.createElement('div');
     translateBubble.className = 'translate-bubble';
@@ -242,7 +279,7 @@
       }
     });
 
-    // Fonction de traduction avec Google Translate
+    // Fonction de traduction avec Google Translate directement sur la page
     document.getElementById('translate-button').addEventListener('click', function() {
       const selectedLang = document.getElementById('language-select').value;
       if (!selectedLang) return;
@@ -250,10 +287,12 @@
       // Mettre à jour l'indicateur de langue
       document.querySelector('.current-language').textContent = selectedLang.toUpperCase().substring(0, 2);
       
-      // Utiliser l'API Google Translate
-      const currentUrl = window.location.href;
-      const googleTranslateUrl = `https://translate.google.com/translate?sl=fr&tl=${selectedLang}&u=${encodeURIComponent(currentUrl)}`;
-      window.open(googleTranslateUrl, '_blank');
+      // Traduire la page avec l'API Google Translate
+      const selectElement = document.querySelector('.goog-te-combo');
+      if (selectElement) {
+        selectElement.value = selectedLang;
+        selectElement.dispatchEvent(new Event('change'));
+      }
       
       // Fermer le menu
       translateMenu.classList.remove('show');
