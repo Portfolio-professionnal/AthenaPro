@@ -1824,26 +1824,40 @@ og_url: "https://athenapro.ovh/Mes_Réalisations.html"
     </htmlCode>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate__animated');
-        const animateClasses = entry.target.getAttribute('data-animate') || '';
-        if (animateClasses) {
-          entry.target.classList.add(...animateClasses.split(' '));
+  // Fonction pour initialiser les animations au scroll
+  function initAnimations() {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('animate__animated');
+            const animateClasses = entry.target.getAttribute('data-animate') || '';
+            if (animateClasses) {
+              animateClasses.split(' ').forEach(cls => {
+                if (cls) entry.target.classList.add(cls);
+              });
+            }
+            entry.target.style.opacity = '1';
+          }, 50);
+          observer.unobserve(entry.target);
         }
-        // Retirer la classe qui masque l'élément
-        entry.target.classList.remove('opacity-0');
-        observer.unobserve(entry.target);
-      }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: "0px 0px -150px 0px"
     });
-  }, {
-    threshold: 0.1,
-    rootMargin: "0px 0px -200px 0px"
-  });
 
-  const animateElements = document.querySelectorAll('.animate-on-scroll');
-  animateElements.forEach(el => observer.observe(el));
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    animateElements.forEach(el => {
+      // Assurer que l'élément commence invisible
+      el.style.opacity = '0';
+      el.style.transition = 'opacity 0.3s ease-out';
+      observer.observe(el);
+    });
+  }
+
+  // Initialiser avec un léger délai pour éviter les conflits
+  setTimeout(initAnimations, 100);
 });
 
 </script>
