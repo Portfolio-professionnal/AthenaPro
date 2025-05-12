@@ -1796,26 +1796,113 @@ google_site_verification: "uop0iHMHrwFRql4-mGREo8r95Z5rUHPfGlxlA2s1R9U"
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     </htmlCode>
 <script>
+// Script unifié pour les animations et interactions
 document.addEventListener('DOMContentLoaded', function() {
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate__animated');
-        // Vérifier d'abord data-animate, sinon data-animation
-        const animateClasses = entry.target.getAttribute('data-animate') || entry.target.getAttribute('data-animation') || '';
-        if (animateClasses) {
-          entry.target.classList.add(...animateClasses.split(' '));
-        }
-        entry.target.classList.remove('opacity-0');
-        entry.target.style.animationFillMode = 'both';
-        observer.unobserve(entry.target);
+  // Fonction pour initialiser les animations au scroll
+  function initAnimations() {
+    // 1. D'abord, s'assurer que tous les éléments .animate-on-scroll sont initialement invisibles
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    animateElements.forEach(el => {
+      if (!el.classList.contains('opacity-0') && !el.style.opacity) {
+        el.style.opacity = '0';
+        el.style.transition = 'opacity 0.3s ease-out';
       }
     });
-  }, { threshold: 0.1, rootMargin: "0px 0px -200px 0px" });
-
-  const animateElements = document.querySelectorAll('.animate-on-scroll');
-  animateElements.forEach(el => observer.observe(el));
+    
+    // 2. Configurer l'observateur pour les animer lors du défilement
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            // Animation avec animate.css
+            entry.target.classList.add('animate__animated');
+            
+            // Supporter les deux formats d'attributs de données
+            const animateClasses = entry.target.getAttribute('data-animate') || 
+                                  entry.target.getAttribute('data-animation') || '';
+            
+            // Ajouter toutes les classes d'animation demandées
+            if (animateClasses) {
+              animateClasses.split(' ').forEach(cls => {
+                if (cls) entry.target.classList.add(cls);
+              });
+            }
+            
+            // S'assurer que l'élément est visible
+            entry.target.style.opacity = '1';
+            entry.target.classList.remove('opacity-0');
+            
+            // Fixer le remplissage d'animation
+            entry.target.style.animationFillMode = 'both';
+          }, 50); // Délai minimal pour éviter les problèmes de rendu
+          
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { 
+      threshold: 0.15, // Légèrement plus élevé pour une meilleure détection
+      rootMargin: "0px 0px -150px 0px" // Déclencher un peu plus tôt
+    });
+    
+    // Observer tous les éléments animés
+    animateElements.forEach(el => observer.observe(el));
+  }
+  
+  // Fonction pour initialiser les accordéons FAQ
+  function initFaqAccordions() {
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    
+    faqToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Obtenir l'ID cible pour le contenu
+        const targetId = this.getAttribute('data-target');
+        const content = document.getElementById(targetId) || this.nextElementSibling;
+        
+        // Obtenir l'icône de flèche
+        const arrow = this.querySelector('.faq-arrow');
+        
+        // Vérifier si déjà ouvert
+        const isOpen = !content.classList.contains('hidden');
+        
+        // Fermer tous les autres accordéons
+        faqToggles.forEach(otherToggle => {
+          if (otherToggle !== this) {
+            const otherTargetId = otherToggle.getAttribute('data-target');
+            const otherContent = document.getElementById(otherTargetId) || otherToggle.nextElementSibling;
+            const otherArrow = otherToggle.querySelector('.faq-arrow');
+            
+            if (otherContent && !otherContent.classList.contains('hidden')) {
+              otherContent.classList.add('hidden');
+              if (otherArrow) {
+                otherArrow.style.transform = 'rotate(0deg)';
+              }
+            }
+          }
+        });
+        
+        // Basculer l'accordéon actuel
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          if (arrow) {
+            arrow.style.transform = 'rotate(180deg)';
+          }
+        } else {
+          content.classList.add('hidden');
+          if (arrow) {
+            arrow.style.transform = 'rotate(0deg)';
+          }
+        }
+      });
+    });
+  }
+  
+  // Initialiser les animations avec un léger délai
+  setTimeout(initAnimations, 100);
+  
+  // Initialiser les accordéons
+  initFaqAccordions();
 });
-
 </script>
 
