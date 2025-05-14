@@ -1761,35 +1761,51 @@ google_site_verification: "uop0iHMHrwFRql4-mGREo8r95Z5rUHPfGlxlA2s1R9U"
         </section>
 
           <script>
-                (function () {
-                    try {
-                        const faqToggles = document.querySelectorAll('.faq-toggle');
-                        faqToggles.forEach(toggle => {
-                            toggle.addEventListener('click', function (e) {
-                                // Empêche tout comportement par défaut
-                                e.preventDefault();
-                                const content = this.nextElementSibling;
-                                const icon = this.querySelector('.faq-icon');
+              function initFaqAccordions() {
+  const faqToggles = document.querySelectorAll('.faq-toggle');
+  
+  faqToggles.forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      // Récupérer l'ID cible
+      const targetId = this.getAttribute('data-target');
+      const content = document.getElementById(targetId);
+      
+      // Récupérer la flèche dans ce toggle spécifique
+      const arrow = this.querySelector('.faq-arrow');
+      
+      // Vérifier si déjà ouvert
+      const isOpen = !content.classList.contains('hidden');
+      
+      // Fermer tous les autres accordéons
+      document.querySelectorAll('.faq-content').forEach(otherContent => {
+        if (otherContent.id !== targetId) {
+          otherContent.classList.add('hidden');
+        }
+      });
+      
+      // Réinitialiser toutes les flèches
+      document.querySelectorAll('.faq-arrow').forEach(otherArrow => {
+        if (otherArrow !== arrow) {
+          otherArrow.style.transform = 'rotate(0deg)';
+        }
+      });
+      
+      // Basculer l'accordéon actuel
+      if (isOpen) {
+        content.classList.add('hidden');
+        arrow.style.transform = 'rotate(0deg)';
+      } else {
+        content.classList.remove('hidden');
+        arrow.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+}
 
-                                // Basculer l'affichage du contenu
-                                content.classList.toggle('hidden');
-                                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-
-                                // Fermer les autres FAQ
-                                faqToggles.forEach(otherToggle => {
-                                    if (otherToggle !== this) {
-                                        const otherContent = otherToggle.nextElementSibling;
-                                        const otherIcon = otherToggle.querySelector('.faq-icon');
-                                        otherContent.classList.add('hidden');
-                                        otherIcon.style.transform = 'rotate(0deg)';
-                                    }
-                                });
-                            });
-                        });
-                    } catch (error) {
-                        console.error("Erreur dans le script FAQ : ", error);
-                    }
-                })();
+// Appelé quand le DOM est chargé
+document.addEventListener('DOMContentLoaded', function() {
+  initFaqAccordions();
+});
             </script>
         </div>
 
