@@ -1760,50 +1760,6 @@ google_site_verification: "uop0iHMHrwFRql4-mGREo8r95Z5rUHPfGlxlA2s1R9U"
         <!-- Bottom border with gradient -->
         </section>
 
-  <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const faqToggles = document.querySelectorAll('.faq-toggle');
-    
-    faqToggles.forEach(toggle => {
-        toggle.addEventListener('click', function() {
-            // Récupérer l'ID du contenu cible
-            const targetId = this.getAttribute('data-target');
-            const content = document.getElementById(targetId);
-            
-            if (!content) {
-                console.error('Élément cible non trouvé:', targetId);
-                return;
-            }
-            
-            // Récupérer la flèche
-            const arrow = this.querySelector('.faq-arrow');
-            
-            // Basculer l'état actuel
-            const isHidden = content.classList.contains('hidden');
-            
-            // Masquer tous les contenus et réinitialiser les flèches
-            document.querySelectorAll('.faq-content').forEach(item => {
-                item.classList.add('hidden');
-            });
-            
-            document.querySelectorAll('.faq-arrow').forEach(item => {
-                item.style.transform = 'rotate(0deg)';
-            });
-            
-            // Afficher ce contenu si c'était caché
-            if (isHidden) {
-                content.classList.remove('hidden');
-                if (arrow) {
-                    arrow.style.transform = 'rotate(180deg)';
-                }
-            }
-        });
-    });
-    
-    // Log pour vérifier que le script est chargé
-    console.log('Script FAQ chargé avec succès');
-});
-</script>
         </div>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
