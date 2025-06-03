@@ -1,0 +1,50 @@
+name: "Auto Blog Post Generator"
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # Tous les jours à 9h
+  workflow_dispatch:      # Permet l'activation manuelle
+
+jobs:
+  create_post:
+    name: Create Blog Post
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with: actions/checkout@v3
+          ref: gh-page
+          fetch-depth: 0ref: gh-page
+          
+      - name: Set up Python
+        uses: actions/setup-python@v4 actions/setup-python@v4
+        with:
+          python-version: '3.x'python-version: '3.x'
+          
+      - name: Install dependenciesInstall dependencies
+        run: |
+          python -m pip install --upgrade pippip
+          pip install markdown frontmatterpip install markdown frontmatter
+          
+      - name: Generate post
+        run: python .github/scripts/generate_post.pyrun: python .github/scripts/generate_post.py
+        
+      - name: List filesDebug info
+        run: |
+          echo "Current directory contents:"
+          ls -lasts/
+          echo "Posts directory contents:"git status
+          ls -la _posts/ || echo "No posts directory"
+          Commit changes
+      - name: Configure Git
+        run: |eply.github.com"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"cal user.name "GitHub Copilot Blog Generator"
+          git config --global user.name "GitHub Blog Generator"
+      "No changes"
+
+
+
+
+
+          git push origin gh-page || echo "No changes to push"          git commit -m "Add new blog post [automated]" || echo "No changes to commit"          git add _posts/ || echo "No changes to add"        run: |      - name: Commit and push          git push origin gh-page || echo "No changes to push"
