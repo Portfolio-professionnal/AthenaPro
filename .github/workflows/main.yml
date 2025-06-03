@@ -43,22 +43,28 @@ jobs:
           && sudo apt install gh -y
 
       - name: Configuration GitHub CLI
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
           gh auth status
 
-      - name: Installation et configuration Copilot
+      - name: Installation Copilot CLI
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh extension install github/gh-copilot
           gh copilot --version
-          gh copilot auth
 
+      - name: Test Copilot
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Test Copilot connection" | gh copilot suggest || true
+          
       - name: Génération Article
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python .github/scripts/generate_blog_post.py
 
       - name: Commit & Push
