@@ -1,71 +1,152 @@
+import json
 import os
+import re
+import subprocess
 from datetime import datetime
-import random
+import pytz
+import unicodedata
+import yaml
 from pathlib import Path
 
-def get_todays_topic():
-    """Génère un sujet pertinent pour AthenaPro"""
-    topics = [
-        "Portfolio", "Landing Page", "UX/UI", "Conversion",
-        "Personal Branding", "Web Design", "Analytics"
-    ]
-    
-    templates = [
-        "Comment optimiser votre {topic} en 2025",
-        "Les meilleures pratiques {topic} pour freelances",
-        "Guide complet : {topic} qui convertit",
-        "5 techniques avancées de {topic}",
-        "L'art du {topic} professionnel"
-    ]
-    
-    topic = random.choice(topics)
-    template = random.choice(templates)
-    return template.format(topic=topic.lower())
+def read_existing_titles():
+    """Lit tous les titres d'articles existants dans le dossier _posts."""
+    existing_titles = set()
+    posts_dir = Path("_posts")
+    if posts_dir.exists():
+        for post_file in posts_dir.glob("*.md"):
+            content = post_file.read_text(encoding="utf-8")
+            if content.startswith("---"):
+                _, front_matter, _ = content.split("---", 2)
+                try:
+                    meta = yaml.safe_load(front_matter)
+                    if "title" in meta:
+                        existing_titles.add(meta["title"])
+                except yaml.YAMLError:
+                    continue
+    return existing_titles
+
+def generate_slug(title):
+    """Génère un slug URL-friendly à partir du titre."""
+    # Convertir en minuscules et remplacer les accents
+    text = unicodedata.normalize('NFKD', title).encode('ASCII', 'ignore').decode('utf-8')
+    # Convertir en minuscules et remplacer espaces/apostrophes par des tirets
+    text = text.lower().replace(" ", "-").replace("'", "-").replace("'", "-")
+    # Supprimer tous les caractères non alphanumériques sauf tirets et underscores
+    text = re.sub(r'[^\w\-]', '', text)
+    # Supprimer les tirets multiples consécutifs
+    text = re.sub(r'-+', '-', text)
+    return text.strip('-')
+
+def get_paris_datetime():
+    """Obtient la date et l'heure actuelles à Paris."""
+    paris_tz = pytz.timezone('Europe/Paris')
+    now = datetime.now(paris_tz)
+    return {
+        'iso': now.strftime('%Y-%m-%d %H:%M:%S +0200'),
+        'date': now.strftime('%Y-%m-%d'),
+        'readable': now.strftime('%d %B %Y')
+    }
+
+def get_copilot_suggestion(prompt):
+    """Obtient une suggestion de GitHub Copilot via CLI."""
+    try:
+        result = subprocess.run(
+            ["gh", "copilot", "suggest", "--target", "shell"],
+            input=prompt.encode('utf-8'),
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        return result.stdout.strip()
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Erreur Copilot CLI : {e}")
+        print(f"Sortie d'erreur : {e.stderr}")
+        raise
+
+def generate_article_metadata():
+    """Génère les métadonnées de l'article avec Copilot."""
+    existing_titles = read_existing_titles()
+    titles_list = "\n".join(f"- {title}" for title in existing_titles)
+
+    prompt = f"""
+    Contexte : AthenaPro = service de création de landing pages & portfolios pro HTML/CSS/Tailwind 
+    pour freelances, indépendants, jeunes diplômés.
+
+    Titres existants :
+    {titles_list}
+
+    Génère un JSON avec :
+    {{
+        "title": "Nouveau titre inédit et accrocheur",
+        "category": "Conseils, Tutoriel, ou Astuces",
+        "excerpt": "Description courte et persuasive",
+        "image_url": "URL d'une image pertinente sur postimg.cc",
+        "keywords": ["mot-clé1", "mot-clé2", "mot-clé3"]
+    }}
+    """
+
+    response = get_copilot_suggestion(prompt)
+    try:
+        # Extraire le JSON de la réponse
+        json_match = re.search(r'\{.*\}', response, re.DOTALL)
+        if not json_match:
+            raise ValueError("Pas de JSON trouvé dans la réponse")
+        return json.loads(json_match.group())
+    except (json.JSONDecodeError, ValueError) as e:
+        print(f"❌ Erreur parsing JSON : {e}")
+        raise
+
+def generate_article_content(metadata, datetime_info):
+    """Génère le contenu complet de l'article avec Copilot."""
+    prompt = f"""
+    Génère un article en Markdown pour AthenaPro avec ce front-matter :
+    ---
+    layout: post
+    title: "{metadata['title']}"
+    date: {datetime_info['iso']}
+    category: "{metadata['category']}"
+    excerpt: "{metadata['excerpt']}"
+    image: "{metadata['image_url']}"
+    ---
+
+    L'article doit :
+    1. Suivre la structure HTML/Tailwind fournie
+    2. Inclure un sommaire avec ancres
+    3. Avoir au moins 5 sections avec texte, images, listes, citations
+    4. Finir par une conclusion et CTA vers AthenaPro
+    5. Être pertinent pour les freelances et indépendants
+    """
+
+    article_content = get_copilot_suggestion(prompt)
+    return article_content
 
 def main():
-    try:
-        # Création du dossier _posts si nécessaire
-        os.makedirs('_posts', exist_ok=True)
-        
-        # Génération du titre
-        title = get_todays_topic()
-        date = datetime.now()
-        
-        # Création du nom de fichier
-        filename = f"{date.strftime('%Y-%m-%d')}-{title.lower().replace(' ', '-')}.md"
-        filepath = os.path.join('_posts', filename)
-        
-        # Génération du contenu
-        content = f"""---
-layout: post
-title: "{title}"
-date: {date.strftime('%Y-%m-%d %H:%M:%S +0100')}
-category: "Design"
-excerpt: "Découvrez les meilleures pratiques et techniques avancées pour améliorer votre présence en ligne"
-image: "https://i.postimg.cc/W3THdGdS/PORTFOLIO.webp"
----
+    # Créer le dossier _posts s'il n'existe pas
+    os.makedirs("_posts", exist_ok=True)
 
-<main class="pt-24 pb-16 bg-[#0A0118] text-white font-serif">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
-      <img src="{{{{ page.image }}}}" alt="{{{{ page.title }}}}" loading="lazy" class="w-full h-72 object-cover"/>
-    </div>
-    <article class="max-w-none">
-      <h1 class="text-4xl font-bold mb-6 neon-text">{{{{ page.title }}}}</h1>
-      <!-- Contenu généré par GitHub Copilot -->
-    </article>
-  </div>
-</main>"""
-        
-        # Sauvegarde du fichier
-        with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(content)
-            
-        print(f"Article créé : {filepath}")
-        
+    # Obtenir date/heure Paris
+    datetime_info = get_paris_datetime()
+
+    try:
+        # Générer métadonnées
+        metadata = generate_article_metadata()
+
+        # Générer contenu
+        article_content = generate_article_content(metadata, datetime_info)
+
+        # Créer nom fichier
+        slug = generate_slug(metadata['title'])
+        filename = f"_posts/{datetime_info['date']}-{slug}.md"
+
+        # Écrire article
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(article_content)
+
+        print(f"✅ Nouvel article généré : {filename}")
+
     except Exception as e:
-        print(f"Erreur : {str(e)}")
-        exit(1)
+        print(f"❌ Erreur lors de la génération : {str(e)}")
+        raise
 
 if __name__ == "__main__":
     main()
