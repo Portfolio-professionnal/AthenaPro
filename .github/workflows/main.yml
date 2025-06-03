@@ -42,19 +42,23 @@ jobs:
           && sudo apt update \
           && sudo apt install gh -y
 
-      - name: Configuration GitHub CLI et Copilot
-        env:
-          GH_TOKEN: ${{ secrets.COPILOT_TOKEN }}
+      - name: Configuration GitHub CLI
         run: |
-          gh auth setup-git
-          gh extension install github/gh-copilot
+          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
           gh auth status
-          gh copilot auth status
+
+      - name: Installation et configuration Copilot
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh extension install github/gh-copilot
+          gh copilot --version
+          gh copilot auth
 
       - name: Génération Article
         env:
-          GH_TOKEN: ${{ secrets.COPILOT_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python .github/scripts/generate_blog_post.py
 
       - name: Commit & Push
