@@ -1,0 +1,35 @@
+name: Auto Blog Post Generator
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Tous les jours à 6h du matin
+  workflow_dispatch:      # Permet l'exécution manuelle
+
+jobs:
+  create_post:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: gh-page
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      
+      - name: Install dependencies
+        run: pip install frontmatter markdown
+      
+      - name: Generate post
+        run: python .github/scripts/generate_post.py
+      
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add _posts/
+          git commit -m "Add new blog post" || echo "No changes"
+          git push
