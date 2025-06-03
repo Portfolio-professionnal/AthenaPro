@@ -3,7 +3,7 @@ name: Génération Quotidienne Blog AthenaPro
 on:
   schedule:
     - cron: '0 7 * * *'  # 07:00 UTC = 09:00 Paris
-  workflow_dispatch:  # Permet le déclenchement manuel
+  workflow_dispatch:
 
 jobs:
   generate-and-publish:
@@ -42,18 +42,20 @@ jobs:
           && sudo apt update \
           && sudo apt install gh -y
 
-      - name: Authentification GitHub CLI
+      - name: Configuration GitHub CLI et Copilot
+        env:
+          GH_TOKEN: ${{ secrets.COPILOT_TOKEN }}
         run: |
-          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
-
-      - name: Installation Copilot CLI
-        run: |
+          gh auth setup-git
           gh extension install github/gh-copilot
+          gh auth status
+          gh copilot auth status
 
       - name: Génération Article
-        run: python .github/scripts/generate_blog_post.py
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.COPILOT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
+        run: python .github/scripts/generate_blog_post.py
 
       - name: Commit & Push
         run: |
