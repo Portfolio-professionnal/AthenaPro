@@ -27,12 +27,11 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-          cache: 'pip'
 
       - name: Installation dépendances Python
         run: |
           python -m pip install --upgrade pip
-          pip install pytz pyyaml
+          pip install -r requirements.txt
 
       - name: Installation GitHub CLI
         run: |
