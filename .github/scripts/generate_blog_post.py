@@ -46,17 +46,21 @@ def get_paris_datetime():
 def get_copilot_suggestion(prompt):
     """Obtient une suggestion de GitHub Copilot via CLI."""
     try:
-        # Modification ici pour corriger le problème d'encodage
-        if isinstance(prompt, bytes):
-            prompt = prompt.decode('utf-8')
+        # Utilisation de echo pour passer l'entrée à gh copilot suggest
+        process = subprocess.Popen(
+            ['echo', prompt],
+            stdout=subprocess.PIPE
+        )
         
         result = subprocess.run(
-            ["gh", "copilot", "suggest"],
-            input=prompt.encode('utf-8') if isinstance(prompt, str) else prompt,
+            ['gh', 'copilot', 'suggest'],
+            stdin=process.stdout,
             capture_output=True,
             text=True,
             check=True
         )
+        
+        process.stdout.close()
         return result.stdout.strip()
     except subprocess.CalledProcessError as e:
         print(f"❌ Erreur Copilot CLI : {e}")
@@ -66,9 +70,6 @@ def get_copilot_suggestion(prompt):
 def extract_json_from_response(response):
     """Extraire JSON de la réponse de Copilot."""
     try:
-        if isinstance(response, bytes):
-            response = response.decode('utf-8')
-            
         json_match = re.search(r'\{.*\}', response, re.DOTALL)
         if not json_match:
             raise ValueError("Aucun JSON trouvé dans la réponse de Copilot")
