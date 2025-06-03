@@ -27,13 +27,9 @@ def read_existing_titles():
 
 def generate_slug(title):
     """Génère un slug URL-friendly à partir du titre."""
-    # Convertir en minuscules et remplacer les accents
     text = unicodedata.normalize('NFKD', title).encode('ASCII', 'ignore').decode('utf-8')
-    # Convertir en minuscules et remplacer espaces/apostrophes par des tirets
     text = text.lower().replace(" ", "-").replace("'", "-").replace("'", "-")
-    # Supprimer tous les caractères non alphanumériques sauf tirets et underscores
     text = re.sub(r'[^\w\-]', '', text)
-    # Supprimer les tirets multiples consécutifs
     text = re.sub(r'-+', '-', text)
     return text.strip('-')
 
@@ -50,9 +46,13 @@ def get_paris_datetime():
 def get_copilot_suggestion(prompt):
     """Obtient une suggestion de GitHub Copilot via CLI."""
     try:
+        # Modification ici pour corriger le problème d'encodage
+        if isinstance(prompt, bytes):
+            prompt = prompt.decode('utf-8')
+        
         result = subprocess.run(
-            ["gh", "copilot", "suggest", "--target", "shell"],
-            input=prompt.encode('utf-8'),
+            ["gh", "copilot", "suggest"],
+            input=prompt.encode('utf-8') if isinstance(prompt, str) else prompt,
             capture_output=True,
             text=True,
             check=True
@@ -63,43 +63,53 @@ def get_copilot_suggestion(prompt):
         print(f"Sortie d'erreur : {e.stderr}")
         raise
 
+def extract_json_from_response(response):
+    """Extraire JSON de la réponse de Copilot."""
+    try:
+        if isinstance(response, bytes):
+            response = response.decode('utf-8')
+            
+        json_match = re.search(r'\{.*\}', response, re.DOTALL)
+        if not json_match:
+            raise ValueError("Aucun JSON trouvé dans la réponse de Copilot")
+        return json.loads(json_match.group())
+    except (json.JSONDecodeError, ValueError) as e:
+        print(f"❌ Erreur lors du parsing JSON : {e}")
+        print(f"Réponse reçue : {response}")
+        raise
+
 def generate_article_metadata():
     """Génère les métadonnées de l'article avec Copilot."""
     existing_titles = read_existing_titles()
     titles_list = "\n".join(f"- {title}" for title in existing_titles)
 
     prompt = f"""
-    Contexte : AthenaPro = service de création de landing pages & portfolios pro HTML/CSS/Tailwind 
-    pour freelances, indépendants, jeunes diplômés.
+    Contexte : AthenaPro est un service de création de landing pages et portfolios professionnels 
+    en HTML/CSS/Tailwind, destiné aux freelances, indépendants et jeunes diplômés.
 
     Titres existants :
     {titles_list}
 
-    Génère un JSON avec :
+    Instructions : Génère un nouvel article sur un sujet pertinent pour mon audience.
+    Retourne uniquement un objet JSON au format suivant :
     {{
-        "title": "Nouveau titre inédit et accrocheur",
-        "category": "Conseils, Tutoriel, ou Astuces",
+        "title": "Titre inédit et accrocheur",
+        "category": "Conseils",
         "excerpt": "Description courte et persuasive",
-        "image_url": "URL d'une image pertinente sur postimg.cc",
+        "image_url": "https://i.postimg.cc/URL-de-image",
         "keywords": ["mot-clé1", "mot-clé2", "mot-clé3"]
     }}
     """
 
     response = get_copilot_suggestion(prompt)
-    try:
-        # Extraire le JSON de la réponse
-        json_match = re.search(r'\{.*\}', response, re.DOTALL)
-        if not json_match:
-            raise ValueError("Pas de JSON trouvé dans la réponse")
-        return json.loads(json_match.group())
-    except (json.JSONDecodeError, ValueError) as e:
-        print(f"❌ Erreur parsing JSON : {e}")
-        raise
+    return extract_json_from_response(response)
 
 def generate_article_content(metadata, datetime_info):
     """Génère le contenu complet de l'article avec Copilot."""
     prompt = f"""
-    Génère un article en Markdown pour AthenaPro avec ce front-matter :
+    Génère un article complet en Markdown pour mon blog AthenaPro.
+    
+    Front-matter requis :
     ---
     layout: post
     title: "{metadata['title']}"
@@ -109,30 +119,35 @@ def generate_article_content(metadata, datetime_info):
     image: "{metadata['image_url']}"
     ---
 
-    L'article doit :
-    1. Suivre la structure HTML/Tailwind fournie
-    2. Inclure un sommaire avec ancres
-    3. Avoir au moins 5 sections avec texte, images, listes, citations
-    4. Finir par une conclusion et CTA vers AthenaPro
-    5. Être pertinent pour les freelances et indépendants
+    Structure requise :
+    1. Une introduction accrocheuse
+    2. Un sommaire avec ancres vers les sections
+    3. Au moins 5 sections avec du contenu riche (texte, listes, citations, images)
+    4. Une conclusion avec un appel à l'action vers AthenaPro
+    5. Une note de mise à jour
+
+    Le contenu doit être utile pour les freelances, indépendants et jeunes diplômés.
     """
 
-    article_content = get_copilot_suggestion(prompt)
-    return article_content
+    return get_copilot_suggestion(prompt)
 
 def main():
-    # Créer le dossier _posts s'il n'existe pas
-    os.makedirs("_posts", exist_ok=True)
-
-    # Obtenir date/heure Paris
-    datetime_info = get_paris_datetime()
-
     try:
+        # Créer le dossier _posts s'il n'existe pas
+        os.makedirs("_posts", exist_ok=True)
+
+        # Obtenir date/heure Paris
+        datetime_info = get_paris_datetime()
+
         # Générer métadonnées
+        print("📝 Génération des métadonnées de l'article...")
         metadata = generate_article_metadata()
+        print(f"✅ Métadonnées générées : {metadata['title']}")
 
         # Générer contenu
+        print("📝 Génération du contenu de l'article...")
         article_content = generate_article_content(metadata, datetime_info)
+        print("✅ Contenu généré")
 
         # Créer nom fichier
         slug = generate_slug(metadata['title'])
