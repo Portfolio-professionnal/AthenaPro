@@ -46,21 +46,14 @@ def get_paris_datetime():
 def get_copilot_suggestion(prompt):
     """Obtient une suggestion de GitHub Copilot via CLI."""
     try:
-        # Utilisation de echo pour passer l'entrée à gh copilot suggest
-        process = subprocess.Popen(
-            ['echo', prompt],
-            stdout=subprocess.PIPE
-        )
-        
         result = subprocess.run(
-            ['gh', 'copilot', 'suggest'],
-            stdin=process.stdout,
+            ['gh', 'copilot', 'suggest', '--format', 'text'],
+            input=prompt.encode('utf-8'),
             capture_output=True,
             text=True,
-            check=True
+            check=True,
+            env=dict(os.environ, GH_TOKEN=os.environ.get('COPILOT_TOKEN', ''))
         )
-        
-        process.stdout.close()
         return result.stdout.strip()
     except subprocess.CalledProcessError as e:
         print(f"❌ Erreur Copilot CLI : {e}")
