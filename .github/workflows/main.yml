@@ -1,1 +1,44 @@
-VSS
+name: "Auto Blog Post Generator"
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # Tous les jours à 9h
+  workflow_dispatch:      # Permet l'activation manuelle
+
+jobs:
+  create_post:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: gh-page
+          
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install markdown frontmatter
+          
+      - name: Generate post
+        run: python .github/scripts/generate_post.py
+        
+      - name: List files
+        run: |
+          echo "Current directory contents:"
+          ls -la
+          echo "Posts directory contents:"
+          ls -la _posts/
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Blog Generator"
+          git add _posts/
+          git commit -m "Add new blog post [automated]" || echo "No changes"
+          git push origin gh-page || echo "No changes to push"
