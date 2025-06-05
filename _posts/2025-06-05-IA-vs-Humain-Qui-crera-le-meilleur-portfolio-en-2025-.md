@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "IA vs. Humain : Qui créera le meilleur portfolio en 2025 ?"
-date: 2025-06-05 10:00:00 +0100
+date: 2025-05-05 10:00:00 +0100
 category: "Conseils"
 excerpt: "Transformez votre portfolio en machine de prospection automatique qui travaille 24h/24 pour vous. Anticipez les tendances design 2025 et prenez 6 mois d'avance sur vos concurrents avec AthenaPro."
 image: "https://i.postimg.cc/3NSQ6jnY/athenapro-conversion.webp"
