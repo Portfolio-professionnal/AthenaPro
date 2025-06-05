@@ -9,14 +9,8 @@ image: "https://i.postimg.cc/3NSQ6jnY/athenapro-conversion.webp"
 
 <main class="pt-24 pb-16 bg-[#0A0118] text-white font-serif">
   <div class="container mx-auto px-4 max-w-4xl">
-    <!-- Image en haut de l'article -->
     <div class="mb-10 rounded-xl overflow-hidden shadow-lg">
-      <img 
-        src="placeholder.jpg" 
-        alt="IA vs Humain : Qui créera le meilleur portfolio en 2025 ?"
-        loading="lazy"
-        class="w-full h-72 object-cover object-center transition-transform duration-500 hover:scale-105"
-      />
+      <img src="placeholder.jpg" alt="Dark Mode vs Glassmorphism" loading="lazy" class="w-full h-72 object-cover object-center transition-transform duration-500 hover:scale-105"/>
     </div>
 
     <article class="max-w-none">
