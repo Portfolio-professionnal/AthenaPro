@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "IA & Design :  Créez un portfolio 2025 qui convertit (ou mourez en essayant)"
-date: 2025-06-05 14:23:58 +0100
+date: 2025-04-16 10:00:00 +0100
 category: "Conseils"
 excerpt: "Transformez votre portfolio en machine de prospection automatique qui travaille 24h/24 pour vous. Anticipez les tendances design 2025 et prenez 6 mois d'avance sur vos concurrents avec AthenaPro."
 image: "https://i.postimg.cc/g0SJPTpX/athenapro-seo.webp"
