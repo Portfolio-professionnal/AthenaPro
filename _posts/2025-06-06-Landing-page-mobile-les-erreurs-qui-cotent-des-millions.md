@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Landing page mobile : les erreurs qui coûtent des millions"
-date: 2025-06-06 10:00:00 +0100
+date: 2025-06-05 10:00:00 +0100
 category: "Conseils"
 excerpt: "Découvrez les erreurs critiques qui sabotent vos conversions et les techniques secrètes des experts AthenaPro pour les éviter. Guide complet 2025 avec exemples concrets et métriques réelles. Maîtrisez l'art du design mobile-first avec AthenaPro et transformez chaque visiteur mobile en prospect qualifié. Méthodologie complète et optimisation conversion. Créez des landing pages qui convertissent à 15%+ avec les techniques AthenaPro. Psychologie utilisateur, optimisation UX et stratégies de conversion éprouvées."
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&auto=format&v=4"
