@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "IA et design web : révolution ou simple effet de mode"
-date: 2025-06-10 10:00:00 +0100
+date: 2025-06-09 10:00:00 +0100
 category: "Conseils"
 excerpt: "Anticipez les tendances design 2025 avec AthenaPro et prenez 6 mois d'avance sur vos concurrents. Technologies émergentes et best practices."
 image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&auto=format&v=5"
