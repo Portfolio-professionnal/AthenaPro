@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pourquoi 90% des portfolios créatifs ne convertissent pas"
-date: 2025-06-10 10:00:00 +0100
+date: 2025-06-09 10:00:00 +0100
 category: "Conseils"
 excerpt: "Transformez votre portfolio en machine de prospection automatique avec AthenaPro. Guide complet : structure, UX, conversion et optimisation SEO."
 image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop&auto=format&v=5"
